@@ -1,0 +1,1189 @@
+:root {
+  
+  --mainBlue: #0866FF;
+  --mainBlueAccentDark: #394D62;
+  --mainBlueAccentLight: #DFE9F2;
+  --backgroundColorDark: #18191A;
+  --backgroundColorLight: #F0F2F5;
+  --accentColorLight: #fff;
+  --accentColorLight2: #E4E6E9;
+  --accentColorDark: #242526;
+  --accentColorDark2: #3a3b3c;
+  --textColorDark: #f2f2f2;
+  --textColorLight: #0f0f0f;
+  --neutralColorDark: #B8BBBF;
+  --neutralColorLight: #606266;
+
+  /*Use Only these */
+  --bgColor: var(--backgroundColorDark);
+  --textColor: var(--textColorDark);
+  --accentColor: var(--accentColorDark);
+  --accentColor2: var(--accentColorDark2);
+  --blueAccent: var(--mainBlueAccentDark);
+  --neutralColor: var(--neutralColorDark);
+}
+
+@font-face {
+  font-family: 'Segoe UI',sans-serif;
+  src: url("/assets/Segoe\ ui\ historic.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+ *, *::after, *::before,
+ul,li,a,h5,h1,h2,h3,h4,h5
+{
+  font-family: 'Segoe UI',sans-serif;
+  box-sizing: border-box;
+  list-style: none;
+  border: 0;
+  padding: 0;
+  transition: all ease-out .2s;
+}
+
+ul,li,a,h5,h1,h2,h3,h4,h5
+{
+  text-decoration: none;
+  max-width: 75ch;
+}
+li > a:hover,
+.mediaUpload > a:hover,
+.primaryNavigation:hover,
+.contact:hover,
+.group:hover,
+.userReactions:hover
+{background: var(--accentColor2);
+}
+.facebookSearch:hover, 
+.secondaryNavigation:hover,
+.whatsOnYourMindPostClickable:hover
+{
+  filter: brightness(1.2);
+}
+
+
+.facebookSearchAndIcon h1,
+#hamburgerSvg,
+#primaryMesengerNav,
+#primaryNotificationNav,
+.facebookSearch .arrow,
+.whatsOnYourMindNav
+{
+  display: none;
+} 
+body
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+margin: 0;
+padding: 0;
+background: var(--bgColor);
+overflow-x: hidden;
+box-sizing: border-box;
+}
+#headerTest{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+header
+{
+  display: flex;
+  align-items: center;    
+  justify-content:space-between;
+  width: 100%;
+  background:var(--accentColor);
+  border-bottom: 1px solid var(--accentColor2);
+  padding: 1rem;
+  height:4rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.facebookSearchAndIcon
+{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 22rem;
+  height: 3rem;
+}
+.facebookSearchAndIcon svg
+{
+  width: 3rem;
+}
+.facebookSearch
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: var(--accentColor2);
+  height: 3rem;
+  width: 18rem;
+  border-radius: 3rem;
+}
+.facebookSearch > #svgSearch
+{
+  fill: var(--neutralColor);
+  width:1rem;
+}
+#searchFacebookClone
+{
+  background: none;
+  border: none;
+  color: var(--neutralColor);
+  width: 12rem;
+}
+
+  
+#navLinks,
+#userActions
+{
+display: block;
+padding: 0;
+}
+#navLinks ul
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  justify-content:center;
+height: 2rem;
+width: 30rem;
+}
+
+#userActions ul
+{
+display: flex;
+align-items: center;
+justify-content:flex-end;
+width: 22rem;
+gap: .5rem;
+}
+
+.navSvg
+{
+  width: 1.5rem;
+  color: var(--neutralColor);
+  fill: var(--neutralColor);
+  outline: var(--neutralColor);
+}
+.primaryNavigation:nth-of-type(1)
+{
+  position: relative;
+}
+.primaryNavigation:nth-of-type(1):hover
+{
+  background: none;
+}
+.primaryNavigation:nth-of-type(1)::after
+{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  bottom: -7px;
+  border-radius: 2px;
+  background: var(--mainBlue);
+}
+.primaryNavigation:nth-of-type(1)  a > .navSvg path
+{
+  fill: var(--mainBlue);
+  color: var(--mainBlue);
+  
+}
+.primaryNavigation:nth-of-type(1) > a:hover
+{
+  background: none;
+}
+.primaryNavigation
+{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+ height: 2rem;
+ padding: 1.5rem;
+ border-radius: .5rem;
+ background: var(--accentColor);
+ justify-content: center;
+}
+
+.secondaryNavigation
+{
+  flex: 0 0 2.5rem;
+  height: 2.5rem;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accentColor2);
+}
+.secondaryNavigation:nth-of-type(4) 
+{
+  background: url('/assets/images/profile.jpg');
+  background-size: cover; 
+  position: relative;
+  background-position: center; 
+  max-height: 3rem;
+  max-width: 3rem;
+  cursor: pointer;
+}
+.secondaryNavigation:nth-of-type(4)::before
+{
+  content: '';
+position: absolute;
+width: 15px;
+height: 15px;
+border: 3px solid var(--accentColor);
+border-radius: 2rem;
+top: 1px;
+right: 0;
+background: red;
+}
+.secondaryNavigation a >svg
+{
+  width: 1.2rem;
+}
+#userActions 
+{
+  width:20rem;
+  display: flex;
+}
+#profileNav 
+{
+  background: url('/assets/images/profile.jpg');
+  background-size: cover; 
+  background-position: center; 
+  max-height: 3rem;
+}
+
+
+@media (min-width:62rem) and (max-width : 70rem) {
+header
+  {
+    display: flex;
+    padding:0rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .facebookSearchAndIcon
+  {
+    display: flex;
+    justify-content: flex-start;
+  }
+.facebookSearch
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background: var(--accentColor2);
+  padding: .5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+}
+.facebookSearchAndIcon h1
+{
+  display: none;
+  color: var(--textColor);
+
+}
+.facebookSearchAndIcon svg
+{
+  width: 3rem;
+}
+.facebookSearch > #svgSearch
+{
+  fill: var(--neutralColor);
+  width: 1.5rem;
+}
+#searchFacebookClone
+{
+  display: none;
+}
+
+.primaryNavigation:nth-of-type(1):hover
+{
+  filter: brightness(1);
+}
+.primaryNavigation:nth-of-type(1)::after
+{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  bottom: -15px;
+  border-radius: 2px;
+  background: var(--mainBlue);
+}
+#navLinks ul,
+.userActions ul
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ height: 2rem;
+width: 20rem;
+}
+.primaryNavigation:nth-of-type(1)::after
+{
+  bottom: -10px;
+}
+.navSvg
+{
+  max-width: 1.5rem;
+  color: var(--neutralColor);
+  fill: var(--neutralColor);
+  outline: var(--neutralColor);
+}
+
+}
+
+@media ( min-width: 48rem) and (max-width:62rem) {
+  header
+  {
+    display: flex;
+    padding:1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .facebookSearchAndIcon
+  {
+    display: flex;
+    justify-content: flex-start;
+  }
+.facebookSearch
+{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background: var(--accentColor2);
+  padding: .5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+}
+.facebookSearchAndIcon h1
+{
+  display: none;
+  color: var(--textColor);
+
+}
+.facebookSearchAndIcon svg
+{
+  width: 3rem;
+}
+.facebookSearch > #svgSearch
+{
+  fill: var(--neutralColor);
+  width: 1.5rem;
+}
+#searchFacebookClone
+{
+  display: none;
+}
+
+.primaryNavigation:nth-of-type(1):hover
+{
+  filter: brightness(1);
+}
+.primaryNavigation:nth-of-type(1)::after
+{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2.5px;
+  bottom: -15px;
+  border-radius: 2px;
+  background: var(--mainBlue);
+}
+#navLinks ul,
+.userActions ul
+{
+display: none;
+}
+.primaryNavigation:nth-of-type(1)::after
+{
+  bottom: -10px;
+}
+.navSvg
+{
+  max-width: 1.5rem;
+  color: var(--neutralColor);
+  fill: var(--neutralColor);
+  outline: var(--neutralColor);
+}
+
+}
+@media ( min-width: 40rem) and (max-width:55rem) {
+  #navLinks ul
+  {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 40rem) {
+  header
+    {
+      width: 100%;
+      height: fit-content;
+      padding: .2rem;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    
+    .facebookSearchAndIcon
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid var(--accentColor2);
+  }
+  .facebookSearchAndIcon h1
+  {
+    display: block;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    color: var(--textColor);
+  }
+  #facebookLogo
+  {
+    display: none;
+  }
+#hamburgerSvg
+{
+  display: block;
+  cursor: pointer;
+  stroke: var(--neutralColor);
+}
+  .facebookSearch > #svgSearch
+  {
+    fill: var(--neutralColor);
+    max-width: 1rem;
+  }
+  .facebookSearch
+  {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+  #searchFacebookClone
+  {
+    display: none;
+  }
+  #userActions
+  {
+    display: none;
+  }
+
+
+  #navLinks
+  {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid var(--accentColor2);
+  }
+  #navLinks ul
+{
+  width: 100%;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+  #navLinks ul >li 
+  {
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+ 
+  
+.whatsOnYourMindNav
+{
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 2rem;
+  width: 100%;
+  padding: 0;
+} 
+ #whatsOnYourMindProfile 
+  {
+    display: flex;
+    background: url('/assets/images/profile.jpg');
+    max-width: 3rem;
+    max-height: 3rem;
+    background-size: cover; 
+    position: relative;
+    background-position: center; 
+    cursor: pointer;
+  }
+ #whatsOnYourMindProfile::before
+  {
+    content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 3px solid var(--accentColor);
+  border-radius: 2rem;
+  top: 1px;
+  right: 0;
+  background: red;
+}
+
+
+.whatsOnYourMindNav input{
+  width: 25rem;
+  height: 3rem;
+  padding-left: 1rem;
+  border-radius: 4rem;
+  outline: none;
+  border: none;
+  background: var(--accentColor2);
+}
+
+.whatsOnYourMindNav > .photo
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    color: var(--textColor);
+    font-size: 1rem;
+    gap: .5rem;
+  }
+.whatsOnYourMindNav .photo svg
+{
+  width: 2rem;
+}
+.primaryNavigation:nth-of-type(1)::after{
+  display: none;
+}
+}
+
+
+
+
+
+
+.mainContent
+{
+  
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.fixedDiv
+{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  background: var(--bgColor);
+  top: 3rem;
+  z-index: 2;
+}
+
+#extraUserActions
+{
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#contacts
+{
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.extraActionsList,
+.contactsHolder,
+.groupHolder
+{ 
+   width: 18rem;
+  margin: 0;
+  display: flex;
+  padding: 1rem 0;
+  flex-direction: column; 
+}
+
+.extraActionsList img, 
+.extraActionsList svg,
+.seeMore svg,
+.contactsHolder > article svg
+{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  position: relative;
+  z-index: 5;
+}
+.seeMore ::after
+{
+  content: '';
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  border-radius:50%;
+  top: 20%;
+  left:3%;
+  background: var(--accentColor);
+}
+.extraActionsLists
+{
+  width: inherit;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;  
+  background: var(--bgColor);
+  max-height: 30rem;
+  overflow: hidden; 
+}
+
+
+.extraAction, .seeMore
+{
+  display: flex;
+  text-decoration: none;
+  font-size: 1rem;  
+  color: var( --textColor);
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+  width: 18rem; 
+  border-radius: .5rem;
+  padding: .5rem;
+  height: 3rem;
+  position: relative;
+}
+
+.terms
+{
+  display: flex;  
+  gap: .4rem;
+  max-width: 18rem;
+  flex-wrap: wrap;
+}
+.terms > a
+{
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: .9rem;
+  margin: 0;
+  padding: 0;
+color: var(--neutralColor);
+}
+.terms > a:hover
+{
+  text-decoration: underline;
+}
+
+
+
+.contactsHolder 
+{
+  display: flex;
+  gap: .5rem;
+  border-bottom: 1px solid var(--accentColor);
+}
+
+.contactsHolder > article
+{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: .5rem;
+
+}
+.contactsHolder h3
+{
+flex-grow: 2;
+color: var(--textColor);
+}
+.contact, .group
+{
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+  height: 3rem;
+  gap: 1rem;
+  color: var(--textColor);
+  border-radius: .5rem;
+}
+.contact img,
+.group img
+{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3rem;
+}
+
+.feedAndsNews
+{
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 4rem;
+  padding: 1rem;
+  gap: .5rem;
+}
+.createPosts
+{
+  width: 32rem;
+  display: flex;
+background: var(--accentColor);
+  flex-direction: column;
+  gap: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  border-bottom: 1px solid var(--accentColor);
+}
+.whatsOnYourMind
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid var(--accentColor2) ;
+}
+.whatsOnYourMind img
+{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+.whatsOnYourMindPostClickable
+{
+  cursor: pointer;
+  width: 85%;
+  border-radius: 2rem;
+  text-align: left;
+  padding-left: 1rem;
+  color: var(--textColor);
+  background: var(--accentColor2);
+}
+.mediaUpload
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: .2rem;
+}
+.mediaUpload a
+{
+  text-decoration: none;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: .5rem;
+  flex: 1;
+}
+
+.mediaUpload a >svg
+ {
+  width: 2rem;
+ }
+
+ 
+.storyContainer
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;  
+  width: 32rem;
+  overflow: hidden;
+  scroll-snap-type:proximity;
+  height: 15rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  position: relative;
+}
+.userStory, .friendStory
+{
+  border-radius: 2rem;
+  flex: 0 0 9rem;
+  height: 100%;
+  background: url('/assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease-in-out;
+}
+.friendStory{
+  border-radius: 1rem;
+}
+a.userStory .userProfileImg:hover,
+.storyContainer > .friendStory:hover
+{
+  background-repeat: no-repeat;
+  background-size: 200%;
+ 
+
+}
+
+.userStory
+{
+  flex-direction: column;
+}
+.userProfileImg
+{
+  border-radius: 1rem 1rem 0 0 ;
+  height: 75%;
+  width: 100%;
+  background: url('/assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.userStory article
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+ border-radius: 0 0 1rem 1rem;
+  color: var(--textColor);
+  font-size: 1.5rem;
+  text-decoration: none;
+  stroke: white;
+  position: relative;
+}
+.userStory article::before
+{
+position: absolute;
+content: '';
+width: 3rem;
+height: 3rem;
+background: var(--mainBlue);
+border: 5px solid var(--accentColor);
+border-radius: 3rem;
+bottom: 57%;
+left: 34%;
+}
+.createStoryArticle{
+  background: var(--accentColor);
+}
+.userStory article > svg
+{
+  position: absolute;
+  bottom: 70%;
+  left: 40%;
+  width: 2rem;
+}
+.friendStory
+{
+  position: relative;
+}
+.friendProfileImg
+{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background: url('/assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 2rem;
+  top: 5%;
+  left: 5%;
+  border: 5px solid var(--mainBlue);
+}
+.friendName
+{
+  position: absolute;
+  text-shadow: 0 0 5px var(--bgColor);
+  font-size: 1rem;
+  bottom: 0;
+  left: 2rem;
+  color: var(--textColor);
+}
+.clickableChevron
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accentColor);
+  border-radius: 2rem;
+  padding: .5rem;
+  box-shadow: 0 0 10px var(--accentColor2);
+  position: absolute;
+
+}
+.rightChevron
+{
+  right: 0;
+}
+.postContainer
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.postCard
+{
+  background: var(--accentColor);
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.postCard svg
+{
+ width: 2rem;
+}
+.postUploader,
+.postCaption,
+.postImage,
+.engagement
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius:  inherit  ;
+  color: var(--textColor);
+  position: relative;
+}
+.uploaderProfile
+{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.uploaderImage
+{
+  background: url('/assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.uploaderData
+{
+  display: flex;
+  gap: .3rem;
+  flex-direction: column;
+  position: relative;
+}
+.uploaderData a
+{
+  font: .8em sans-serif;
+  transition: color 0.3s ease; 
+}
+.uploderName {
+  color: var(--textColor);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.uploaderNameSpan {
+position: absolute;
+right: 0;
+color: var(--mainBlue);
+  font: 1em sans-serif;  
+}
+
+.timeUploaded {
+  color: var(--textColor); 
+  text-decoration: none;
+}
+
+/* Hover effects */
+.uploderName:hover {
+  text-decoration: underline;}
+
+.uploaderNameSpan:hover {
+  color: var(--mainBlue);
+  text-decoration: underline;
+}
+.timeUploaded:hover {
+  text-decoration: underline; 
+  color: var(--textColor); 
+  
+}
+.postImage{
+  background: url('/assets/images/profile.jpg');
+  height: 25rem;
+  border-radius: 0;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.likesAndReactions{
+  position: relative;
+}
+
+.engagement{
+  padding:  0 1rem ;
+}
+.engagement::after
+{
+  content: '';
+  position: absolute;
+  background: #000;
+  width: 95%;
+  border-bottom: 1px solid var(--neutralColor);
+  bottom: 0;
+  left: 15px;
+
+}
+.reactions
+{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  color: var(--neutralColor);
+}
+
+.commentsAndShares,
+.commentsAndShares a,
+.userEngagement,
+.userReactions
+{
+  
+  align-items: center;
+  gap: .2rem;
+  color: var(--neutralColor);
+  display: flex;
+}
+.userEngagement{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userReactions{
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  cursor: pointer;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+@media (min-width:62rem) and (max-width : 70rem) 
+{
+#extraUserActions
+{
+  display: none;
+}
+.feedAndsNews
+{
+  left: -10rem;
+}
+}
+@media ( min-width: 48rem) and (max-width:62rem) 
+{
+
+  #extraUserActions
+{
+  display: none;
+}
+
+.contactsHolder,
+.groupHolder
+{
+  display: none;
+}
+}
+
+
+@media ( min-width: 40rem) and (max-width:55rem) 
+{
+  
+#extraUserActions,
+.extraActionsList,
+.contacts,
+.contactsHolder,
+.groupHolder
+{
+  display: none;
+}
+
+
+
+
+
+}
+@media screen and (max-width: 40rem) 
+{
+  #extraUserActions
+{
+  display: none;
+}
+.contactsHolder,
+.groupHolder
+{
+  display: none;
+}
+main.mainContent
+{
+  width: 100%;
+  background: var(--accentColor);
+}
+.feedAndsNews
+{  
+  background: var(--accentColor);
+  border-top: 2rem  solid black;
+  border-bottom: 2rem  solid black;
+  width: 100%;
+  padding: .5rem;
+  z-index: 20;
+  top: 10rem;
+}
+.createPosts,
+.createStoryContainer
+{
+  display: none;
+}
+}
