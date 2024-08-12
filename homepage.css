@@ -227,7 +227,7 @@ gap: .5rem;
 }
 .secondaryNavigation:nth-of-type(4) 
 {
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-size: cover; 
   position: relative;
   background-position: center; 
@@ -258,7 +258,7 @@ background: red;
 }
 #profileNav 
 {
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-size: cover; 
   background-position: center; 
   max-height: 3rem;
@@ -536,7 +536,7 @@ display: none;
  #whatsOnYourMindProfile 
   {
     display: flex;
-    background: url('/assets/images/profile.jpg');
+    background: url('assets/images/profile.jpg');
     max-width: 3rem;
     max-height: 3rem;
     background-size: cover; 
@@ -847,7 +847,7 @@ background: var(--accentColor);
   border-radius: 2rem;
   flex: 0 0 9rem;
   height: 100%;
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -875,7 +875,7 @@ a.userStory .userProfileImg:hover,
   border-radius: 1rem 1rem 0 0 ;
   height: 75%;
   width: 100%;
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -924,7 +924,7 @@ left: 34%;
   position: absolute;
   width: 3rem;
   height: 3rem;
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-position: center;
   background-size: cover;
   border-radius: 2rem;
@@ -1001,7 +1001,7 @@ left: 34%;
 }
 .uploaderImage
 {
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   background-position: center;
   background-size: cover;
   border-radius: 2rem;
@@ -1052,7 +1052,7 @@ color: var(--mainBlue);
   
 }
 .postImage{
-  background: url('/assets/images/profile.jpg');
+  background: url('assets/images/profile.jpg');
   height: 25rem;
   border-radius: 0;
   background-position: center;
