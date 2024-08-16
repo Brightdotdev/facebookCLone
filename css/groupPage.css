@@ -1,0 +1,356 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.headercontainer{
+    height: 60px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.headerwrapper{
+    height: 100%;
+    width: 98.5%;
+    /* background-color: pink; */
+     display: flex;
+     justify-content: space-between;
+}
+
+.logo{
+    height: 90%;
+}
+
+.facebooklogo{
+    height: 100%;
+    width: 8%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.img1icon{
+    height: 47px;
+    width: 47px;
+    border-radius: 25px;
+    border: none;
+}
+
+.sreachcc{
+    background-color: #F0F2F5;
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 200px;
+    border: none;
+    outline: none;
+}
+
+.headermiddle{
+    width: 25%;
+    height: 100%;
+    /* background-color: orange; */
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.findfriends{
+    width: 430px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* background-color: gold; */
+}
+
+.ocean{
+    width: 250px;
+    height: 50px;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.ocean input{
+    background: none;
+    padding-left: 20px;
+}
+
+.ocean svg {
+    width: 20px;
+}
+
+.nathanel{
+    display: none;
+}
+
+.bodycontainer{
+    height: 890px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bodywrapper{
+    width: 99.2%;
+    height: 100%;
+    /* background-color: blue; */
+    /* align-items: center; */
+    display: flex;
+}
+
+.leftside{
+    height: 60%;
+    width: 17%;
+    /* background-color: brown; */
+    
+}
+
+.gold{
+    height: 13%;
+    width: 95%;
+    /* background-color: yellow; */
+    border-radius: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ocean{
+    width: 250px;
+    height: 50px;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+.ocean input
+{
+    background: none;
+    padding-left: 20px;
+}
+.ocean svg
+{
+    width: 20px;
+}
+.promise{
+    height: 10%;
+    width: 95%;
+    /* background-color: pink; */
+    /* border-bottom: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+}
+
+
+.svffrf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6px;
+}
+
+
+
+
+
+.righttttside{
+    width: 17%;
+    height: 80%;
+    /* background-color: blueviolet; */
+    /* display: flex; */
+    align-items: center;
+}
+
+.lefttttside{
+    width: 75%;
+    height: 80%;
+    /* background-color: purple; */
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.rightside{
+    height: 100%;
+    width: 100%;
+    background-color: #F0F2F5;
+    border-left: 1px solid black;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+.rightside{
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groupboxed{
+    /* background-color: green; */
+    width: 98%;
+    height: 100%;
+}
+
+.boxxxed{
+    width: 100;
+    height: 350px;
+    /* background-color: cyan; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spacebetween{
+    width: 100%;
+    height: 20px;
+}
+
+.boxx{
+    height: 95%;
+    background-color: white;
+      border-radius: 12px;
+      font-size: 20px;
+}
+
+.boxxx{
+    height: 95%;
+    background-color: white;
+      border-radius: 12px;
+      font-size: 20px;
+
+}
+
+.joingroup{
+    height: 60%;
+    width: 97%;
+    border-radius: 12px;
+    border: none;
+    background-color: #F0F2F5;
+}
+
+.joingrouppppp{
+    width: 100%;
+    height: 70px;
+    /* background-color: blue; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fiver{
+    padding-left: 10px;
+}
+
+.fiver{
+    padding-left: 10px;
+
+}
+
+.secondcontainere{
+    display: none;
+    border-bottom: 1px solid black;
+    height: 60px;
+}
+.suggestergro{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+}
+.gro{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.secondwrapper{
+    width: 57%;
+    height: 100%;
+    /* background-color: pink; */
+   /* margin-left: 25px; */
+   align-items: center;
+   display: flex;
+    justify-content: space-between;
+    margin-left: 7px;
+}
+
+.newgrup{
+    width: 90%;
+    height: 50px;
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    border-radius: 12px;
+    color: #1C70CC;
+    background-color: #DFE9F2;
+}
+
+.buutttttton{
+    width: 53px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #F0F2F5;
+    border: none;
+    }
+
+
+@media only screen and (max-width:500px) {
+    .secondcontainere{
+        display: block;
+    }
+    .boxxx{
+          display: none;
+    }
+    
+    .leftside{
+        display: none;
+    }
+
+    .headermiddle{
+        display: none;
+    }
+
+    .img1icon{
+        display: none;
+    }
+
+    .findfriends{
+        width: 77%;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .boxx{
+        width: 100%;
+    }
+
+    .nathanel{
+        display: block;
+    }
+    .rightside{
+        border-left: none;
+    }
+}

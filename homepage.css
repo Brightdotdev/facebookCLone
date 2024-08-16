@@ -43,7 +43,9 @@ ul,li,a,h5,h1,h2,h3,h4,h5
 ul,li,a,h5,h1,h2,h3,h4,h5
 {
   text-decoration: none;
+
   max-width: 75ch;
+  
 }
 li > a:hover,
 .mediaUpload > a:hover,
@@ -72,21 +74,14 @@ li > a:hover,
 } 
 body
 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 margin: 0;
 padding: 0;
 background: var(--bgColor);
 overflow-x: hidden;
 box-sizing: border-box;
-}
-#headerTest{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
 }
 
 header
@@ -97,10 +92,11 @@ header
   width: 100%;
   background:var(--accentColor);
   border-bottom: 1px solid var(--accentColor2);
-  padding: 1rem;
-  height:4rem;
+  padding: 0rem  1rem;
+  height:3.5rem;
   position: fixed;
   top: 0;
+  left:0;
   z-index: 100;
 }
 .facebookSearchAndIcon
@@ -188,7 +184,7 @@ gap: .5rem;
   content: '';
   width: 100%;
   height: 2.5px;
-  bottom: -7px;
+  bottom: -5px;
   border-radius: 2px;
   background: var(--mainBlue);
 }
@@ -265,17 +261,14 @@ background: red;
 }
 
 
-@media (min-width:62rem) and (max-width : 70rem) {
+@media  (max-width : 64rem) {
 header
   {
     display: flex;
     padding:0rem;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 4rem;
-    
-    gap: 2rem;
+    height: 3.5rem;
     padding: 1rem;
   }
   .facebookSearchAndIcon
@@ -351,7 +344,7 @@ width: 20rem;
 
 }
 
-@media ( min-width: 48rem) and (max-width:62rem) {
+@media   (max-width:62rem) {
   header
   {
     display: flex;
@@ -359,10 +352,7 @@ width: 20rem;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 4rem;
     
-    gap: 2rem;
-    padding: 1rem;
   }
   .facebookSearchAndIcon
   {
@@ -432,7 +422,7 @@ display: none;
 }
 
 }
-@media ( min-width: 40rem) and (max-width:55rem) {
+@media (max-width:48rem) {
   #navLinks ul
   {
     display: none;
@@ -445,10 +435,13 @@ display: none;
     {
       width: 100%;
       height: fit-content;
-      padding: .2rem;
+      padding: .5rem;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
+      gap: .5rem;
       flex-direction: column;
+    position:fixed;
+top:0;
     }
 
     
@@ -458,6 +451,7 @@ display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: .5rem;
     border-bottom: 1px solid var(--accentColor2);
   }
   .facebookSearchAndIcon h1
@@ -472,21 +466,22 @@ display: none;
   {
     display: none;
   }
-#hamburgerSvg
+#hamburgerSvgGroup
 {
   display: block;
   cursor: pointer;
   stroke: var(--neutralColor);
+  height: 2px;
 }
   .facebookSearch > #svgSearch
   {
     fill: var(--neutralColor);
-    max-width: 1rem;
+    width: 1rem;
   }
   .facebookSearch
   {
-    max-width: 3rem;
-    max-height: 3rem;
+    max-width: 2rem;
+    max-height: 2rem;
   }
   #searchFacebookClone
   {
@@ -512,7 +507,6 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 }
   #navLinks ul >li 
   {
@@ -520,16 +514,14 @@ display: none;
     align-items: center;
     justify-content: center;
     padding: 0;
-  }
- 
-  
-.whatsOnYourMindNav
+  } 
+
+  .whatsOnYourMindNav
 {
   display: flex;
-  height: 4rem;
   align-items: center;
   justify-content:flex-start;
-  gap: 2rem;
+  gap: .5rem;
   width: 100%;
   padding: 0;
 } 
@@ -537,8 +529,8 @@ display: none;
   {
     display: flex;
     background: url('assets/images/profile.jpg');
-    max-width: 3rem;
-    max-height: 3rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
     background-size: cover; 
     position: relative;
     background-position: center; 
@@ -560,7 +552,7 @@ display: none;
 
 .whatsOnYourMindNav input{
   width: 25rem;
-  height: 3rem;
+  height: 2.5rem;
   padding-left: 1rem;
   border-radius: 4rem;
   outline: none;
@@ -580,27 +572,25 @@ display: none;
   }
 .whatsOnYourMindNav .photo svg
 {
-  width: 2rem;
+  width: 1.5rem;
 }
 .primaryNavigation:nth-of-type(1)::after{
   display: none;
 }
+.primaryNavigation a > svg
+{
+  width: 1.2rem;
 }
-
-
-
-
+}
 
 
 .mainContent
 {
-  
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .fixedDiv
 {
   display: flex;
@@ -621,7 +611,7 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 #contacts
@@ -630,7 +620,7 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .extraActionsList,
@@ -639,8 +629,8 @@ position: relative;
 { 
    width: 18rem;
   margin: 0;
+  padding: .5rem 0;
   display: flex;
-  padding: 1rem 0;
   flex-direction: column; 
 }
 
@@ -653,7 +643,7 @@ position: relative;
   height: 2rem;
   border-radius: 2rem;
   position: relative;
-  z-index: 5;
+  z-index: 1;
 }
 .seeMore ::after
 {
@@ -662,13 +652,12 @@ position: relative;
   height: 2rem;
   width: 2rem;
   border-radius:50%;
-  top: 20%;
-  left:3%;
+  top: 6px;
+  left:8px;
   background: var(--accentColor);
 }
 .extraActionsLists
 {
-  width: inherit;
   display: flex;
   padding: 0;
   margin: 0;
@@ -677,8 +666,11 @@ position: relative;
   max-height: 30rem;
   overflow: hidden; 
 }
-
-
+.contacts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .extraAction, .seeMore
 {
   display: flex;
@@ -687,8 +679,7 @@ position: relative;
   color: var( --textColor);
   align-items: center;
   justify-content: flex-start;
-  gap: .5rem;
-  width: 18rem; 
+  gap: .5rem; 
   border-radius: .5rem;
   padding: .5rem;
   height: 3rem;
@@ -744,7 +735,7 @@ color: var(--textColor);
   align-items: center;
   padding: .5rem;
   height: 3rem;
-  gap: 1rem;
+  gap: .5rem;
   color: var(--textColor);
   border-radius: .5rem;
 }
@@ -758,15 +749,15 @@ color: var(--textColor);
 
 .feedAndsNews
 {
-  width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   top: 4rem;
-  padding: 1rem;
-  gap: .5rem;
+  padding: .5rem;
+  gap: .8rem;
+  width: fit-content;
 }
 .createPosts
 {
@@ -774,23 +765,26 @@ color: var(--textColor);
   display: flex;
 background: var(--accentColor);
   flex-direction: column;
-  gap: 1rem;
-  padding: .5rem;
+  gap: .2rem;
   border-radius: .5rem;
   border-bottom: 1px solid var(--accentColor);
+  padding: .4rem;
+  height: fit-content;
+  
+
 }
 .whatsOnYourMind
 {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: .5rem 1rem;
+  padding: .5rem;
   border-bottom: 1px solid var(--accentColor2) ;
 }
 .whatsOnYourMind img
 {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 2rem;
 }
 .whatsOnYourMindPostClickable
@@ -798,7 +792,6 @@ background: var(--accentColor);
   cursor: pointer;
   width: 85%;
   border-radius: 2rem;
-  text-align: left;
   padding-left: 1rem;
   color: var(--textColor);
   background: var(--accentColor2);
@@ -807,8 +800,9 @@ background: var(--accentColor);
 {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: .2rem;
+  height: 3rem;
 }
 .mediaUpload a
 {
@@ -817,9 +811,10 @@ background: var(--accentColor);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   border-radius: .5rem;
   flex: 1;
+  gap: .5rem;
+  height: 3rem;
 }
 
 .mediaUpload a >svg
@@ -833,26 +828,25 @@ background: var(--accentColor);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: .5rem;  
-  width: 32rem;
+  gap: .4rem;  
+  width: 100%;
   overflow: hidden;
   scroll-snap-type:proximity;
-  height: 15rem;
-  padding: .5rem;
+  height: 12rem;
   border-radius: .5rem;
   position: relative;
 }
 .userStory, .friendStory
 {
-  border-radius: 2rem;
-  flex: 0 0 9rem;
+  border-radius: 1rem;
+  flex: 0 0 7rem;
   height: 100%;
   background: url('assets/images/profile.jpg');
   background-position: center;
   background-size: cover;
   display: flex;
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease-in-out;
+  transition:  0.3s ease-in-out;
 }
 .friendStory{
   border-radius: 1rem;
@@ -862,8 +856,6 @@ a.userStory .userProfileImg:hover,
 {
   background-repeat: no-repeat;
   background-size: 200%;
- 
-
 }
 
 .userStory
@@ -886,12 +878,13 @@ a.userStory .userProfileImg:hover,
   justify-content: center;
   width: 100%;
   height: 25%;
- border-radius: 0 0 1rem 1rem;
+ border-radius: 0 0 .7rem .7rem;
   color: var(--textColor);
   font-size: 1.5rem;
   text-decoration: none;
   stroke: white;
   position: relative;
+  border: 1px solid var(--accentColor2);
 }
 .userStory article::before
 {
@@ -902,8 +895,8 @@ height: 3rem;
 background: var(--mainBlue);
 border: 5px solid var(--accentColor);
 border-radius: 3rem;
-bottom: 57%;
-left: 34%;
+bottom: 25px;
+left: 30px;
 }
 .createStoryArticle{
   background: var(--accentColor);
@@ -911,8 +904,8 @@ left: 34%;
 .userStory article > svg
 {
   position: absolute;
-  bottom: 70%;
-  left: 40%;
+  bottom: 35px;
+  left: 39px;
   width: 2rem;
 }
 .friendStory
@@ -951,19 +944,113 @@ left: 34%;
   padding: .5rem;
   box-shadow: 0 0 10px var(--accentColor2);
   position: absolute;
-
+  cursor: pointer;
+  width: 2.5rem;
+&:hover
+{
+  transform: scale(1.1);
+}
 }
 .rightChevron
 {
   right: 0;
 }
-.postContainer
+
+@media  (max-width : 64rem) 
+{
+#extraUserActions,
+.extraActionsList,
+.extraActionsList
+{
+  display: none;
+}
+.feedAndsNews
+{
+  left: -10rem;
+}
+}
+@media(max-width:62rem) 
+{
+  #extraUserActions,
+  .extraActionsList,
+  .extraActionsList,
+.contacts,
+.fixedDiv,
+.contactsHolder,
+.groupHolder
+  {
+    display: none;
+  }
+.feedAndsNews
+{
+  left: 0;
+}
+}
+
+
+@media screen and (max-width: 40rem) 
+{
+  #extraUserActions,
+.extraActionsList,
+.extraActionsList,
+.contacts,
+.fixedDiv,
+.contactsHolder,
+.groupHolder
+{
+  display: none;
+}
+
+.contacts,
+.fixedDiv,
+.contactsHolder,
+.groupHolder,
+.createPosts,
+.createStoryContainer
+{
+  display: none;
+}
+
+main.mainContent
+{
+  width: 100%;
+  left: 0;
+  background: var(--accentColor);
+ 
+}
+.feedAndsNews
+{  
+  background: var(--accentColor);
+  width: 100%;
+  padding: .5rem;
+  z-index: 20;
+  top: 12rem;
+}
+.storyContainer
+{
+  
+  border-top: 5px solid black;
+  border-bottom: 2px solid black;
+}
+
+
+.storyContainer
+{
+  padding: .5rem;
+  width: 100%;
+  height: 13rem;
+  border-radius: 0;
+}
+}
+
+
+.postsContainer
 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: .5rem;
 }
 .postCard
 {
@@ -973,8 +1060,9 @@ left: 34%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
+  border-radius: .5rem;
 }
+
 .postCard svg
 {
  width: 2rem;
@@ -988,7 +1076,7 @@ left: 34%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: .5rem;
   border-radius:  inherit  ;
   color: var(--textColor);
   position: relative;
@@ -1053,16 +1141,35 @@ color: var(--mainBlue);
 }
 .postImage{
   background: url('assets/images/profile.jpg');
-  height: 25rem;
+  height: 20rem;
   border-radius: 0;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.likesAndReactions{
+.reactions
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  color: var(--neutralColor);
   position: relative;
 }
 
+.reactions a > svg {
+ position: absolute;
+}
+#likeSvgReaction{
+  left: 0;
+  top: 0px;
+  width: 1.2rem;
+}
+#heartSvgIcon{
+  left :14px;
+  top: -3px;
+  width: 1.5rem;
+}
 .engagement{
   padding:  0 1rem ;
 }
@@ -1070,27 +1177,24 @@ color: var(--mainBlue);
 {
   content: '';
   position: absolute;
-  background: #000;
   width: 95%;
-  border-bottom: 1px solid var(--neutralColor);
+  border-bottom: .1px solid var(--neutralColor);
   bottom: 0;
   left: 15px;
-
 }
-.reactions
-{
+
+.commentsAndShares{
   display: flex;
-  align-items: center;
-  gap: .2rem;
-  color: var(--neutralColor);
+  gap: 1rem;
+&.commentsAndShares a:hover
+{
+  text-decoration: underline;
 }
-
-.commentsAndShares,
+}
 .commentsAndShares a,
 .userEngagement,
 .userReactions
 {
-  
   align-items: center;
   gap: .2rem;
   color: var(--neutralColor);
@@ -1101,89 +1205,269 @@ color: var(--mainBlue);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: .5rem 1rem;
+  position: relative;
 }
 .userReactions{
-  width: 25%;
+  flex: 1;
   align-items: center;
   justify-content: center;
   border-radius: .5rem;
   cursor: pointer;
-  height: 3rem;
+  height: 2.5rem;
   font-size: 1.5rem;
+  position: relative;
+  gap: .2rem;
 }
-@media (min-width:62rem) and (max-width : 70rem) 
+.userReactions > h6
 {
-#extraUserActions
+  pointer-events: none;
+}
+.userReactions svg {
+width: 1.5rem;
+}
+.userEngagement::after{
+  content: '';
+  position: absolute;
+  width: 95%;
+  bottom: 0px;
+  border-bottom: .1px solid var(--neutralColor) ;
+}
+.commentsOverFlow{
+  width: 32rem;
+
+}
+
+.userCommentInput
+{
+display: flex;
+width: 100%;
+padding: 1rem;
+justify-content: space-between;
+}
+.userProfileImgComment{
+  background: url('./assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+}
+.commentInput{
+  width: 90%;
+  background: var(--accentColor2);
+  border-radius: 2rem;
+  padding: .2rem;
+  gap: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 3rem;
+}
+.commentInput input{
+  width: 75%;
+  height: 2.5rem;
+  background: none;
+  outline: none;
+  border: none;
+  padding-left: 1rem;
+  color: var(--neutralColor);
+}
+.commentInput input:focus{
+width: 100%;
+}
+
+
+
+.commentInput a> svg{
+  width: 1rem;
+  fill: var(--neutralColor);
+}
+#sendCommentIconSvg{
+  display: none;
+}
+@media (max-width:40rem) {
+   
+  .postsContainer{
+    gap: 0;
+  }
+
+  .postCard
+  {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    width: 100%;
+    border-radius: 0;
+    height: fit-content;
+  }
+  .postUploader,
+  .postCaption,
+  .engagement,
+  .userEngagement,
+.commentsOverFlow,
+.userCommentInput
+{
+  width: 100%;
+  padding: .4rem;
+}
+.uploaderProfile
+{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+.uploaderImage
+{
+  background: url('assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+.uploaderData
+{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+.uploaderData a
+{
+  font: .7em sans-serif;
+  transition: color 0.3s ease; 
+}
+.postCaption > p
+{
+  text-decoration: none;
+  max-width: 70ch;
+  line-height: 20px;  
+}
+.postImage{
+  height: 18rem;
+}
+
+.reactions
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  color: var(--neutralColor);
+  position: relative;
+}
+.reactions p
+{
+  font-size: .8rem;
+}
+.reactions a > svg {
+ position: absolute;
+}
+#likeSvgReaction{
+  left: 0;
+  top: 0px;
+  width: 1rem;
+}
+#heartSvgIcon{
+  left :14px;
+  top: 0px;
+  width: 1.1rem;
+}
+.engagement{
+  padding: .5rem .5rem ;
+}
+.engagement::after
 {
   display: none;
 }
-.feedAndsNews
-{
-  left: -10rem;
-}
-}
-@media ( min-width: 48rem) and (max-width:62rem) 
-{
 
-  #extraUserActions
+.commentsAndShares{
+  display: none;
+  gap: .5rem;
+&.commentsAndShares a:hover
 {
+  text-decoration: underline;
+}
+}
+.commentsAndShares a,
+.userEngagement,
+.userReactions
+{
+  align-items: center;
+  gap: .2rem;
+  color: var(--neutralColor);
+  display: flex;
+  font-size: .7rem;
+}
+.userReactions
+{
+ background: red;
+}
+.userEngagement a > svg
+{
+ width: 1.2rem;
+}
+.userReactions
+{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  justify-content: center;
+  font-size: 1rem;
+  height: 2rem;
+ background: var(--accentColor2);
+ border-radius: 2rem;
+}
+.userReactions:nth-of-type(3){
+  display:none;
+}
+.userCommentInput
+{
+display: none;
+padding: .5rem 1rem;
+justify-content: flex-start;
+gap: .5rem;
+align-items: center;
+}
+.userEngagement::after{
   display: none;
 }
-
-.contactsHolder,
-.groupHolder
-{
-  display: none;
+.userProfileImgComment{
+  background: url('./assets/images/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
 }
-}
 
 
-@media ( min-width: 40rem) and (max-width:55rem) 
-{
+.commentInput{
   
-#extraUserActions,
-.extraActionsList,
-.contacts,
-.contactsHolder,
-.groupHolder
-{
-  display: none;
+  background: var(--accentColor2);
+  border-radius: 2rem;
+  padding: 0;
+  height: 2rem;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 2.5rem;
+}
+.commentInput input{
+  flex: 1;
+  height: 2.5rem;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--neutralColor);
+}
+.commentInput input:focus{
+width: 100%;
 }
 
 
-
-
-
-}
-@media screen and (max-width: 40rem) 
-{
-  #extraUserActions
-{
-  display: none;
-}
-.contactsHolder,
-.groupHolder
-{
-  display: none;
-}
-main.mainContent
-{
-  width: 100%;
-  background: var(--accentColor);
-}
-.feedAndsNews
-{  
-  background: var(--accentColor);
-  border-top: 2rem  solid black;
-  border-bottom: 2rem  solid black;
-  width: 100%;
-  padding: .5rem;
-  z-index: 20;
-  top: 10rem;
-}
-.createPosts,
-.createStoryContainer
-{
-  display: none;
-}
 }
