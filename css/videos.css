@@ -1,24 +1,78 @@
+
+:root {
+  
+    --mainBlue: #0866FF;
+    --mainBlueAccentDark: #394D62;
+    --mainBlueAccentLight: #DFE9F2;
+    --backgroundColorDark: #18191A;
+    --backgroundColorLight: #F0F2F5;
+    --accentColorLight: #fff;
+    --accentColorLight2: #E4E6E9;
+    --accentColorDark: #242526;
+    --accentColorDark2: #3a3b3c;
+    --textColorDark: #f2f2f2;
+    --textColorLight: #0f0f0f;
+    --neutralColorDark: #B8BBBF;
+    --neutralColorLight: #606266;
+  
+    /*Use Only these */
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  .lightMode {
+    --bgColor: var(--backgroundColorLight);
+    --textColor: var(--textColorLight);
+    --accentColor: var(--accentColorLight);
+    --accentColor2: var(--accentColorLight2);
+    --blueAccent: var(--mainBlueAccentLight);
+    --neutralColor: var(--neutralColorLight);
+  }
+  .darkMode {
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+
+
+
 *{
-    border: none;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+p,h1,h2,h3,h4,h5,h6 ,a , button, input, b, input::placeholder{
+    color: var(--textColor) !important;
+}
+button{
+    border: none;
+    outline: none;
 }
 
 
 .headercontainer{
     width: 100%;
     height: 70px;
-    /* background-color: red; */
+    background-color: var(--accentColor);
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid black;
+    
 }
 
 .secondcontainere{
     width: 100%;
     height: 60px;
-    /* background-color: red; */
+    background-color: var(--accentColor);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,10 +92,11 @@
 }
 
 .buutttttton{
-width: 53px;
-height: 35px;
+width: 50px;
+height: 30px;
 border-radius: 15px;
-background-color: #F0F2F5;
+background-color: var(--bgColor);
+
 }
 
 .headerWrapper{
@@ -73,7 +128,7 @@ background-color: #F0F2F5;
 }
 
 .search{
-    background-color: #F0F2F5;
+    background-color: var(--accentColor);
     height: 40px;
     width: 40px;
     align-items: center;
@@ -106,7 +161,7 @@ background-color: #F0F2F5;
 }
 
 .findfriends{
-    width: 430px;
+    width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -115,6 +170,19 @@ background-color: #F0F2F5;
     /* background-color: gold;/    */
 }
 
+.savedser{
+    width: 50px;
+    height: 50px;
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 27px;
+}
+ 
+.secondwrapper{
+    width: 55%;
+}
 .findbutton{
     height: 50px;
     width: 130px;
@@ -139,10 +207,11 @@ background-color: #F0F2F5;
     width: 43px;
     /* /* object-fit: contain; */
     border-radius: 20px;
-    /* background-color: #E4E6EB; */
+    background-color: var(--bgColor);
+    /* border: none; */
 }
 .hrouppppp{
-    background-color: #F0F2F5;
+    background-color: var(--accentColor);
     border-radius: 20px;
 }
 
@@ -150,7 +219,7 @@ background-color: #F0F2F5;
 .bodyContainer{
       width: 100%;
       height: 890px;
-      /* background-color: red; */
+      background-color: var(--bgColor);
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -167,14 +236,13 @@ background-color: #F0F2F5;
 .leftside{
     height: 60%;
     width: 20%;
-    /* background-color: brown; */
-    
+    background-color: var(--bgColor);
 }
 
 .rightside{
     height: 100%;
     width: 95%;
-    background-color: #F0F2F5;
+    background-color: var(--bgColor);
     border-left: 1px solid black;
     overflow: hidden;
     overflow-y: scroll;
@@ -197,16 +265,44 @@ background-color: #F0F2F5;
 .ocean{
     width: 250px;
     height: 50px;
-    background-color: #F0F2F5;
+    background-color: var(--bgColor);
     display: flex;
     align-items: center;
     border-radius: 30px;
+    background-color: var(--accentColor);
+    /* border: none; */
+    border: none;
+    outline: none;
+
 }
+
+.oceann{
+    width: 250px;
+    height: 50px;
+    background-color: var(--bgColor);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: var(--bgColor);
+    /* border: none; */
+    border: none;
+    outline: none;
+
+}
+
+.sreachcc{
+    background-color: var(--bgColor);
+    border: none;
+}
+
+
 .ocean input
 {
     background: none;
     padding-left: 20px;
 }
+
+
 .ocean svg
 {
     width: 20px;
@@ -273,9 +369,10 @@ background-color: #F0F2F5;
 
 .videofacebook{
     width: 95%;
-    height: 95%;
-    background-color: white;
+    height: 85%;
+    background-color: var(--accentColor);
     border-radius: 12px;
+color: var(--textColor);
 }
 
 
@@ -292,11 +389,12 @@ background-color: #F0F2F5;
 .imagprofile{
     height: 60%;
     width: 7%;
-    background-color: #F0F2F5;
+    background-color: var(--bgColor);
     display: flex;
      justify-content: center;
      align-items: center;
      border-radius: 45px;
+     margin-bottom: 25px;
 }
 
 .titleee{
@@ -304,11 +402,11 @@ background-color: #F0F2F5;
 }
 
 .textinpostprofile{
-    width: 88%;
+    width: 84%;
     height: 80%;
     /* background-color: purple; */
     display: block;
-    font-size: 20px ;   
+    font-size: 17px ;   
     align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -317,7 +415,7 @@ background-color: #F0F2F5;
     width: 100%;
     padding-left: 12px;
     /* background-color: red; */
-    font-size: 25px;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -366,7 +464,7 @@ background-color: #F0F2F5;
 
 
 .spaceeeeeebar{
-    width: 35%;
+    width: 40%;
     height: 100%;
      /* background-color: green; */
      display: flex;
@@ -385,13 +483,44 @@ background-color: #F0F2F5;
 .nathanel{
     display: none;
 }
+.vodeoooo{
+    font-size: 32px;
+    display: none   ;
+    color:var(--textColor);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Facebookjkkk{
+    font-size: 32px;
+    color:var(--textColor);
+    user-select: none;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 
-
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:550px) {
     .headerWrapper{
         display: flex;
         justify-content: space-between;
+    }
+
+    .vodeoooo{
+        display: block;
+    }
+
+   .findfriends{
+    width: 55%;
+   }
+
+    .Facebookjkkk{
+        display: none;
+        
+    }
+
+    .boldddd{
+        display: none;
+       
     }
     .leftside{
         display: none;
@@ -418,7 +547,9 @@ background-color: #F0F2F5;
         display: none;
     }
 
-
+.oceann{
+    display: none;
+}
     .kvifaccceboodeo{
         padding-top: 20px;
         width: 100%;
@@ -453,7 +584,7 @@ background-color: #F0F2F5;
     }
 
     .img1icon{
-        display: none;
+        /* display: none; */
     }
     .search{
         display: none;
@@ -471,4 +602,16 @@ background-color: #F0F2F5;
         width: 45px;
         height: 45px;
     }
+    .ocean{
+        display: none;
+    }
+
+    .spacebarbbbb{
+        width: 60%;
+    }
+
+    .likeandcommentss{
+        width: 20%;
+    }
+
 }

@@ -1,0 +1,808 @@
+:root {
+    --mainBlue: #0866FF;
+    --mainBlueAccentDark: #394D62;
+    --mainBlueAccentLight: #DFE9F2;
+    --backgroundColorDark: #18191A;
+    --backgroundColorLight: #F0F2F5;
+    --accentColorLight: #fff;
+    --accentColorLight2: #E4E6E9;
+    --accentColorDark: #242526;
+    --accentColorDark2: #3a3b3c;
+    --textColorDark: #f2f2f2;
+    --textColorLight: #0f0f0f;
+    --neutralColorDark: #B8BBBF;
+    --neutralColorLight: #606266;
+  
+    /*Use Only these */
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  .lightMode {
+    --bgColor: var(--backgroundColorLight);
+    --textColor: var(--textColorLight);
+    --accentColor: var(--accentColorLight);
+    --accentColor2: var(--accentColorLight2);
+    --blueAccent: var(--mainBlueAccentLight);
+    --neutralColor: var(--neutralColorLight);
+  }
+  .darkMode {
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+
+  @font-face {
+    font-family: 'Segoe UI',sans-serif;
+    src: url("../assets/Segoe\ ui\ historic.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+   *, *::after, *::before,
+  ul,li,a,h5,h1,h2,h3,h4,h5
+  {
+    font-family: 'Segoe UI',sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    border: 0;
+    padding: 0;
+    transition: all ease-out .2s;
+  }
+  a{
+    color: var(--textColor);
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  #userBio{
+  display: none;
+  }
+  ul,li,a,h5,h1,h2,h3,h4,h5,h6,p
+  {
+    text-decoration: none;
+    max-width: 75ch;    
+  }
+  li > a:hover,
+  .mediaUpload > a:hover,
+  .primaryNavigation:hover,
+  .contact:hover,
+  .group:hover,
+  .userReactions:hover
+  {background: var(--accentColor2);
+  }
+  .facebookSearch:hover, 
+  .secondaryNavigation:hover,
+  .whatsOnYourMindPostClickable:hover
+  {
+    filter: brightness(1.2);
+  }
+  
+body{
+    background: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    gap: 10rem;
+}
+
+.userProfileContainer{
+  width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, black, var(--accentColor));
+}
+.userInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 63rem;
+  position: relative;
+}
+
+
+.userProfileCover{
+  background: url('../assets/images/profileCover.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 100% 40%;
+width: 100%;
+height:22rem;
+position: relative;
+border-radius: .5rem;
+}
+
+
+.editCoverPhoto{
+  width: 10rem;
+  padding:  .5rem ;
+  background: #F2F2F2;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  justify-content: center;
+  gap: .5rem;
+  font-size: .9rem;
+  border-radius: .5rem;
+  color: #1C1D21;
+  position: absolute;
+  left: 82%;
+  bottom: 5%;
+}
+#cameraaa{
+  width: 1.5rem;
+}
+#cameraaa path{
+  width: 1.5rem;
+  fill: #1C1D21;
+}
+.userProfileInfo{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  top: -45px;
+}
+.profilePic{  
+width: 12rem;
+height: 12rem;
+  background: url('../assets/images/profile.jpg');
+  background-position: cover;
+  background-size: cover;
+border-radius: 25rem;
+outline: 7px solid var(--bgColor);
+  position: relative;
+}
+#userProfileCameraButton{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  border-radius: 2rem;
+  background: var(--accentColor);
+}
+#userProfileCamera{
+  width: 1.5rem;
+  fill: var(--neutralColor);
+}
+.profileInfoText{
+  display: flex;
+  position: relative;
+  right: 10%;
+  flex-direction: column;
+  gap: .5rem;
+  color: var(--textColor);
+}
+.userFriendsImage a {
+  object-fit: cover;
+}
+.userFriendsImage a > img{
+  border: 3px solid  var(--accentColor2);
+}
+.userFriendsImage a:nth-of-type(2){
+  position: absolute;
+  left: 30px;
+}
+.userFriendsImage a:nth-of-type(3){
+  position: absolute;
+  left: 60px;
+}.userFriendsImage a:nth-of-type(4){
+  position: absolute;
+  left: 90px;
+}.userFriendsImage a:nth-of-type(5){
+  position: absolute;
+  left: 120px;
+}
+.userFriendsImage img {
+width: 2.5rem;
+height: 2.5rem;
+border-radius: 2rem;
+object-fit: cover;
+}
+.editProfile{
+  display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 1rem;
+}
+.addToStory{
+  background: var(--mainBlue);
+  width: 10rem;
+  display: flex;
+  align-items: center;
+justify-content: center;
+  gap: .5rem;
+  color:#fff;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+.addToStory svg, .editUserProfile svg{
+  width: 1.5rem;
+  
+}
+.editUserProfile svg{
+  width: 1rem;
+}
+
+.editUserProfile{
+  width: 10rem;
+  display: flex;
+  align-items: center;
+justify-content: center;
+  gap: .5rem;
+  color:var(--textColor);
+  background: var(--accentColor);
+  border-radius: .5rem;
+  padding: .7rem;
+
+}
+.closeAndOpenPeople{
+  color: var(--accentColor);
+  background: var(--accentColor);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+border-radius: .3rem;
+}
+.closeAndOpenPeople svg{
+  width: 2rem;
+}
+.rotate{
+  transform: rotate(180deg);
+}
+.userProfileNav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.userProfileNav ul{
+min-width: 100%;
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+.userProfileNavigation{
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+color: var(--neutralColor);
+font-size: 1rem;
+
+}
+.userProfileNavigation > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+}
+.userProfileNavigation:nth-of-type(1) a{
+  color: var(--mainBlue);
+}
+.userProfileNavigation:nth-of-type(1) a::before{
+content: '';
+width: 100%;
+border-bottom: 3px solid var(--mainBlue);
+position: absolute;
+border-radius: 3rem;
+bottom: -15px;
+}
+.userProfileNavigation svg{
+  width: 1rem;
+}
+
+
+
+
+.userProfileContents{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  width: 63rem;
+}
+.leftContents{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width:40%;
+  position: sticky;
+  top: 0;
+}
+.rightContents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  gap: .5rem;
+ }
+.leftContents a{
+color: var(--mainBlue);
+}
+.introCard,
+.userPhotos,
+.friendsCard
+{
+  display: flex;
+  flex-direction: column;
+  color: var(--textColor);
+  background: var(--accentColor);
+  padding: 1rem;
+  border-radius: .5rem;
+  gap: 2em;
+}
+
+
+
+.introCard ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+ background: var(--accentColor);
+}
+.introCard ul >li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accentColor2);
+width: 90%;
+border-radius: .5rem;
+}
+.introCard ul >li a{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  color: var(--textColor);
+  background: var(--accentColor2);
+}
+
+.photoHeader,
+.friendHeader
+{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  color: var(--textColor);
+}
+.friendHeader > h5{
+ font-size: 1.5rem;
+  position: relative;
+}
+.friendHeader > h5 span{
+color: grey;
+font-size: .7rem;
+position: absolute;
+bottom: -20px;
+left: 0;
+}
+.terms
+{
+  display: flex;  
+  gap: .4rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.terms > a
+{
+  color: var(--textColor);
+  text-decoration: none;
+  font-size: .9rem;
+  margin: 0;
+  padding: 0;
+color: var(--neutralColor);
+}
+.terms > a:hover
+{
+  text-decoration: underline;
+}
+
+.userPhotos{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.photoContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.photos{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+  border-radius: .3rem;
+}
+.photoHeader{
+  height: 2rem;
+}
+
+
+.createPosts
+{
+  width: 33rem;
+  display: flex;
+background: var(--accentColor);
+  flex-direction: column;
+  gap: .2rem;
+  border-radius: .5rem;
+  border-bottom: 1px solid var(--accentColor);
+  padding: .4rem;
+  height: fit-content;
+}
+.whatsOnYourMind
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+  border-bottom: 1px solid var(--accentColor2) ;
+}
+.whatsOnYourMind img
+{
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+}
+.whatsOnYourMindPostClickable
+{
+  cursor: pointer;
+  width: 85%;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  color: var(--textColor);
+  background: var(--accentColor2);
+}
+.mediaUpload
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+.mediaUpload a
+{
+  text-decoration: none;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+  flex: 1;
+  gap: .5rem;
+  height: 3rem;
+}
+
+.mediaUpload a >svg
+ {
+  width: 2rem;
+ }
+ .postFilterText{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--accentColor);
+  width: 33rem;
+  padding: 1rem 1rem;
+  border-radius: .5rem .5rem 0 0;
+  gap: .5rem;
+ }
+.postFilterText h6{
+flex: 1;
+font-size: 1.5rem;
+margin: 0;
+color: var(--textColor);
+}
+.postFilterText button > svg{
+  width: 1.5rem;
+}
+ .postFilterText button{
+  color: var(--textColor);
+  background: var(--accentColor2);
+  fill: var(--neutralColor);
+  padding: 1rem;
+  height: 2.5rem;
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  border-radius: .3rem;
+ }
+
+.postView{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0 ;
+  border-radius: 0rem 0rem .5rem .5rem;
+  background: var(--accentColor);
+}
+.postView button{
+  width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accentColor);
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--textColor);  
+  border-radius: .5rem;
+  position: relative;
+}
+.postView button > svg{
+width: 2.5rem;
+}
+.postView button:nth-of-type(2) >svg {
+  width: 1.5rem;  
+  }
+
+  .postView button:nth-of-type(1){
+    color: var(--mainBlue);
+    }
+
+  .postView button:nth-of-type(1)::after
+  {
+    content:  '';
+     width: 100%;  
+     position: absolute;
+     bottom: -15px;
+     left: 15px;
+     border: 2px solid var(--mainBlue);
+     border-radius: 2rem;
+
+}
+.postView button:nth-of-type(1) >svg {
+fill: var(--mainBlue);
+}
+
+.friendsCardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+
+.stuff{
+  width: 100%;
+  height: 15rem;
+  outline: 2px solid var(--accentColor2);
+  overflow: hidden;
+  overflow-x: scroll;
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+
+/* Customizing the scrollbar for WebKit browsers (e.g., Chrome, Safari) */
+.stuff::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  background-color: transparent; /* No background color */
+}
+
+/* Track (background of the scrollbar) */
+.stuff::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track background */
+}
+
+/* Thumb (the scroll indicator) */
+.stuff::-webkit-scrollbar-thumb {
+  background-color: var(--accentColor2); /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges for the scrollbar thumb */
+}
+
+/* Optional: Scrollbar styling for Firefox */
+.stuff {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: var(--accentColor2) transparent; /* Thumb and track color */
+}
+
+
+
+.friendImageCard{
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: .5rem;
+  position: relative;
+}
+.friendImageCard p{
+z-index: 4000;
+padding: 0;
+margin: 0;
+}
+.friendImageCard::after{
+position: absolute;
+bottom: 0;
+left: 0;
+content: '';
+width: 100%;
+background: linear-gradient(to top, var(--accentColor), transparent);
+border-radius: inherit;
+height: 30%;
+}
+
+@media (max-width: 64rem) { 
+
+  .userProfileContainer{
+    width: fit-content;
+    background: none;
+  }
+  .userProfileCover{
+   width: 100%;
+   border-radius: 0;
+  }
+
+  .userProfileInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+ 
+  
+  .profileInfoText{
+    right: 0;
+    display: flex;
+  }
+  .stuff{
+    max-width:100%;
+    justify-content: flex-start;
+  }
+  .userProfileNav,    
+  .userFriendsImage a
+  {
+    display: none;
+  }
+
+  
+}
+@media (max-width: 62rem) { 
+ 
+  .editCoverPhoto{
+    left: 75%;
+    }
+    .profileInfoText{
+      display: flex;
+      align-items: center;
+    }
+    #userProfileInfo,.userProfileCover, .userInfo, .userProfileContainer{
+      width: 100%;
+    }
+    #userBio{
+      display: flex;
+    }
+   
+  .userProfileContents{
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    }
+  
+.leftContents, .rightContents{
+  display: none;
+}
+    .leftContents, .rightContents{
+      display: flex;
+      width: 40rem;
+      position: relative;
+    }
+
+ 
+    
+    .photos, .friendImageCard{
+      width: 13rem;
+      height: 13rem;
+      border-radius: 1rem;
+    }
+    .terms{
+      max-width: 100%;
+    }
+}
+
+
+@media (max-width: 44rem) { 
+
+  .editCoverPhoto{
+    left: 70%;
+  }
+
+.userProfileCover{
+  background-position: cover;
+background-size: cover;
+}
+.userProfileInfo{
+  top: -5rem;
+}
+
+.leftContents, .rightContents{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.postCard{
+  width: 100%;
+}
+.editProfile{
+gap: .5rem;
+  }
+
+  .closeAndOpenPeople, .stuff{
+    display: none;
+  }
+}
+@media (max-width: 35rem) { 
+  .userInfo{
+    top: 5rem;
+  }
+.profilePic{
+  width: 9rem;
+  height: 9rem;
+}
+.editCoverPhoto{
+  display: none;
+}
+.postFilterText, .postView, .createPosts{
+  display: none;
+}
+.photos, .friendImageCard{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+}
+.terms{
+  display: none;
+}
+}
+
+
+
