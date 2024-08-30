@@ -1,5 +1,6 @@
 
-
+document.addEventListener('DOMContentLoaded', ()=>{
+    
 
  document.querySelectorAll('.promise').forEach(promise =>{
     promise.addEventListener('click', () =>{
@@ -13,7 +14,7 @@ document.querySelector('.left-header').addEventListener('click', () =>{
 
 })
 
+document.querySelector('.FacebookHeader').style.color = 'red'
 
-document.querySelector('.Facebookjkkk').addEventListener('click', () =>{
-    window.location.href = '../index.html'
+
 })
