@@ -825,7 +825,9 @@ width:100vw;
  const secondaryMesengerNav = navDiv.querySelector('#mesengerNav');
 const hamburger = navDiv.querySelector('.hamburgerSvgGroup');
 const hamburgerQuickUserActions = hamburgerSvgElement()
-const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu')
+const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu');
+
+
    homeNav.addEventListener('click' , () =>{
        window.location.href = "../index.html"
    })

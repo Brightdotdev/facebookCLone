@@ -1,3 +1,5 @@
+import { applyTheme } from "./miniFunctionlities.js";
+
 const hamburgerSvgElement = () =>{
     const hamburgerSvgEDivElement = document.createElement('main');
     const hamburgerSvgEDivElementStyle = document.createElement('style');
@@ -319,8 +321,6 @@ const hamburgerSvgElement = () =>{
     </li>
     
     
-    
-    
     <li  class="games" >
     <a href="#" class="extraActionHamburgerSection" >
         <svg xmlns="http://www.w3.org/2000/svg"  
@@ -401,7 +401,7 @@ const hamburgerSvgElement = () =>{
                         </svg>
                          <label class="darkModeText">Dark mode</label>
                          <label class="darkModeToggle">
-                             <input type="checkbox" id="darkModeToggle">
+                             <input type="checkbox" id="darkModeToggle" class="darkModeToggleCheckBox" >
                              <span class="toggle round"></span>
                          </label>
                 </a>
@@ -762,9 +762,12 @@ input:checked + .toggle:before {
 document.head.appendChild(hamburgerSvgEDivElementStyle);
 const userName = hamburgerSvgEDivElement.querySelector('.userName');
 const userProfileSectionHambugerSection = hamburgerSvgEDivElement.querySelector('.userProfileSectionHambugerSection');
+
+
 userProfileSectionHambugerSection.addEventListener('click', () =>{
   window.location.href = '../html/userProfile.html'
 })
+
 const friends = hamburgerSvgEDivElement.querySelector('.friends')
 const memories = hamburgerSvgEDivElement.querySelector('.memories')
 const saved = hamburgerSvgEDivElement.querySelector('.saved')
@@ -783,7 +786,7 @@ const games = hamburgerSvgEDivElement.querySelector('.games')
 const settingsAndPrivacyDropDown = hamburgerSvgEDivElement.querySelector('.settingsAndPrivacyDropDown');
 const settingsAndPrivacyDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.settingsAndPrivacyDropDownUl li');
 const settingsAndPrivacyDropDownSvg = hamburgerSvgEDivElement.querySelector('.settingsAndPrivacyDropDownSvg');
-
+const hamburgerCkeckBox = hamburgerSvgEDivElement.querySelector('.darkModeToggleCheckBox');
 const helpAndSupportDropDown = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDown');
 const helpAndSupportDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.helpAndSupportDropDownUl li');
 const helpAndSupportDropDownSvg = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDownSvg');
@@ -791,9 +794,10 @@ const helpAndSupportDropDownSvg = hamburgerSvgEDivElement.querySelector('.helpAn
 userName.textContent = 'haha'
 
 settingsAndPrivacyDropDown.addEventListener('click', () =>{
-    settingsAndPrivacyDropDownSvg.classList.toggle('rotate');
-settingsAndPrivacyDropDownUl.forEach(list =>{
-list.classList.toggle("unActive")
+   
+  settingsAndPrivacyDropDownSvg.classList.toggle('rotate');
+  settingsAndPrivacyDropDownUl.forEach(list =>{
+  list.classList.toggle("unActive")
 })
 })
 
@@ -807,7 +811,6 @@ helpAndSupportDropDown.addEventListener('click', () =>{
 friends.addEventListener("click", () =>{
     window.location.href = '../html/friends.html'
 })
-
 groups.addEventListener("click", () =>{
     window.location.href = '../html/groups.html'
 })
@@ -825,23 +828,32 @@ pages.addEventListener("click", () =>{
 })
 messenger.forEach(message =>{
     message.addEventListener("click", () =>{
-        window.location.href = '../messenger.html'
+        window.location.href = '../html/messenger.html'
     })
 })
 
 settings.forEach(setting =>{
     setting.addEventListener("click", () =>{
-        window.location.href = '../settings.html'
+        window.location.href = '../html/settings.html'
     })
 })
 
+  
 
+console.log(hamburgerCkeckBox);
 
+  hamburgerCkeckBox.addEventListener('change', () =>{
+     
+    document.body.classList.remove('darkMode', 'lightMode')   
+    const selectedTheme  = hamburgerCkeckBox.checked ? "off" : "on";
+    localStorage.setItem('theme', selectedTheme);
+   applyTheme(selectedTheme);
+  }) 
 
 return hamburgerSvgEDivElement
 }
 
 
-export{
+export {
   hamburgerSvgElement
 }

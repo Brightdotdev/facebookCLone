@@ -1,0 +1,89 @@
+
+
+/* using variables is pretty easy fr no big deal
+so err  these are the variables that store the color palatte of facebook's color in this case*/
+
+
+/*Dark Mode*/
+:root {
+  
+  --mainBlue: #0866FF;
+  --mainBlueAccentDark: #394D62;
+  --mainBlueAccentLight: #DFE9F2;
+  --backgroundColorDark: #0f0f0f;
+  --backgroundColorLight: #F0F2F5;
+  --accentColorLight: #fff;
+  --accentColorLight2: #E4E6E9;
+  --accentColorDark: #242526;
+  --accentColorDark2: #3a3b3c;
+  --textColorDark: #f2f2f2;
+  --textColorLight: #0f0f0f;
+  --neutralColorDark: #B8BBBF;
+  --neutralColorLight: #606266;
+
+  /*Use Only these */
+  --bgColor: var(--backgroundColorDark);
+  --textColor: var(--textColorDark);
+  --accentColor: var(--accentColorDark);
+  --accentColor2: var(--accentColorDark2);
+  --blueAccent: var(--mainBlueAccentDark);
+  --neutralColor: var(--neutralColorDark);
+}
+
+/*
+now i'm coding in dark mode of facebook(cause why not)
+for those coding in light mode(omo) use these
+*/
+/*Light Mode*/
+:root {
+  
+  --mainBlue: #0866FF;
+  --mainBlueAccentDark: #394D62;
+  --mainBlueAccentLight: #DFE9F2;
+  --backgroundColorDark: #0f0f0f;
+  --backgroundColorLight: #F0F2F5;
+  --accentColorLight: #fff;
+  --accentColorLight2: #E4E6E9;
+  --accentColorDark: #242526;
+  --accentColorDark2: #3a3b3c;
+  --textColorDark: #f2f2f2;
+  --textColorLight: #0f0f0f;
+  --neutralColorDark: #B8BBBF;
+  --neutralColorLight: #606266;
+
+  /*Use Only these */
+  --bgColor: var(--backgroundColorLight);
+  --textColor: var(--textColorLight);
+  --accentColor: var(--accentColorLight);
+  --accentColor2: var(--accentColorLight2);
+  --blueAccent: var(--mainBlueAccentLight);
+  --neutralColor: var(--neutralColorLight);
+}
+/*
+the colors where picked by...yours truly *bows*
+
+now you'll paste this code at the top part of your css file to be able to use them
+
+so to use a variable in your  css is pretty easy like I said(can't emphasize this enough)
+
+so say you want to make the back ground of an element to be the main blue(for some reason)
+
+you do it like::
+*/
+
+myElement{
+background: var(---mainBlue) ;
+}
+
+/* or maybe you want an accent color */
+/* or maybe you want an accent color */
+
+myElement{
+  background: var(--accentColor) ;
+  }
+/*
+see just call the property,call the variable assignment and assign it with the color of the variable you want(and by "color you want" I mean the one that corresponds with the site)
+thank you for your time
+enjoy yourself and Good Luck 👍
+*/
+
