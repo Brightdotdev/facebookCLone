@@ -63,6 +63,7 @@ const nav = (navPage) =>
                 
             </div>
 
+            <div class="hamburgerSvgGroup" > 
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"version="1.1">
                  <title>Menu</title>
                  <g id="hamburgerSvgGroup"  stroke-width="1" fill="none" fill-rule="evenodd">
@@ -81,7 +82,7 @@ const nav = (navPage) =>
              </line>
                      </g>
                  </g>
-             </svg>
+             </svg></div>
         </section>
 
         <nav id="navLinks"> 
@@ -687,6 +688,11 @@ display: none;
   stroke: var(--neutralColor);
   height: 2px;
 }
+  .hamburgerSvgGroup
+{
+cursor:pointer;
+  
+}
   .facebookSearch > #svgSearch
   {
     fill: var(--neutralColor);
@@ -817,7 +823,7 @@ width:100vw;
  const primaryMesengerNav = navDiv.querySelector('#primaryMesengerNav')
  const notificationNav = navDiv.querySelector('#notificationNav');
  const secondaryMesengerNav = navDiv.querySelector('#mesengerNav');
-const hamburger = navDiv.querySelector('#hamburgerSvgGroup');
+const hamburger = navDiv.querySelector('.hamburgerSvgGroup');
 const hamburgerQuickUserActions = hamburgerSvgElement()
 const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu')
    homeNav.addEventListener('click' , () =>{
@@ -847,7 +853,8 @@ const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu')
 
    notificationNav.addEventListener('click', () =>{
     window.location.href = "../html/notification.html"
-    //waiting for raph on this pop up tho....2 weeks later...there's no pop up lol
+    //waiting for raph on this pop up tho
+    //....2 weeks later...there's no pop up lol
    })
 
    const quickUserAction = quickUserActions();
