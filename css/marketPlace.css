@@ -71,12 +71,13 @@
     gap: 5rem;
   }
   .menuHambugerSection{
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 1rem;
     padding: .5rem;
     height: fit-content;
@@ -91,7 +92,7 @@
     top: 0;
     background: var(--bgColor);
     z-index: 23;
-    height: 4rem;
+    height: 3.5rem;
 
   }
   .menu > h4{
@@ -114,7 +115,17 @@
     border-bottom: 3px solid var(--neutralColor);
   }
 
-
+.contentsDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: .5rem;
+  height: fit-content;
+  overflow-y: auto;
+  flex: 1;
+}
   .userProfileImageHambugerSection{
     width: 2.5rem;
     min-height: 2.5rem;
@@ -170,7 +181,9 @@
     margin: 0;
   }
   .extraActionHamburgerSection > svg {
-flex: 0 1 2.5rem ;
+
+    height: 3rem;
+
   }
 
 
@@ -225,7 +238,7 @@ flex: 0 1 2.5rem ;
   gap: .5rem;
   font-weight: 700;
   border-radius: .5rem;
-  height: 4rem;
+  height: 3.5rem;
     background: var(--accentColor);
     color: var(--neutralColor);
   }
@@ -244,7 +257,7 @@ flex: 0 1 2.5rem ;
   gap: 1rem;
   width: 100%;
   color: var(--neutralColor);
-  height: 4rem;
+  height: 3.5rem;
   padding: .5rem;
   cursor: pointer;
   border-top: 1px solid var(--neutralColor);
@@ -257,10 +270,13 @@ flex: 0 1 2.5rem ;
   .logOut >svg{
     width: 2rem;
   }
+  .darkModeText{
+    flex: 1;
+  }
   .darkModeToggle {
     position: relative;
     display: inline-block;
-    width: 3.5rem;
+    width: 3rem;
     height: 1.5rem;
 }
 .darkModeToggle input {
@@ -286,10 +302,10 @@ flex: 0 1 2.5rem ;
 .toggle:before {
     position: absolute;
     content: "";
-    height: 1.2rem;
-    width: 1.2rem;
-    left: 3px;
-    bottom: 3px;
+    height: 1rem;
+    width: 1rem;
+    left: 4px;
+    bottom: 4px;
     background-color: var(--mainBlue);
     transition: .4s;
     border-radius: 50%;
@@ -298,7 +314,8 @@ flex: 0 1 2.5rem ;
 
 
 input:checked + .toggle:before {
-    transform: translateX(1.5rem);
+    transform: translateX(1.7rem);
+    left: 4px;
 }
 
 .toggle.round {

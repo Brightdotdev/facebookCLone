@@ -1,5 +1,5 @@
 import { quickUserActions } from "./quickUserActions.js";
-
+import { hamburgerSvgElement } from "./hamburgerSvg.js";
 const nav = (navPage) =>
     {
         let navigationNumber;
@@ -817,9 +817,9 @@ width:100vw;
  const primaryMesengerNav = navDiv.querySelector('#primaryMesengerNav')
  const notificationNav = navDiv.querySelector('#notificationNav');
  const secondaryMesengerNav = navDiv.querySelector('#mesengerNav');
-  
-
-
+const hamburger = navDiv.querySelector('#hamburgerSvgGroup');
+const hamburgerQuickUserActions = hamburgerSvgElement()
+const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu')
    homeNav.addEventListener('click' , () =>{
        window.location.href = "../index.html"
    })
@@ -847,7 +847,7 @@ width:100vw;
 
    notificationNav.addEventListener('click', () =>{
     window.location.href = "../html/notification.html"
-    //waiting for raph on this pop up tho
+    //waiting for raph on this pop up tho....2 weeks later...there's no pop up lol
    })
 
    const quickUserAction = quickUserActions();
@@ -855,11 +855,22 @@ width:100vw;
 
    document.body.appendChild(quickUserAction);
    quickUserAction.classList.add('unActive')
+  
+  
    profile.addEventListener('click', () =>{
     quickUserAction.classList.toggle('unActive')
     })
  
+hamburger.addEventListener('click', () =>{
+document.body.appendChild(hamburgerQuickUserActions);
+navDiv.style.display = 'none'
 
+})
+
+hamburgerReturn.addEventListener('click', () =>{
+document.body.removeChild(hamburgerQuickUserActions);
+navDiv.style.display = 'flex';
+})
  document.head.appendChild(navStyle);
  return navDiv
     }

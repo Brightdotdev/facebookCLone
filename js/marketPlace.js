@@ -1,4 +1,4 @@
-import { nav } from "./navs.js";
+/* import { nav } from "./navs.js";
 import { loadTheme } from "./miniFunctionlities.js";
 const navigation = nav()
 
@@ -7,9 +7,10 @@ console.log("Dont tell me");
 document.body.appendChild(navigation);
 
 
+
 loadTheme();
-
-
+ */
+/* 
 
 const hamburgerSvgEDivElement = document.querySelector('.menuHambugerSection');
 
@@ -41,13 +42,7 @@ const helpAndSupportDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.help
 const helpAndSupportDropDownSvg = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDownSvg');
 
 
-
-
-
 userName.textContent = 'haha'
-
-console.log(settingsAndPrivacyDropDown,settingsAndPrivacyDropDownUl,helpAndSupportDropDown,helpAndSupportDropDownUl, settingsAndPrivacyDropDownSvg);
-
 
 settingsAndPrivacyDropDown.addEventListener('click', () =>{
     settingsAndPrivacyDropDownSvg.classList.toggle('rotate');
@@ -79,6 +74,9 @@ marketplace.addEventListener("click", () =>{
 feeds.addEventListener("click", () =>{
     window.location.href = '../index.html'
 })
+pages.addEventListener("click", () =>{
+    window.location.href = '../index.html'
+})
 messenger.forEach(message =>{
     message.addEventListener("click", () =>{
         window.location.href = '../messenger.html'
@@ -91,3 +89,4 @@ settings.forEach(setting =>{
     })
 })
 
+ */
