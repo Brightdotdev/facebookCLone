@@ -70,7 +70,6 @@ const quickUserActions = () =>
           </div>
           <h6>Give Feedback</h6>
           
-        
           
   </a>
   </li>
@@ -671,7 +670,8 @@ gap:0;
       applyTheme(selectedTheme);
     })
    })
- const stuff =  ['on', 'off', 'default']
+
+   
 const theme = localStorage.getItem('theme')
 
 radioToggle.forEach(radio =>{  

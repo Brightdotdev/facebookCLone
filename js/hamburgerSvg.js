@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Place</title>
-<link rel="shortcut icon" href="../assets/images/favicon (1).png" type="image/x-icon">
-<link rel="stylesheet" href="../css/marketPlace.css">
-</head>
-<body>
-    
-    <main class="menuHambugerSection">
-        
+const hamburgerSvgElement = () =>{
+    const hamburgerSvgEDivElement = document.createElement('main');
+    const hamburgerSvgEDivElementStyle = document.createElement('style');
+    hamburgerSvgEDivElement.classList.add('menuHambugerSection')
+    hamburgerSvgEDivElement.innerHTML = 
+    `   
         <section class="menu">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 512 512" version="1.1" xml:space="preserve" width="2.5rem" height="2.5rem" >
                 <style type="text/css">
@@ -56,57 +49,90 @@
         </a>
     </li>
 
-    <li class="videos">
+
+        <li class="memories" >
         <a href="#" class="extraActionHamburgerSection" >
-            <svg xmlns="http://www.w3.org/2000/svg" height="40px" 
-            viewBox="0 -960 960 960" width="40px" class="videoSvgUserActions">
-           <defs>
-               <linearGradient id="blueTvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                   <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
-                   <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
-                   <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
-               </linearGradient>
-           </defs>
-           <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z" fill="url(#blueTvGradient)" class="userActionSvg"/>
-       </svg>
-              <h5>Videos</h5>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
+            class='clockSvg' class="userActionSvg"
+            stroke="#3191F6" fill="none"
+            stroke="currentColor" stroke-linecap="round" 
+            stroke-linejoin="round" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <h5>Memories</h5>
         </a>
     </li>
 
+    <li class="saved" >
+    <a href="#" class="extraActionHamburgerSection" >
+        <svg xmlns="http://www.w3.org/2000/svg" 
+        stroke-width="2" stroke-linejoin="round" 
+        stroke-linecap="round" 
+        class="bookmarkSvg" height="30"
+        class="userActionSvg"
+        width="24" viewBox="0 0 24 24">
+       <defs>
+           <linearGradient id="bookmarkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+               <stop offset="0%" style="stop-color:#B54AD0;stop-opacity:1"/>
+               <stop offset="100%" style="stop-color:#9E70F7;stop-opacity:1"/>
+           </linearGradient>
+       </defs>
+       <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" class="userActionSvg" fill="url(#bookmarkGradient)" />
+   </svg>
    
+          <h5>Saved</h5>
+    </a>
+</li>
+
     <li class="groups" >
-        <a href="#" class="extraActionHamburgerSection" >
-            <svg xmlns="http://www.w3.org/2000/svg"
-         enable-background="new 0 0 24 24" height="40px"
-         viewBox="0 0 24 24" class="groupsSvgUserActions">
-        <defs>
-            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
-                <stop offset="100%" style="stop-color:lightblue;stop-opacity:1"/>
-            </linearGradient>
-        </defs>
-      
-        <circle cx="12" cy="12" r="10" fill="url(#blueGradient)"/>
+    <a href="#" class="extraActionHamburgerSection" >
+        <svg xmlns="http://www.w3.org/2000/svg"
+     enable-background="new 0 0 24 24" height="40px"
+     viewBox="0 0 24 24" class="groupsSvgUserActions">
+    <defs>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:lightblue;stop-opacity:1"/>
+        </linearGradient>
+    </defs>
+  
+    <circle cx="12" cy="12" r="10" fill="url(#blueGradient)"/>
+
     
-        
-        <g fill="white" transform="scale(0.6) translate(8, 6)">
-            <rect fill="none" height="24" width="24"/>
-            <path d="M12,12.75c1.63,0,3.07,0.39,4.24,0.9c1.08,0.48,1.76,1.56,1.76,2.73L18,18H6l0-1.61c0-1.18,0.68-2.26,1.76-2.73 
-                     C8.93,13.14,10.37,12.75,12,12.75z M4,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C2,12.1,2.9,13,4,13z 
-                     M5.13,14.1 C4.76,14.04,4.39,14,4,14c-0.99,0-1.93,0.21-2.78,0.58C0.48,14.9,0,15.62,0,16.43V18l4.5,0v-1.61 
-                     C4.5,15.56,4.73,14.78,5.13,14.1z M20,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,12.1,18.9,13,20,13z 
-                     M24,16.43c0-0.81-0.48-1.53-1.22-1.85 C21.93,14.21,20.99,14,20,14c-0.39,0-0.76,0.04-1.13,0.1c0.4,0.68,0.63,1.46,0.63,2.29 
-                     V18l4.5,0V16.43z M12,6c1.66,0,3,1.34,3,3 c0,1.66-1.34,3-3,3s-3-1.34-3-3C9,7.34,10.34,6,12,6z"/>
-        </g>
-    </svg>
-    
-                <h5>Groups</h5>
-        </a>
-    </li>
-    
-    
+    <g fill="white" transform="scale(0.6) translate(8, 6)">
+        <rect fill="none" height="24" width="24"/>
+        <path d="M12,12.75c1.63,0,3.07,0.39,4.24,0.9c1.08,0.48,1.76,1.56,1.76,2.73L18,18H6l0-1.61c0-1.18,0.68-2.26,1.76-2.73 
+                 C8.93,13.14,10.37,12.75,12,12.75z M4,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C2,12.1,2.9,13,4,13z 
+                 M5.13,14.1 C4.76,14.04,4.39,14,4,14c-0.99,0-1.93,0.21-2.78,0.58C0.48,14.9,0,15.62,0,16.43V18l4.5,0v-1.61 
+                 C4.5,15.56,4.73,14.78,5.13,14.1z M20,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,12.1,18.9,13,20,13z 
+                 M24,16.43c0-0.81-0.48-1.53-1.22-1.85 C21.93,14.21,20.99,14,20,14c-0.39,0-0.76,0.04-1.13,0.1c0.4,0.68,0.63,1.46,0.63,2.29 
+                 V18l4.5,0V16.43z M12,6c1.66,0,3,1.34,3,3 c0,1.66-1.34,3-3,3s-3-1.34-3-3C9,7.34,10.34,6,12,6z"/>
+    </g>
+</svg>
+
+            <h5>Groups</h5>
+    </a>
+</li>
+
+<li class="videos">
+    <a href="#" class="extraActionHamburgerSection" >
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" 
+        viewBox="0 -960 960 960" width="40px" class="videoSvgUserActions">
+       <defs>
+           <linearGradient id="blueTvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+               <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
+               <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
+               <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
+           </linearGradient>
+       </defs>
+       <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z" fill="url(#blueTvGradient)" class="userActionSvg"/>
+   </svg>
+          <h5>Videos</h5>
+    </a>
+</li>
 <li class="marketplace"> 
-    <a href="./html/marketPlace.html" class="extraActionHamburgerSection" >
+    <a href="#" class="extraActionHamburgerSection" >
         <svg xmlns="http://www.w3.org/2000/svg" 
          viewBox="0 0 24 24" 
          class="userActionSvg" 
@@ -126,61 +152,6 @@
         <h5>MarketPlace</h5>
     </a>
 </li>
-
-<li class="messenger">
-    <a href="#" class="extraActionHamburgerSection">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" 
-         viewBox="0 0 24 24" data-name="Layer 1" class="userActionSvg" >
-           
-            <defs>
-              <linearGradient id="messengerKidsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:green;stop-opacity:1"/>
-                <stop offset="50%" style="stop-color:white;stop-opacity:1"/>
-                <stop offset="100%" style="stop-color:teal;stop-opacity:1"/>
-              </linearGradient>
-            </defs>
-            <path fill="url(#messengerKidsGradient)" 
-            d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z"  class="userActionSvg"/>
-          </svg>
-       <h5>Mesenger Kids</h5>
-    </a>
-    </li>
-    
-    <li  class="messenger" >
-    <a href="#" class="extraActionHamburgerSection" >
-        <svg xmlns="http://www.w3.org/2000/svg"  
-        viewBox="0 0 24 24" data-name="Layer 1" class="messengerSvg" class="userActionSvg" >
-         
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style="stop-color:red;stop-opacity:1"/>
-                <stop offset="50%" style="stop-color:purple;stop-opacity:1"/>
-                <stop offset="100%" style="stop-color:blue;stop-opacity:1"/>
-              </linearGradient>
-            </defs>
-          
-           
-            <path fill="url(#gradient)" d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z" class="userActionSvg" />
-          </svg>
-          <h5>Messenger</h5>
-    </a>
-    </li>
-    
-
-
-<li class="feeds">
-    <a href="../index.html" class="extraActionHamburgerSection" >
-<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" 
- viewBox="0 0 24 24"  fill="url(#blueTvGradient)" class='feedSvg' class="userActionSvg" >
-<g><path d="M0,0h24v24H0V0z" fill="none" class="userActionSvg"/></g>
-<g><path d="M16,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V8L16,3z M8,7h3c0.55,0,1,0.45,1,1v0c0,0.55-0.45,1-1,1H8 C7.45,9,7,8.55,7,8v0C7,7.45,7.45,7,8,7z M16,17H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0 C17,16.55,16.55,17,16,17z M16,13H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0C17,12.55,16.55,13,16,13z M15,8 V5l4,4h-3C15.45,9,15,8.55,15,8z"/>
-</g></svg>
-<h5>Feeds</h5>
-    </a>
-</li>
-
-
 
 <li class="reels"> 
     <a href="./html/marketPlace.html" class="extraActionHamburgerSection" >
@@ -206,36 +177,16 @@
         <h5>Reels</h5>
     </a>
 </li>
-
-    <li class="saved" >
+<li class="feeds">
     <a href="#" class="extraActionHamburgerSection" >
-        <svg xmlns="http://www.w3.org/2000/svg" 
-        stroke-width="2" stroke-linejoin="round" 
-        stroke-linecap="round" 
-        class="bookmarkSvg" height="30"
-        class="userActionSvg"
-        width="24" viewBox="0 0 24 24">
-       <defs>
-           <linearGradient id="bookmarkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-               <stop offset="0%" style="stop-color:#B54AD0;stop-opacity:1"/>
-               <stop offset="100%" style="stop-color:#9E70F7;stop-opacity:1"/>
-           </linearGradient>
-       </defs>
-       <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" class="userActionSvg" fill="url(#bookmarkGradient)" />
-   </svg>
-   
-          <h5>Saved</h5>
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" 
+ viewBox="0 0 24 24"  fill="url(#blueTvGradient)" class='feedSvg' class="userActionSvg" >
+<g><path d="M0,0h24v24H0V0z" fill="none" class="userActionSvg"/></g>
+<g><path d="M16,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V8L16,3z M8,7h3c0.55,0,1,0.45,1,1v0c0,0.55-0.45,1-1,1H8 C7.45,9,7,8.55,7,8v0C7,7.45,7.45,7,8,7z M16,17H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0 C17,16.55,16.55,17,16,17z M16,13H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0C17,12.55,16.55,13,16,13z M15,8 V5l4,4h-3C15.45,9,15,8.55,15,8z"/>
+</g></svg>
+<h5>Feeds</h5>
     </a>
 </li>
-
-
-
-
-
-
-
-
-
 
 
 <li  class="pages" >
@@ -283,10 +234,45 @@
 </a>
 
 </li>
+<li class="messengerKids">
+<a href="./html/messenger.html" class="extraActionHamburgerSection">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 24 24" data-name="Layer 1" class="userActionSvg" >
+       
+        <defs>
+          <linearGradient id="messengerKidsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:green;stop-opacity:1"/>
+            <stop offset="50%" style="stop-color:white;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:teal;stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#messengerKidsGradient)" 
+        d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z"  class="userActionSvg"/>
+      </svg>
+   <h5>Mesenger Kids</h5>
+</a>
+</li>
 
-
-
-
+<li  class="messenger" >
+<a href="./html/messenger.html" class="extraActionHamburgerSection" >
+    <svg xmlns="http://www.w3.org/2000/svg"  
+    viewBox="0 0 24 24" data-name="Layer 1" class="messengerSvg" class="userActionSvg" >
+     
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:red;stop-opacity:1"/>
+            <stop offset="50%" style="stop-color:purple;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:blue;stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+      
+       
+        <path fill="url(#gradient)" d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z" class="userActionSvg" />
+      </svg>
+      <h5>Messenger</h5>
+</a>
+</li>
 <li  class="games" >
 <a href="#" class="extraActionHamburgerSection" >
     <svg xmlns="http://www.w3.org/2000/svg"  
@@ -310,39 +296,22 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
         <h5>Games</h5>
 </a>
 </li>
-<li class="memories" >
-    <a href="#" class="extraActionHamburgerSection" >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
-        class='clockSvg' class="userActionSvg"
-        stroke="#3191F6" fill="none"
-        stroke="currentColor" stroke-linecap="round" 
-        stroke-linejoin="round" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-          <h5>Memories</h5>
-    </a>
-</li>
-
         </ul>  
     </section>
-    
-
-
 <section class="settingsAndPrivacyHamburgerSection">
     <div class="settingsAndPrivacyDropDown">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
                   fill="var(--neutralColor)"><path d="M0 0h24v24H0V0z" 
-                  fill="none"  />
+                  fill="none"/>
                   <path d="M19.44 12.99l-.01.02c.04-.33.08-.67.08-1.01 0-.34-.03-.66-.07-.99l.01.02 2.44-1.92-2.43-4.22-2.87 1.16.01.01c-.52-.4-1.09-.74-1.71-1h.01L14.44 2H9.57l-.44 3.07h.01c-.62.26-1.19.6-1.71 1l.01-.01-2.88-1.17-2.44 4.22 2.44 1.92.01-.02c-.04.33-.07.65-.07.99 0 .34.03.68.08 1.01l-.01-.02-2.1 1.65-.33.26 2.43 4.2 2.88-1.15-.02-.04c.53.41 1.1.75 1.73 1.01h-.03L9.58 22h4.85s.03-.18.06-.42l.38-2.65h-.01c.62-.26 1.2-.6 1.73-1.01l-.02.04 2.88 1.15 2.43-4.2s-.14-.12-.33-.26l-2.11-1.66zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
        <h6> Settings And Privacy </h6>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"  class="settingsAndPrivacyDropDownSvg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="var(--neutralColor)"/>
             </svg>
     </div>
-    <ul class="settingsAndPrivacyDropDownUl" >
-        <li class="settings" >  
+    <ul>
+        <li>  
        <a href="#">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" 
         fill="var(--neutralColor)"><path d="M0 0h24v24H0V0z" 
@@ -352,14 +321,14 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
        </a>
         </li>
 
-        <li class="orders" > 
+        <li> 
         <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" fill="var(--neutralColor)" viewBox="-1 0 19 19" class="ordersAndPayments"><path d="M7.782 8.282H.818v-.874A1.112 1.112 0 0 1 1.926 6.3h6.629a4.767 4.767 0 0 0-.773 1.982zm7.09 4.859v.971a1.112 1.112 0 0 1-1.108 1.108H1.926a1.112 1.112 0 0 1-1.108-1.108V9.39h6.93a4.782 4.782 0 0 0 6.623 3.998 4.792 4.792 0 0 0 .501-.247zM7.92 12.113H3.33v1.109h4.59zm8.262-3.129a3.672 3.672 0 1 1-3.672-3.671 3.672 3.672 0 0 1 3.672 3.671zm-2.215.812a1.073 1.073 0 0 0-.265-.705 1.427 1.427 0 0 0-.397-.316 1.657 1.657 0 0 0-.41-.148 1.782 1.782 0 0 0-.375-.039 1.29 1.29 0 0 1-.216-.016.811.811 0 0 1-.221-.072.511.511 0 0 1-.164-.131.315.315 0 0 1-.074-.187.324.324 0 0 1 .182-.267.985.985 0 0 1 .5-.133 1.077 1.077 0 0 1 .175.03l.022.004a1.126 1.126 0 0 1 .214.075.583.583 0 0 1 .168.116.396.396 0 1 0 .56-.56 1.374 1.374 0 0 0-.403-.278 1.904 1.904 0 0 0-.352-.122v-.242a.396.396 0 1 0-.791 0v.232a1.669 1.669 0 0 0-.516.209 1.107 1.107 0 0 0-.55.936 1.094 1.094 0 0 0 .25.686 1.29 1.29 0 0 0 .425.34 1.583 1.583 0 0 0 .445.145 2.06 2.06 0 0 0 .346.027.987.987 0 0 1 .207.021.87.87 0 0 1 .21.075.645.645 0 0 1 .169.136.285.285 0 0 1 .07.184c0 .044 0 .135-.166.242a.983.983 0 0 1-.51.14 1.608 1.608 0 0 1-.224-.027 1.08 1.08 0 0 1-.208-.066.418.418 0 0 1-.154-.12.396.396 0 0 0-.598.519 1.192 1.192 0 0 0 .459.336 1.839 1.839 0 0 0 .345.107v.237a.396.396 0 0 0 .791 0v-.242a1.683 1.683 0 0 0 .53-.22 1.049 1.049 0 0 0 .526-.906z"/></svg>
               <h5>Orders And Payments</h5>
         </a>
         </li>
 
-        <li > 
+        <li> 
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                     <rect width="24" height="24" fill="none"/>
@@ -374,7 +343,7 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
         </li>
 
         <li>
-            <a href="#" class="settings" >  
+            <a href="#">  
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"  viewBox="0 0 32 32" version="1.1">
                 <title>globe</title>
                 <defs>
@@ -392,20 +361,18 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
         </li>
     </ul>
 </section>
-
-
 <section class="helpAndSupportHamburgerSection">
     <div class="helpAndSupportDropDown">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 9C11.7015 9 11.4344 9.12956 11.2497 9.33882C10.8843 9.75289 10.2523 9.79229 9.83827 9.42683C9.4242 9.06136 9.3848 8.42942 9.75026 8.01535C10.2985 7.3942 11.1038 7 12 7C13.6569 7 15 8.34315 15 10C15 11.3072 14.1647 12.4171 13 12.829V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V12.5C11 11.6284 11.6873 11.112 12.2482 10.9692C12.681 10.859 13 10.4655 13 10C13 9.44772 12.5523 9 12 9ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17H12.01C12.5623 17 13.01 16.5523 13.01 16C13.01 15.4477 12.5623 15 12.01 15H12Z" fill="var(--neutralColor)"/>
             </svg>  <h6>
                 Help & Support 
-            </h6> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="helpAndSupportDropDownSvg" >
+            </h6> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="var(--neutralColor)"/>
             </svg>
     </div>
-    <ul class="helpAndSupportDropDownUl" >
-        <li class="settings" >
+    <ul>
+        <li>
          <a href="#">
                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 9C11.7015 9 11.4344 9.12956 11.2497 9.33882C10.8843 9.75289 10.2523 9.79229 9.83827 9.42683C9.4242 9.06136 9.3848 8.42942 9.75026 8.01535C10.2985 7.3942 11.1038 7 12 7C13.6569 7 15 8.34315 15 10C15 11.3072 14.1647 12.4171 13 12.829V13C13 13.5523 12.5523 14 12 14C11.4477 14 11 13.5523 11 13V12.5C11 11.6284 11.6873 11.112 12.2482 10.9692C12.681 10.859 13 10.4655 13 10C13 9.44772 12.5523 9 12 9ZM12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17H12.01C12.5623 17 13.01 16.5523 13.01 16C13.01 15.4477 12.5623 15 12.01 15H12Z" fill="var(--neutralColor)"/>
@@ -413,7 +380,7 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
          <h5> Support</h5>
         </a>
     </li>
-    <li class="settings" >
+    <li>
         <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="5" width="18" height="14" rx="1" stroke="var(--neutralColor)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -423,7 +390,7 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
             <h5>Support Inbox</h5>
           </a>
     </li>
-        <li class="settings" > 
+        <li> 
         <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" class="aboutSvgIcon" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
                 <path fill="var(--neutralColor)" d="M60,52V4c0-2.211-1.789-4-4-4H14v51v3h42v8H10c-2.209,0-4-1.791-4-4s1.791-4,4-4h2v-3V0H8  C5.789,0,4,1.789,4,4v54c0,3.313,2.687,6,6,6h49c0.553,0,1-0.447,1-1s-0.447-1-1-1h-1v-8C59.104,54,60,53.104,60,52z M23,14h12  c0.553,0,1,0.447,1,1s-0.447,1-1,1H23c-0.553,0-1-0.447-1-1S22.447,14,23,14z M42,28H23c-0.553,0-1-0.447-1-1s0.447-1,1-1h19  c0.553,0,1,0.447,1,1S42.553,28,42,28z M49,22H23c-0.553,0-1-0.447-1-1s0.447-1,1-1h26c0.553,0,1,0.447,1,1S49.553,22,49,22z"/>
@@ -433,9 +400,8 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
                 </h5>
             </a>
     </li>
-
     
-        <li class="settings" >
+        <li>
             <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="var(--neutralColor)" viewBox="0 0 24 24">
                     <path d="M12,22A17.5,17.5,0,0,0,21,6.7V6L12,2,3,6v.7A17.5,17.5,0,0,0,12,22ZM11,6h2V8H11Zm0,4h2v8H11Z"/></svg>
@@ -443,14 +409,10 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
         Report A Problem
 
 </h5>
-
-                </a>
+       </a>
         </li>
     </ul>
 </section>
-
-
-
 <section class="logOut">
  
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -461,10 +423,272 @@ d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9
         <h5> LogOut</h5>
      
 </section>
+    `
+hamburgerSvgEDivElementStyle.textContent = 
+`
+ *, *::after, *::before,
+  ul,li,a,h5,h1,h2,h3,h4,h5
+  {
+    font-family: 'Segoe UI',sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: all ease-out .2s;
+  }
+  
+  ul,li,a,h5,h1,h2,h3,h4,h5
+  {
+    max-width: 75ch;  
+  }
+  body{
+    background: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  .menuHambugerSection{
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: .5rem;
+    height: fit-content;
+    z-index: 200000000000000000;
 
-</main>
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: sticky;
+    top: 0;
+    background: var(--bgColor);
+    z-index: 23;
+    height: 4rem;
 
+  }
+  .menu > h4{
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    font-size: 1rem;
+  color: var(--neutralColor);
+  }
+  .menu > svg{
+  width: 1.5rem;
+  }
+  .userProfileSectionHambugerSection{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--accentColor2);
+    color: var(--textColor);
+    border-bottom: 3px solid var(--neutralColor);
+  }
+
+ .unActive{display:none}
+  .userProfileImageHambugerSection{
+    width: 2.5rem;
+    min-height: 2.5rem;
+    background: url('../assets/images/profile.jpg');
+    background-position: center;
+    background-size: 100%;
+    border-radius: 2rem;
+  }
+.extraUserActionHamburgerSection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+  
+  .extraActionsListHamburgerSection{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 100%; 
+    padding: .5rem;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   gap: .5rem;
+  }
+
+  .extraActionsListHamburgerSection li{
+    width:48%;
+    background: var(--accentColor);
+    border-radius: .5rem;
+    margin: 0;
+    padding: 0;
+  }
+  .extraActionHamburgerSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--textColor);
+    height: 4rem;
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+  .extraActionHamburgerSection  h5{
+    padding: 0;
+    margin: 0;
+  }
+  .extraActionHamburgerSection > svg {
+flex: 0 1 2.5rem ;
+  }
+  .settingsAndPrivacyHamburgerSection, .helpAndSupportHamburgerSection{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid var(--neutralColor);
+  padding-top: 1.5rem;
+  }
+
+  .settingsAndPrivacyHamburgerSection svg,.helpAndSupportHamburgerSection svg{
+   flex:0 1 2rem;
+  }
+  .settingsAndPrivacyDropDown, .helpAndSupportDropDown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: .5rem;
+  }
+
+  .settingsAndPrivacyDropDown > h6, .helpAndSupportDropDown > h6{
+    margin: 0;
+    padding: 0;
+    color: var(--neutralColor);
+    flex: 1;
+    font-size: 1rem;
     
-</body>
-<script src="../js/marketPlace.js" type="module" ></script>
-</html>
+  }
+  .settingsAndPrivacyHamburgerSection > ul, .helpAndSupportHamburgerSection > ul{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 0;
+  }
+  .settingsAndPrivacyHamburgerSection > ul li, .helpAndSupportHamburgerSection > ul li{
+  min-width: 100%;
+  }
+  .settingsAndPrivacyHamburgerSection ul > li a, .helpAndSupportHamburgerSection ul> li a{
+    min-width: 100%;
+    display: flex;
+  align-items: center;
+  padding: .5rem;
+  gap: .5rem;
+  font-weight: 700;
+  border-radius: .5rem;
+  height: 4rem;
+    background: var(--accentColor);
+    color: var(--neutralColor);
+  }
+  .settingsAndPrivacyHamburgerSection ul > li a > h5, .helpAndSupportHamburgerSection ul> li a > h5
+{
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+.settingsAndPrivacyHamburgerSection ul > li a:hover, .helpAndSupportHamburgerSection ul> li a:hover, .logOut:hover{
+    background: var(--accentColor2);
+  }
+  .logOut{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  color: var(--neutralColor);
+  height: 4rem;
+  padding: .5rem;
+  cursor: pointer;
+  border-top: 1px solid var(--neutralColor);
+  padding-top: 1.5rem;
+  }
+  .logOut > h5{
+    margin: 0;
+    padding: 0;
+  }
+  .logOut >svg{
+    width: 2rem;
+  }
+  .darkModeToggle {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.5rem;
+}
+.darkModeToggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--blueAccent);
+    transition: .4s;
+    border-radius: 100%;
+    outline: 1px solid var(--neutralColor);
+    padding: .5rem;
+  }
+
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--mainBlue);
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .toggle:before {
+    transform: translateX(1.5rem);
+}
+.toggle.round {
+    border-radius: 2rem;
+}
+
+.toggle.round:before {
+    border-radius: 50%;
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
+`
+document.head.appendChild(hamburgerSvgEDivElementStyle);
+
+
+const userName = hamburgerSvgEDivElement.querySelector('.userName')
+
+
+
+return hamburgerSvgEDivElement
+}

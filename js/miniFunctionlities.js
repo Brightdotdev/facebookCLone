@@ -24,9 +24,6 @@ if (storedTheme) {
 }
 }
 
-
-
-
 const linkShared = (preference) =>{
     const linkSharedDiv = document.createElement('div');
     linkSharedDiv.innerHTML = 

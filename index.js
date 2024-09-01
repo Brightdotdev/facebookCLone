@@ -6,19 +6,19 @@ const navigation = nav();
 document.body.appendChild(navigation);
 const userName  = document.getElementById('userName')
 
-userName.innerText = 'Goobarrr'
+userName.innerText = 'Gooarrr'
 
 
 const posts  = document.querySelector('.postsContainer')
 
+loadTheme()
 
-
-let i = 1;
-
-while(i <= 20){ 
-new  postCardClass(posts)
-    console.log(i);
+const postCardInitialization = async () =>  {
+     let i  =  1
+while(i<10){
+  new postCardClass(posts)
     i++
 }
+}
 
-loadTheme()
+postCardInitialization();

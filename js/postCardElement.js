@@ -754,9 +754,11 @@ gap: .5rem;
 
   .postCardContainer
   {
-    width: 100%;
+    width: 100vw;
     border-radius: 0;
     height: fit-content;
+  border:none;
+
   }
   .postUploader,
   .postCaption,

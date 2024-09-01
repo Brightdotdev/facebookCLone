@@ -648,9 +648,9 @@ display: none;
 @media screen and (max-width: 40rem) {
   header
     {
-      width: 100%;
-      height: fit-content;
-      padding: 0;
+      width: 100vw;
+      height: 10rem;
+      padding: .5rem;
       display: flex;
       justify-content: center;
       gap: .5rem;
@@ -764,7 +764,7 @@ display: none;
 
 
 .whatsOnYourMindNav input{
-  width: 70%;
+  width: 80%;
   height: 2.5rem;
   padding-left: 1rem;
   border-radius: 4rem;
