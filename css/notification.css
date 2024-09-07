@@ -98,12 +98,54 @@ ul,li,a,h5,h1,h2,h3,h4,h5
 }
 
 body{
-    padding: 5% ;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background: #f0f2f5;
+    background: var(--bgColor);
     align-content: center;
-    /* margin-top:9%; */
 }
 
+.notifications{
+  position: relative;
+  top:9rem;
+  padding: 1rem;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 50vw;
+  height: 100vh;
+  border-radius: .5rem;
+}
+.notificationHeader{
+  display: flex;
+  color: var(--neutralColor);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.notificationHeader svg{
+  width: 2rem;
+}
+.notificationFilter{
+  display: flex;
+  color: var(--textColor);
+  gap: 1rem;
+}
+.notificationFilter h5{
+  padding: .8rem;
+  border-radius: 2rem;
+}
+.notificationFilter h5:nth-of-type(1){
+  background: var(--blueAccent);
+  color: var(--mainBlue);
+
+}
+.notificationWrapper{
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: var(--textColor);
+}
