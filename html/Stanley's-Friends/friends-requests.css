@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.heading-with-arrow{
+    align-items: center;
+    display: flex;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px; /* 20px space between arrow and heading */
+}
+
+.arrow{
+    gap: 0;
+}
+
+.heading-with-arrows{
+    display: none;
+}
+
+.sidebar {
+    width: 360px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-weight: 800;
+    color: #1c1e21;
+    margin-bottom: 5px; 
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #1c1e21;
+    margin-bottom: 7px;
+}
+
+.sidebar .sent-requests {
+    color: #1b74e4;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 10px;
+    display: block;
+}
+
+.sidebar p {
+    color: #90949c;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    width: calc(100% - 360px);
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    font-size: 18px;
+    color: #606770;
+}
+
+.messages{
+    display: none;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.message {
+    font-size: 1.25rem;
+    color: #65676B;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.floating-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.h4{
+    display: none;
+}
+
+header{
+    display: none;
+}
+
+.friend-suggestions-btn {
+    display: none; /* Hidden by default, will show in mobile view */
+    background-color: #1b74e4; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px){
+    body{
+        background-color: white;
+    }
+
+    *{
+        margin: 0;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .floating-button{
+        display: none;
+    }
+
+    .content{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .message{
+        display: none;
+    }
+
+    .messages{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contentholder p{
+        margin-top: 15px;
+        font-weight: 600;
+        text-align: center;
+        font-size: 16px;
+        color: #606770;
+    }
+
+    .h4{
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    header{
+        padding-bottom: 10px;
+        width: 100%;
+        position: fixed;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        box-shadow: 0 0px 1px 2px #ccc;
+        /* border-bottom: 1px solid black; */
+    }
+
+    .heading-with-arrows{
+        display: flex;
+        align-items: center;
+    }
+    
+    .arrow-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 25px;
+        margin-right: 20px; /* 20px space between arrow and heading */
+    }
+    
+    .arrow{
+        gap: 0;
+    }
+
+    .arrow p{
+        font-weight: 700;
+    }
+
+    img {
+        margin-right: 15px;
+    }
+
+    .friend-suggestions-btn {
+        font-weight: 600;
+        text-align: center;
+        display: inline-block; /* Show the button in mobile view */
+        margin: 20px auto 0; /* Center the button with auto margin */
+    }
+
+    .contentholder{
+        text-align: center;
+    }
+}
