@@ -4,8 +4,9 @@ import { nav } from "./navs.js"
 import { postImages } from "./miniFunctionlities.js"
 import { postCardClass } from "./postCard.js"
 
+document.addEventListener('DOMContentLoaded', () =>{
 
-const navigtion = nav()
+  const navigtion = nav()
 document.body.appendChild(navigtion)
 loadTheme()
 
@@ -184,25 +185,16 @@ loadTheme()
     profileImage.style.backgroundRepeat = `no-repeat`;
     profileImage.style.backgroundSize = `cover`;
     profileImage.style.borderRadius = `.5rem`;
-
 });
 
 const test =  document.querySelector('.stuff')
 
-for(let fNum = 0; fNum <= 10; fNum++){
+for(let fNum = 0; fNum <= 20; fNum++){
     
 test.appendChild(AddFriendCard())
 test.appendChild(AddFriendCard())
 test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
-test.appendChild(AddFriendCard())
+
 }
 
 
@@ -215,7 +207,8 @@ test.appendChild(AddFriendCard())
 
 const userPostSection = document.querySelector('.rightContents')
 
-
+const userData = JSON.parse(localStorage.getItem('fbUserData'));
+document.title = `${userData.surName} ${userData.firstName}'s profile | faceTextbook`;
 
 
  const userPostCard = () =>{
@@ -224,28 +217,15 @@ const userPostSection = document.querySelector('.rightContents')
 
     const postUser = userPostElement.querySelector('.uploderName');
     const postAtricle = userPostElement.querySelector('.postPopUpArticle')
-    postUser.innerText = 'hahahahelpme'    
-    postAtricle.querySelector('h4').innerText = "hahahahelpme's post";
+    postUser.innerText =`${userData.firstName} ${userData.surName}`    
+    postAtricle.querySelector('h4').innerText = `${userData.firstName} ${userData.surName}'s post`;
    return userPost
  }
+for (let i = 0; i <= 10; i++) {
+  userPostCard()
+}
+const userProfileTextName = document.getElementById('userProfileTextName')
 
 
-
-
- userPostCard()
- userPostCard()
- userPostCard()
- userPostCard()
- userPostCard()
- userPostCard()
-
- userPostCard()
- userPostCard()
- userPostCard()
-
- userPostCard()
- userPostCard()
- userPostCard()
-
- userPostCard()
- userPostCard()
+userProfileTextName.innerText =`${userData.firstName} ${userData.surName} `
+})

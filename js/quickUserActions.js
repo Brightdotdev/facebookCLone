@@ -621,7 +621,10 @@ gap:0;
  })
  
   userProfile.forEach(profile =>{
-    profile.innerText = "omo"
+    
+const userData = JSON.parse(localStorage.getItem('fbUserData'));
+profile.textContent = `${userData.firstName} ${userData.surName} `;
+
   })
 
 

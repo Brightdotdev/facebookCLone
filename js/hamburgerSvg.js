@@ -178,7 +178,7 @@ const hamburgerSvgElement = () =>{
     
     
     <li class="feeds">
-        <a href="../index.html" class="extraActionHamburgerSection" >
+        <a href="../html/homePage.html" class="extraActionHamburgerSection" >
     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" 
      viewBox="0 0 24 24"  fill="url(#feedsHamburgerGradient)" class='feedSvg' class="userActionSvg" >
         
@@ -791,7 +791,8 @@ const helpAndSupportDropDown = hamburgerSvgEDivElement.querySelector('.helpAndSu
 const helpAndSupportDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.helpAndSupportDropDownUl li');
 const helpAndSupportDropDownSvg = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDownSvg');
 
-userName.textContent = 'haha'
+const userData = JSON.parse(localStorage.getItem('fbUserData'));
+userName.textContent = `${userData.firstName} ${userData.surName}`;
 
 settingsAndPrivacyDropDown.addEventListener('click', () =>{
    
@@ -821,10 +822,10 @@ marketplace.addEventListener("click", () =>{
     window.location.href = '../html/marketPlace.html'
 })
 feeds.addEventListener("click", () =>{
-    window.location.href = '../index.html'
+    window.location.href = '../html/homePage.html'
 })
 pages.addEventListener("click", () =>{
-    window.location.href = '../index.html'
+    window.location.href = '../html/homePage.html'
 })
 messenger.forEach(message =>{
     message.addEventListener("click", () =>{
@@ -838,9 +839,6 @@ settings.forEach(setting =>{
     })
 })
 
-  
-
-console.log(hamburgerCkeckBox);
 
   hamburgerCkeckBox.addEventListener('change', () =>{
      

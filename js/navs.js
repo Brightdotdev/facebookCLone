@@ -21,12 +21,11 @@ const nav = (navPage) =>
                 }
              
           const notificationNumber = Math.floor(Math.random()* 10  )
-        const navDiv = document.createElement('div');
+        const navDiv = document.createElement('header');
         const navStyle = document.createElement('style');
 
         navDiv.innerHTML = 
         `
-        <header>
         <section class="facebookSearchAndIcon">
             <svg xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 1024 1024" id="facebookLogo">
@@ -123,7 +122,6 @@ const nav = (navPage) =>
                     </svg>
                 </a>
             </li>
-
             <li id="videosNav" class="primaryNavigation" >
                 <a >
                     <svg viewBox="0 0 24 24"  id="friendsSvg" class="navSvg">
@@ -136,7 +134,6 @@ const nav = (navPage) =>
                     </path></svg>
                 </a>
             </li>
-
             <li  id="primaryNotificationNav"  class="primaryNavigation" > 
                 <a href="">
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -147,26 +144,20 @@ const nav = (navPage) =>
                     </svg>
                 </a>
             </li>
-
-            
-
-            <li id="groupsNav" class="primaryNavigation" >
+                <li id="groupsNav" class="primaryNavigation" >
                 <a>
                     <svg viewBox="0 0 24 24" id="groupsNavSvg" class="navSvg">
                         <path d="M12 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm-2 4a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"  class="navSvg">
                             <title>Groups</title>
                         </path>
                         <path d="M12 .5C5.649.5.5 5.649.5 12S5.649 23.5 12 23.5 23.5 18.351 23.5 12 18.351.5 12 .5zM2.5 12c0-.682.072-1.348.209-1.99a2 2 0 0 1 0 3.98A9.539 9.539 0 0 1 2.5 12zm4 0a4.001 4.001 0 0 0-3.16-3.912A9.502 9.502 0 0 1 12 2.5a9.502 9.502 0 0 1 8.66 5.588 4.001 4.001 0 0 0 0 7.824 9.514 9.514 0 0 1-1.755 2.613A5.002 5.002 0 0 0 14 14.5h-4a5.002 5.002 0 0 0-4.905 4.025 9.515 9.515 0 0 1-1.755-2.613A4.001 4.001 0 0 0 6.5 12zm13 0a2 2 0 0 1 1.791-1.99 9.538 9.538 0 0 1 0 3.98A2 2 0 0 1 19.5 12zm-2.51 8.086A9.455 9.455 0 0 1 12 21.5c-1.83 0-3.54-.517-4.99-1.414a1.004 1.004 0 0 1-.01-.148V19.5a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v.438a1 1 0 0 1-.01.148z" class="navSvg"></path>
-                    </svg>
-                         
+                    </svg>        
                 </a>
             </li>
             
             </ul>
 
         </nav>
-
-
         <nav  id="userActions" >
             <ul>
           <li id="menuNav" class="secondaryNavigation" >
@@ -210,40 +201,12 @@ const nav = (navPage) =>
     </ul>
         </nav>
 
-        <div class="whatsOnYourMindNav">
-            <div id="whatsOnYourMindProfile" class="secondaryNavigation" >
-                <a href="#">
-                    <title>whats On Your Mind</title>
-                </a>
-            </div>
-            <input type="text" id="whatsOnYourMindPost" placeholder="whatsOnYourMind">
-            <div class="photo">
-           
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                xmlns:xlink="http://www.w3.org/1999/xlink" 
-                fill="green" version="1.1"  
-                viewBox="0 0 31.06 32.001" xml:space="preserve">
-                    <g id="photosSvg">
-                        <path d="M29.341,11.405L13.213,7.383c-1.21-0.301-2.447,0.441-2.748,1.652L6.443,25.163c-0.303,1.211,0.44,2.445,1.65,2.748   l16.127,4.023c1.21,0.301,2.447-0.443,2.748-1.652l4.023-16.127C31.293,12.944,30.551,11.708,29.341,11.405z M28.609,14.338   l-2.926,11.731c-0.1,0.402-0.513,0.65-0.915,0.549l-14.662-3.656c-0.403-0.1-0.651-0.512-0.551-0.916l2.926-11.729   c0.1-0.404,0.513-0.65,0.916-0.551l14.661,3.658C28.462,13.522,28.71,13.936,28.609,14.338z"/>
-                        <circle cx="15.926" cy="13.832" r="2.052"/>
-                        <path d="M22.253,16.813c-0.136-0.418-0.505-0.51-0.82-0.205l-2.943,2.842c-0.315,0.303-0.759,0.244-0.985-0.133l-0.471-0.781   c-0.227-0.377-0.719-0.5-1.095-0.273l-4.782,2.852c-0.377,0.225-0.329,0.469,0.096,0.576l3.099,0.771   c0.426,0.107,1.122,0.281,1.549,0.389l3.661,0.912c0.426,0.105,1.123,0.279,1.549,0.385l3.098,0.773   c0.426,0.107,0.657-0.121,0.521-0.539L22.253,16.813z"/>
-                        <path d="M2.971,7.978l14.098-5.439c0.388-0.149,0.828,0.045,0.977,0.432l1.506,3.933l2.686,0.67l-2.348-6.122   c-0.449-1.163-1.768-1.748-2.931-1.299L1.45,6.133C0.287,6.583-0.298,7.902,0.151,9.065L5.156,22.06l0.954-3.827L2.537,8.954   C2.389,8.565,2.583,8.126,2.971,7.978z"/>
-                    </g>
-                    <g id="photosSvg">
-                    </g>
-                    </svg>
-           
-                <h5 style="margin: 0;padding: 0;" >Photo</h5>
-            </div>
-        </div>
-        
-    </header>
-
       `
 
         navStyle.textContent = 
         `
- *, *::after, *::before,
+ 
+*, *::after, *::before,
 ul,li,a,h5,h1,h2,h3,h4,h5
 {
   font-family: 'Segoe UI',sans-serif;
@@ -270,8 +233,7 @@ li > a:hover,
 {background: var(--accentColor2);
 }
 .facebookSearch:hover, 
-.secondaryNavigation:hover,
-.whatsOnYourMindPostClickable:hover
+.secondaryNavigation:hover
 {
   filter: brightness(1.2);
 }
@@ -279,8 +241,7 @@ li > a:hover,
 #hamburgerSvg,
 #primaryMesengerNav,
 #primaryNotificationNav,
-.facebookSearch .arrow,
-.whatsOnYourMindNav
+.facebookSearch .arrow
 {
   display: none;
 } 
@@ -427,9 +388,7 @@ gap: .5rem;
   max-width: 3rem;
   cursor: pointer;
 }
-.secondaryNavigation:nth-of-type(4)::before,
-
-{
+.secondaryNavigation:nth-of-type(4)::before{
   content: '';
 position: absolute;
 width: 15px;
@@ -476,10 +435,11 @@ background: #E41E3F;
   background-position: center; 
   max-height: 3rem;
 }
+
 @media  (max-width : 64rem) {
 header
   {
-    width:100%
+    width:100%;
     display: flex;
     padding:0rem;
     align-items: center;
@@ -533,7 +493,6 @@ header
   content: '';
   width: 100%;
   height: 2.5px;
-  bottom: -15px;
   border-radius: 2px;
   background: var(--mainBlue);
 }
@@ -546,10 +505,7 @@ header
  height: 1rem;
 width: 20rem;
 }
-.primaryNavigation:nth-of-type(${navigationNumber})::after
-{
-  bottom: -10px;
-}
+
 .navSvg
 {
   max-width: 1.5rem;
@@ -650,14 +606,15 @@ display: none;
   header
     {
       width: 100vw;
-      height: 10rem;
-      padding: .5rem;
+      height: 6rem;
       display: flex;
-      justify-content: center;
+      padding: 0;
+      justify-content: space-between;
       gap: .5rem;
       flex-direction: column;
        position:fixed;
       top:0;
+      border: none;
     }
 
     
@@ -667,7 +624,8 @@ display: none;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid var(--accentColor2);
+    border:none;
+    padding: 0 .5rem;
   }
   .facebookSearchAndIcon h1
   {
@@ -716,13 +674,13 @@ cursor:pointer;
     display: flex;
     width: 100%;
     padding: 0;
-    border-bottom: 1px solid var(--accentColor2);
+    border: none;
   }
   #navLinks ul
 {
   width: 100%;
   padding:0;
-  height: .5rem;
+  height: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,64 +693,7 @@ cursor:pointer;
     padding: 0;
     margin:0;
   } 
-  .whatsOnYourMindNav
-{
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
-  gap: .5rem;
-  width: 100%;
-  padding: 0;
-} 
- #whatsOnYourMindProfile 
-  {
-    display: flex;
-    background: url('../assets/images/profile.jpg');
-    max-width: 2.5rem;
-    max-height: 2.5rem;
-    background-size: cover; 
-    position: relative;
-    background-position: center; 
-    cursor: pointer;
-  }
- #whatsOnYourMindProfile::before
-  {
-    content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  border: 3px solid var(--accentColor);
-  border-radius: 2rem;
-  top: 1px;
-  right: 0;
-  background: red;
-}
-
-
-.whatsOnYourMindNav input{
-  width: 80%;
-  height: 2.5rem;
-  padding-left: 1rem;
-  border-radius: 4rem;
-  outline: none;
-  border: none;
-  background: var(--accentColor2);
-}
-
-.whatsOnYourMindNav > .photo
-  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    color: var(--textColor);
-    font-size: 1rem;
-    gap: .5rem;
-  }
-.whatsOnYourMindNav .photo svg
-{
-  width: 1.5rem;
-}
+ 
 .primaryNavigation:nth-of-type(${navigationNumber})::after{
   display: none;
 }
@@ -800,16 +701,25 @@ cursor:pointer;
 {
   width: 1.2rem;
 }
+.primaryNavigation{
+   position: relative;
+   border-radius: 0;
+   border: 1px solid var(--neutralColorLighter);
+   border-bottom: 2px solid  hsla(210, 4%, 40%, 0.1);
+
 }
 
 
-@media (max-width: 35rem) { 
- 
-header{
-width:100vw;
+
+.primaryNavigation:nth-of-type(1)
+{
+      border-left:none;
 }
-
-
+      .primaryNavigation:nth-of-type(6)
+{
+      border-right:none;
+}
+}
    `
 
 
@@ -828,8 +738,14 @@ const hamburgerQuickUserActions = hamburgerSvgElement()
 const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu');
 
 
+ navDiv.querySelector('#menuNav').addEventListener('click', () =>{
+  alert("Yeah this was supposed to be Joshua's part lol")
+})
+
+
+
    homeNav.addEventListener('click' , () =>{
-       window.location.href = "../index.html"
+       window.location.href = "../html/homePage.html"
    })
    friendsNav.addEventListener('click' , () =>{
      window.location.href = "../html/friends.html"
@@ -850,11 +766,11 @@ const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu');
     window.location.href = "../html/messenger.html"
    });
    primaryNotificationNav.addEventListener('click', () =>{
-    window.location.href = "../html/notification.html"
+    window.location.href = "../html/notifiaction.html"
    });
 
    notificationNav.addEventListener('click', () =>{
-    window.location.href = "../html/notification.html"
+    window.location.href = "../html/notifiaction.html"
     //waiting for raph on this pop up tho
     //....2 weeks later...there's no pop up lol
    })
