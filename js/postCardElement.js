@@ -425,14 +425,11 @@ body{
   color: var(--textColor);
   text-decoration: none;
   transition: color 0.3s ease;
+  width:100%;
 }
 
-.uploaderNameSpan {
-position: absolute;
-right: 0;
-color: var(--mainBlue);
-  font: 1em sans-serif;  
-}
+
+
 
 .timeUploaded {
   color: var(--textColor); 
@@ -443,10 +440,8 @@ color: var(--mainBlue);
 .uploderName:hover {
   text-decoration: underline;}
 
-.uploaderNameSpan:hover {
-  color: var(--mainBlue);
-  text-decoration: underline;
-}
+
+  
 .timeUploaded:hover {
   text-decoration: underline; 
   color: var(--textColor); 
@@ -485,7 +480,7 @@ cursor: pointer;
   width: 1.5rem;
 }
 .engagement{
-  padding:  0 1rem ;
+  padding:  1rem 1rem ;
 }
 .engagement::after
 {

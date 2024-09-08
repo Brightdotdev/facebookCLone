@@ -128,15 +128,15 @@ const signUpModal = () =>{
         </div>
         <div class="termsOfUse">
         <article style="display: flex; gap:.5rem;align-items: center;">
-    <h5 class="userNameWelcome" style="color: var(--textColor);margin: 0;padding:0;" >Hi,</h5>
-    <h5  style="color: var(--neutralColor);margin: 0;padding:0;" > Welcome to</h5>
+    <h5 class="userNameWelcome" style="color: var(--textColorLight);margin: 0;padding:0;" >Hi,</h5>
+    <h5  style="color: var(--neutralColorLight);margin: 0;padding:0;" > Welcome to</h5>
     <h4  style="color: var(--mainBlue);margin: 0;padding:0;" >FaceTextBook</h4>
           </article>
-  <p style="color: var(--textColor);margin: 0;padding:0; >
+  <p style="color: var(--textColorLight);margin: 0;padding:0; >
                People who use our service may have uploaded your contact information to <br> Facebook. 
                 <span>Learn more.</span>
             </p>
-            <p style="color: var(--textColor);margin: 0;padding:0; >
+            <p style="color: var(--textColorLight);margin: 0;padding:0; >
                 By clicking Sign Up, you agree to our <span>   Terms, Privacy Policy</span> and <span> Cookies Policy.</span> <br> You may receive SMS notifications from us and can opt out at any time.
             </p>
         </div>
@@ -391,7 +391,8 @@ const modalResponsivenes = () => {
     signUpButton.style.width = "18rem";
     signUpButton.style.fontSize = "1.5rem";
     signUpButton.style.margin = "0";
-
+    userInfo.querySelector('.firstName').style.width = "48.5%"
+    userInfo.querySelector('.surName').style.width = "48.5%"
 
     termsOfUse.style.display ="none";    
     userInfo.style.display ="flex";
@@ -466,7 +467,7 @@ const modalResponsivenes = () => {
 
     termsOfUse.style.display = "flex";
     termsOfUse.querySelector("article").style.display ="flex";
-termsOfUse.querySelector(".userNameWelcome").innerText = `Hi ${userData.firstName}`
+    termsOfUse.querySelector(".userNameWelcome").innerText = `Hi ${userData.firstName}`
     userInfo.classList.add("unActive");
     radioAndSelects.forEach(radios => (radios.style.display = "none"));
     DOB.style.display = "none";
@@ -483,6 +484,7 @@ termsOfUse.querySelector(".userNameWelcome").innerText = `Hi ${userData.firstNam
     alert(`User created: ${JSON.stringify(userData)}`);
     const userDataInput = JSON.stringify(userData);
     localStorage.setItem("fbUserData", userDataInput);
+
     document.body.classList.add("fade-out");
     setTimeout(() =>{
     window.location.href = "./html/homePage.html";

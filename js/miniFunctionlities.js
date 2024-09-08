@@ -103,6 +103,17 @@ const linkShared = (preference) =>{
         '../assets/images/postImages/ehnnn.jpg',
         '../assets/images/postImages/OIP.jpg'
     ]
+    const profileImages = [
+        '../assets/images/profileImages/catimage.jpg',
+        '../assets/images/profileImages/download.jpg',
+        '../assets/images/profileImages/haaha.jpg',
+        '../assets/images/profileImages/coolkat.jpg',
+        '../assets/images/profileImages/naruto.jpg',
+        '../assets/images/profileImages/justAnother.jpg',
+        '../assets/images/profileImages/yeee.jpg',
+        '../assets/images/profileImages/thanuss.jpg',
+        '../assets/images/profileImages/baddiiee.jpg'
+    ]
 
     const globeEmoji = '\u{1F30D}';
     const saturnEmoji = '\u{1FA90}';
@@ -248,5 +259,6 @@ export{
     postImages,
     dates,
     postCaptions,
-    notifications
+    notifications,
+    profileImages
 };

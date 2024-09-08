@@ -1,0 +1,545 @@
+:root {
+    --mainBlue: hsl(218, 100%, 50%);
+    --mainBlueAccentDark: hsl(213, 24%, 30%);
+    --mainBlueAccentLight: hsl(213, 57%, 89%);
+    --backgroundColorDark: hsl(210, 5%, 10%);
+    --backgroundColorLight: hsl(210, 23%, 95%);
+    --accentColorLight: hsl(0, 0%, 100%);
+    --accentColorLight2: hsl(210, 14%, 90%);
+    --accentColorDark: hsl(210, 6%, 14%);
+    --accentColorDark2: hsl(210, 6%, 23%);
+    --textColorDark: hsl(0, 0%, 95%);
+    --textColorLight: hsl(0, 0%, 6%);
+    --neutralColorDark: hsl(210, 4%, 73%);
+    --neutralColorLight: hsl(210, 4%, 40%);
+    --neutralColorLighter: hsla(210, 4%, 40%, 0.349);
+    /*Use Only these */
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  .lightMode {
+    --bgColor: var(--backgroundColorLight);
+    --textColor: var(--textColorLight);
+    --accentColor: var(--accentColorLight);
+    --accentColor2: var(--accentColorLight2);
+    --blueAccent: var(--mainBlueAccentLight);
+    --neutralColor: var(--neutralColorLight);
+  }
+  
+  .darkMode {
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  
+  @font-face {
+    font-family: 'Segoe UI',sans-serif;   
+    src: url("../assets/Segoe\ ui\ historic.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+   *, *::after, *::before,
+  ul,li,a,h5,h1,h2,h3,h4,h5,h6
+  {
+    font-family: 'Segoe UI',sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    transition: all ease-out .2s;
+  }
+  
+  /* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    background-color: var(--bgColor);
+    height: 100%;
+}
+p,h1,h2,h3,h4,h5,h6{
+    color: var(--textColor)  !important; 
+}
+
+.main-content {
+    margin-left: 440px; 
+    width: calc(100% - 360px);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: 0;
+    overflow-y: scroll; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    .main-content::-webkit-scrollbar {
+        display: none;
+      }
+}
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    top: 3rem;
+    overflow-y: auto;
+    
+}
+
+.sidebar {
+    width: 360px; /* Adjusted width */
+    background-color: var(--accentColor); 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  color: var(--textColor);
+    position: fixed; 
+    top: 3rem;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+}
+
+.sidebar-container {
+    padding: 5px;
+}
+
+.suggestion-item{
+    display: none;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.side-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.img-house {
+    background-color: var(--neutralColor);
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgs-house{
+    background-color: var(--neutralColor);
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgs-house img{
+    width: 30px;
+}
+
+.img-house img{
+    width: 60px;
+}
+
+.side-content h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-right: 20px;
+}
+
+.arrow{
+    width: 25px;
+    /* height: 25px; */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    height: 30px;
+    color: var(--textColor);
+}
+
+.sidebar ul li img{
+    width: 20px;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--accentColor);
+}
+
+
+
+.main-content-container{
+    width: 95%;
+    margin-left: 10px;
+}
+
+.sub-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--textColor);
+}
+.sub-content h2{
+    font-size: 20px;
+}
+
+.sub-content p{
+    color: var(--mainBlue);
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding-bottom: 10px;
+    max-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.friend-card {
+    background-color: var(--accentColor2);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    /* padding: 10px; */
+    width: 25%;
+    height: 100%;
+}
+
+.button{
+    display: block;
+}
+
+.friend-card img {
+    border-radius: 7px 7px 0px 0px;
+    width: 100%;
+    height: 200px;
+}
+
+.friend-card h4 {
+    margin-top: 5px;
+    margin-left: 15px;
+    /* font-size: 16px; */
+    margin-bottom: 40px;
+}
+
+.button1 button {
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--mainBlue);
+}
+
+.button2 button {
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: var(--textColor);
+}
+
+.button1{
+    text-align: center;
+    background-color: var(--accentColor );
+    color: var(--textColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 10px 10px 12px;
+    width: 90%;
+    height: 30px;
+}
+
+.button2{
+    text-align: center;
+    background-color: var(--accentColor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0px 10px 10px 12px;
+    width: 90%;
+    height: 30px;
+}
+
+.friend-card button:hover {
+    background-color: var(--blueAccent);
+    border-radius: inherit;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--bgColor);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.home .imgs-house{
+    margin-right: 15px;
+    background-color: var(--mainBlue);
+}    
+
+.friend-request, .suggestions, .All-friends, .Birthdays, .Custom-lists{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--accentColor);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+ 
+.friend-request .imgs-house,
+.suggestions .imgs-house, 
+.All-friends .imgs-house, 
+.Birthdays .imgs-house, 
+.Custom-lists .imgs-house {
+    margin-right: 15px;
+}
+
+.home span,
+.friend-request span,
+.suggestions span,
+.All-friends span,
+.Birthdays span,
+.Custom-lists span {
+    flex-grow: 1;
+}
+
+.friend-request .arrow, 
+.suggestions .arrow, 
+.All-friends .arrow, 
+.Custom-lists .arrow {
+    margin-left: auto; 
+    padding-left: 15px; 
+}
+
+.home:hover, .friend-request:hover, .suggestions:hover, .All-friends:hover, .Birthdays:hover, .Custom-lists:hover{
+    background-color: var(--accentColor2); /* or any other hover color */
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accentColor2);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.floating-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-search-bar{
+    display: none;
+}
+
+.mobile-tabs{
+    display: none;
+}
+
+
+@media (max-width: 1300px) {
+    * {
+        margin: 0;
+        border: 0;
+    }
+    body, html {
+        border: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+        background-color: var(--bgColor);
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        top: 5rem;
+        padding-top: 2rem;
+    }
+
+    .sidebar-container{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border: 0;
+    }
+
+    .sub-content h2{
+        width: 100%;
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
+    .main-content {
+        display: none;
+    }
+
+    .friends-grid{
+        display: none;
+    }
+
+    .sub-content p{
+        display: none;
+    }
+
+    .mobile-search-bar {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+
+    .imgs-house {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .mobile-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .mobile-tabs a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: var(--accentColor2);
+        text-decoration: none;
+        color: var(--textColor);
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .mobile-tabs a:hover {
+        background-color: var(--accentColor);
+    }
+
+    .suggestion-item{
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        display: flex;
+    }
+
+    .suggestion-container{
+        width: 100%;
+    }
+    
+    .suggestion-item img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    
+    .suggestion-info {
+        /* flex-grow: 1; */
+        width: 100%;
+    }
+    
+    .suggestion-info p {
+        margin: 0;
+        /* font-weight: bold; */
+        color: var(--textColor);
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+    
+    .suggestion-info span {
+        font-size: 12px;
+        color: var(--textColor);
+    }
+    
+    .actions {
+        display: flex;
+        gap: 5px;
+        width: 95%;
+    }
+    
+    .add-friend, .remove {
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        height: 30px;
+        font-weight: 600;
+        width: 80%;
+    }
+    
+    .add-friend {
+        background-color: var(--mainBlue);
+        color: var(--textColor);
+        border: none;
+        margin-right: 5px;
+    }
+    
+    .remove {
+        background-color: var(--accentColor2);
+        color: var(--textColor);
+        border: none;
+        margin: 0;
+    }
+
+    .floating-button{
+        display: none;
+    }
+}

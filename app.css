@@ -67,7 +67,7 @@ ul,li,a,h5,h1,h2,h3,h4,h5
   box-sizing: border-box;
 }
 body{
-  background: var(--backgroundColor);
+  background: var(--backgroundColorLight);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +113,7 @@ body{
     margin: 0;
     padding: 0;
     font-size: 1.3rem;
-    color: var(--textColor);
+    color: var(--textColorLight);
    }
 }
 .right{
@@ -130,7 +130,7 @@ body{
     border-radius: .5rem;
     gap: .9rem;
     padding: .8rem;
-  background: var(--accentColor);
+  background: var(--accentColorLight);
   box-shadow: 0 0 30px var(--neutralColorLighter);
   }
   & a{
@@ -141,26 +141,26 @@ body{
     color: var(--mainBlue);
     font-weight: 500;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--neutralColor);
+    border-bottom: 1px solid var(--neutralColorLight);
 
   }
 }
 #userPassword, #userName{
   width: 100%;
   background: none;
-  border: 1px solid var(--neutralColor);
+  border: 1px solid var(--neutralColorLight);
   height: 3rem;
   padding-left: .5rem;
   border-radius: .5rem;
   outline: none;
-  color: var(--textColor);
+  color: var(--textColorLight);
   font-weight: 700;
 }
 
 #logIn{
   width: 100%;
   background: var(--mainBlue);
-  color: var(--accentColor2);
+  color: var(--accentColorLight);
   border: none;
   height: 3rem;
   padding-left: .5rem;
@@ -172,7 +172,7 @@ body{
 }
 
 #userPassword::placeholder, #userName::placeholder{
-  color: var(--textColor);
+  color: var(--textColorLight);
   font-weight: 700;
   font-size: .7rem;
 }
@@ -182,7 +182,7 @@ padding: .8rem 1rem;
 border-radius: .5rem;
 background: #36A420;
 font-weight: 700;
-color: var(--accentColor);
+color: var(--accentColorLight);
 cursor: pointer;
 }
 
@@ -237,7 +237,7 @@ font-size: 2.5rem;
       align-items: center;
       justify-content: center;
       width: 100%;
-      color: var(--textColor);
+      color: var(--textColorLight);
       font-weight: 500;
       padding-bottom: 2rem;
       border: none;
@@ -247,18 +247,18 @@ font-size: 2.5rem;
 #userPassword, #userName{
   width: 100%;
   background: none;
-  border: 1px solid var(--neutralColor);
+  border: 1px solid var(--neutralColorLight);
   height: 3rem;
   padding-left:.5rem;
   border-radius: .5rem;
   outline: none;
-  color: var(--textColor);
+  color: var(--textColorLight);
 }
 
 #logIn{
   width: 100%;
   background: var(--mainBlue);
-  color: var(--accentColor);
+  color: var(--accentColorLight);
   border: none;
 padding: .5rem 1rem;
   border-radius: 2rem;
@@ -268,7 +268,7 @@ padding: .5rem 1rem;
 }
 
 #userPassword::placeholder, #userName::placeholder{
-  color: var(--textColor);
+  color: var(--textColorLight);
   font-weight: 700;
   font-size: .6rem;
 

@@ -417,7 +417,7 @@ const quickUserActions = () =>
     border-radius: 2rem;
   }
   .quickUserActions ul{
-    width: 20rem;
+    min-width: 20rem;
     display: flex;
     align-items:flex-start;
     justify-content;center;
@@ -431,6 +431,7 @@ const quickUserActions = () =>
   }
   .quickUserActions li > a
   {
+    min-width: 100%;
     padding: .5rem;
     display: flex;
     align-items: center;
@@ -454,7 +455,7 @@ const quickUserActions = () =>
   height:3rem;
     font-size: 2rem;
     display: flex;
-    width: 100%;
+    min-width: 100%;
     align-items: center;
     gap: 1rem;
     border-radius: .5rem;
@@ -582,10 +583,10 @@ const quickUserActions = () =>
   }
   .settingsAndPrivacy ul >li 
   {
-  width:100%
+  min-width:100%;
   }
   .defaultDiv ul > li {
-        width:100%;
+        min-width:100%;
   }
 .displayAndAccesibility{
 width:100%;
@@ -593,9 +594,17 @@ height:5rem;
 }
 .displayText{
 gap:0;
-
 }
-  .unActive{display:none}
+  .unActive{display:none;}
+
+  
+
+  @media (max-width:40rem) {
+    .quickUserActions{
+      display: none!important ;
+    }
+    
+  }
   ` 
   
   const settingsDiv = quickUserActionsDiv.querySelector('.settingsDiv');
@@ -618,13 +627,25 @@ gap:0;
     user.addEventListener('click', () =>{
         window.location = '../html/userProfile.html'
     })
+    user.style.overflow = "hidden"
+
+
  })
  
   userProfile.forEach(profile =>{
     
 const userData = JSON.parse(localStorage.getItem('fbUserData'));
-profile.textContent = `${userData.firstName} ${userData.surName} `;
+profile.textContent = `${userData.firstName} ${userData.surName}`;
+profile.style.padding = "0"
+profile.style.margin = "0"
+profile.style.display = "flex"
+profile.style.flexWrap = "wrap"
+profile.style.overflow = "hidden"
+profile.style.maxWidth = "20rem"
+profile.style.overflowY = "auto"
 
+
+profile.style.fontSize = "2rem"
   })
 
 
@@ -682,11 +703,7 @@ radioToggle.forEach(radio =>{
     if (radio.value === theme){
         radio.checked = true
     }
-
    })
-  
-  
-     
    feedback.addEventListener('click', () =>{
     window.location = '../html/helpAndSupport.html'
   })
@@ -694,13 +711,9 @@ radioToggle.forEach(radio =>{
   logOut.addEventListener('click', () =>{
     window.location = './helpAndSupport.html'
   })
-  
-  console.log( display);
-  
   document.head.appendChild(quickUserActionsStyle);
   return quickUserActionsDiv;
-  
-    }
+  }
   
 
 export {quickUserActions}

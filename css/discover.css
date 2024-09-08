@@ -1,0 +1,529 @@
+:root {
+    --mainBlue: hsl(218, 100%, 50%);
+    --mainBlueAccentDark: hsl(213, 24%, 30%);
+    --mainBlueAccentLight: hsl(213, 57%, 89%);
+    --backgroundColorDark: hsl(210, 5%, 10%);
+    --backgroundColorLight: hsl(210, 23%, 95%);
+    --accentColorLight: hsl(0, 0%, 100%);
+    --accentColorLight2: hsl(210, 14%, 90%);
+    --accentColorDark: hsl(210, 6%, 14%);
+    --accentColorDark2: hsl(210, 6%, 23%);
+    --textColorDark: hsl(0, 0%, 95%);
+    --textColorLight: hsl(0, 0%, 6%);
+    --neutralColorDark: hsl(210, 4%, 73%);
+    --neutralColorLight: hsl(210, 4%, 40%);
+    --neutralColorLighter: hsla(210, 4%, 40%, 0.349);
+    /*Use Only these */
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  .lightMode {
+    --bgColor: var(--backgroundColorLight);
+    --textColor: var(--textColorLight);
+    --accentColor: var(--accentColorLight);
+    --accentColor2: var(--accentColorLight2);
+    --blueAccent: var(--mainBlueAccentLight);
+    --neutralColor: var(--neutralColorLight);
+  }
+  
+  .darkMode {
+    --bgColor: var(--backgroundColorDark);
+    --textColor: var(--textColorDark);
+    --accentColor: var(--accentColorDark);
+    --accentColor2: var(--accentColorDark2);
+    --blueAccent: var(--mainBlueAccentDark);
+    --neutralColor: var(--neutralColorDark);
+  }
+  
+  
+  @font-face {
+    font-family: 'Segoe UI',sans-serif;   
+    src: url("../assets/Segoe\ ui\ historic.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+   *, *::after, *::before,
+  ul,li,a,h5,h1,h2,h3,h4,h5,h6
+  {
+    font-family: 'Segoe UI',sans-serif;
+    list-style: none;
+    transition: all ease-out .2s;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: var(--bgColor);
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    color: var(--textColor) !important;
+}
+
+.sidebar {
+    width: 400px;
+    position: fixed;
+    background-color: var(--accentColor);
+    padding: 20px;
+    top: 3rem;
+    bottom: 0;
+    box-sizing:content-box !important;
+}
+
+.sidebar-container{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    width: 24%;
+}
+
+.sidebar-container i{
+    color: var(--mainBlue);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.create-page {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--accentColor2);
+    border: 1px solid var(--mainBlue);
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    color: var(--mainBlue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px !important;
+    box-sizing:content-box !important;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: bold;
+    display: block;
+    padding: 10px !important;
+    border-radius: 6px;
+    background-color: var(--accentColor2);
+    box-sizing:content-box !important;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--accentColor2);
+}
+
+.content {
+    margin-left: 450px;
+    width: calc(100% - 360px);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    top: 3rem;
+}
+
+.card-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.card {
+    background-color: var(--accentColor);
+    border: 1px solid var(--neutralColor);
+    border-radius: 6px;
+    /* padding: 15px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 6px 6px 0px 0px;
+    /* margin-bottom: 10px; */
+}
+
+.card h4 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    margin: 5px 0;
+    color: var(--textColor);
+    font-size: 12px;
+}
+
+.like-button {
+    background-color: var(--mainBlue);
+    color: var(--textColor);
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 38px;
+    cursor: pointer;
+    color: var(--textColor);
+}
+
+.close-button:hover {
+    color: var(--mainBlue);
+}
+
+.card-container {
+    margin-top: 20px;
+}
+
+.img-house {
+    background-color: var(--accentColor2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.imgs-house {
+    background-color: var(--accentColor2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 3px !important;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.line{
+    border-bottom: 1px solid var(--neutralColor);
+    margin-bottom: 10px;
+}
+
+.sidebar li h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--accentColor2);
+    border-radius: 8px;
+}
+
+.side-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+    margin: 0;
+    vertical-align: middle;
+    margin-bottom: 15px;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.create-page:hover{
+    background-color: var(--accentColor2);
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--textColor);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.floating-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.discover{
+    background-color: var(--accentColor2);
+    border-radius: 10px;
+}
+
+.img-houses{
+    background-color: var(--mainBlue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.cards-container{
+    display: block;
+    width: 100%;
+}
+
+.card-cont{
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px 15px 15px !important;
+}
+
+.cards-cont{
+    display: flex;
+    align-items: center;
+}
+
+.cards-cont img{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    /* vertical-align: middle; */
+}
+
+.suggestion-item{
+    display: none;
+}
+
+.mobile-header{
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    * {
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+    .sidebar{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .sidebar-container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .content, .side-content, .line, .create-page{
+        display: none;
+    }
+
+    .sidebar ul{
+        display: none;
+    }
+
+    .suggestion-item{
+        text-align: left;
+        padding: 10px !important;
+        width: 100%;
+        display: flex;
+    }
+        input{
+            background: none;
+        }
+    .suggestion-container{
+        width: 100%;
+    }
+    
+    .suggestion-item img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    
+    .suggestion-info {
+        /* flex-grow: 1; */
+        width: 100%;
+    }
+    
+    .suggestion-info p {
+        margin: 0;
+        /* font-weight: bold; */
+        color: var(--textColor);
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+    
+    .suggestion-info span {
+        font-size: 12px;
+        color: var(--textColor);
+    }
+    
+    .actions {
+        display: flex;
+        gap: 5px;
+        width: 95%;
+    }
+    
+    .add-friend, .remove {
+        /* width: 135px; */
+        /* padding: 5px 10px; */
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        height: 30px;
+        font-weight: 600;
+        width: 80%;
+    }
+    
+    .add-friend {
+        background-color: var(--mainBlue);
+        color: var(--textColor);
+        border: none;
+        margin-right: 5px;
+    }
+    
+    .remove {
+        background-color: var(--accentColor2);
+        color: var(--textColor);
+        border: none;
+        margin: 0;
+    }
+
+    .card-container{
+        overflow-y: scroll;
+    }
+
+    .mobile-header {
+        display: block;
+        background-color: var(--accentColor);
+        /* padding: 10px; */
+        width: 100%;
+        margin-top: 20px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    }
+    
+    .nav-bar {
+        display: flex;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--neutralColor);
+    }
+
+    .nav-bars{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        height: 30px;
+    }
+    
+    .nav-item {
+        font-size: 16px;
+        color: var(--textColor);
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .nav-item.active {
+        color: var(--mainBlue);
+        border-bottom: 2px solid var(--mainBlue);
+        padding-bottom: 30px;
+    }
+    
+    .search-bar {
+        background-color: var(--accentColor2);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .search-bar input {
+        width: 95%;
+        padding: 10px;
+        /* border-radius: 20px; */
+        border: 3px solid var(--neutralColor);
+        font-size: 14px;
+    }
+
+    .back-arrow {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .back-arrow img {
+        width: 20px;
+        height: 20px;
+        margin-right: 18px;
+        vertical-align: middle;
+    }
+
+    .back-arrow p{
+        vertical-align: middle;
+        font-weight: 600;
+    }
+
+    .pages-title {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+    .sidebar,.content{
+        top: 2rem;
+    }
+}

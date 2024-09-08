@@ -100,6 +100,8 @@ this.comments.appendChild(this.commentFragment);
          postCard.querySelector('.closePost').style.display = 'none';
          postAtricle.style.display = 'flex';
              if(window.innerWidth <= 1100 ) {
+                postCard.style.width = '100vw';
+                postCard.style.height = '100vh';
                  postCardContainer.style.height = '35rem';
                 postCardContainer.style.width = '40rem';
               document.querySelector('header').style.display = "none"
@@ -138,8 +140,8 @@ this.comments.appendChild(this.commentFragment);
              postCardContainer.style.position = 'relative'
            commentInput.style.display = 'flex'
              postCard.style.position = 'relative';
-             postCard.style.width = '100%'
-             postCard.style.height = '100vh'
+             postCard.style.width = '100vw';
+             postCard.style.height = '100vh';
              postCard.style.display = 'flex';
              postCard.style.justifyContent = 'center';
              postCard.style.alignItems = 'center'; 

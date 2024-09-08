@@ -162,8 +162,8 @@ border-radius: .5rem;
   top: -45px;
 }
 .profilePic{  
-width: 12rem;
-height: 12rem;
+min-width: 12rem;
+min-height: 12rem;
   background: url('../assets/images/profile.jpg');
   background-position: cover;
   background-size: cover;
@@ -190,8 +190,9 @@ outline: 7px solid var(--bgColor);
 .profileInfoText{
   display: flex;
   position: relative;
-  right: 10%;
   flex-direction: column;
+  flex-grow: 1;
+  margin-left: 1rem;
   gap: .5rem;
   color: var(--textColor);
 }

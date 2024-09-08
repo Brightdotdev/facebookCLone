@@ -40,6 +40,10 @@
   --neutralColor: var(--neutralColorDark);
 }
 
+h6,h5,h4,h3,h2,h1,p,a{
+  margin: 0 !important ;
+  padding: 0 !important ;
+}
 
 @font-face {
   font-family: 'Segoe UI',sans-serif;   
@@ -108,7 +112,6 @@ body{
 { 
    width: 18rem;
   margin: 0;
-  padding: .5rem 0;
   display: flex;
   flex-direction: column; 
 }
@@ -124,15 +127,14 @@ body{
   position: relative;
   z-index: 1;
 }
-.seeMore ::after
+.rotate{
+  transform: rotate(180deg);
+}
+.seemoreSvgIcon
 {
-  content: '';
-  position: absolute;
   height: 2rem;
   width: 2rem;
   border-radius:50%;
-  top: 6px;
-  left:8px;
   background: var(--accentColor);
 }
 .extraActionsLists
@@ -145,6 +147,30 @@ body{
   max-height: 30rem;
   overflow: hidden; 
 }
+
+/* Customizing the scrollbar for WebKit browsers (e.g., Chrome, Safari) */
+.extraActionsLists::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  background-color: transparent; /* No background color */
+}
+
+/* Track (background of the scrollbar) */
+.extraActionsLists::-webkit-scrollbar-track {
+  background-color: transparent; /* Transparent track background */
+}
+
+/* Thumb (the scroll indicator) */
+.extraActionsLists::-webkit-scrollbar-thumb {
+  background-color: var(--accentColor2); /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges for the scrollbar thumb */
+}
+
+/* Optional: Scrollbar styling for Firefox */
+.extraActionsLists {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: var(--accentColor2) transparent; /* Thumb and track color */
+}
+
 .contacts{
   display: flex;
   flex-direction: column;
@@ -244,13 +270,10 @@ color: var(--textColor);
   display: flex;
 background: var(--accentColor);
   flex-direction: column;
-  gap: .2rem;
+  gap: 1rem;
   border-radius: .5rem;
-  border-bottom: 1px solid var(--accentColor);
   padding: .4rem;
   height: fit-content;
-  
-
 }
 .whatsOnYourMind
 {
@@ -258,7 +281,15 @@ background: var(--accentColor);
   display: flex;
   justify-content: space-between;
   padding: .5rem;
-  border-bottom: 1px solid var(--accentColor2) ;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.whatsOnYourMind::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  border: 1px solid var(--accentColor2);
 }
 .whatsOnYourMind img
 {
@@ -302,7 +333,11 @@ background: var(--accentColor);
   width: 2rem;
  }
 
- 
+ .storyWrapper{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+ }
 .storyContainer
 {
   display: flex;
@@ -327,6 +362,7 @@ background: var(--accentColor);
   display: flex;
   background-repeat: no-repeat;
   transition:  0.3s ease-in-out;
+  box-shadow: 0 0 2px var(--accentColor2);
 }
 .friendStory{
   border-radius: 1rem;
@@ -419,21 +455,25 @@ left: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accentColor);
+  background: var(--accentColor2);
+  fill: var(--neutralColor);
   border-radius: 2rem;
   padding: .5rem;
   box-shadow: 0 0 10px var(--accentColor2);
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  width: 2.5rem;
-&:hover
-{
-  transform: scale(1.1);
-}
+  min-width: 2.5rem;
+
 }
 .rightChevron
 {
   right: 0;
+}
+.leftChevron
+{
+  left: 0;
 }
 
 @media  (max-width : 64rem) 
@@ -505,14 +545,23 @@ main.mainContent
   top: 5.2rem;
 }
 
+.storyWrapper
+{
+  width: 100vw;
+  background: var(--accentColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13rem;
+  border-radius: 0;
+}
 
 
 .storyContainer
 {
   padding: .5rem;
   width: 100vw;
-  background: var(--accentColor);
-  height: 13rem;
+  height: 12rem;
   border-radius: 0;
 }
 .createPosts
@@ -521,6 +570,17 @@ main.mainContent
   width: 100vw;
   background: var(--accentColor);
   border-radius: 0;
+  border: none;
+}
+.mediaUpload{
+  display: none;
+}
+.whatsOnYourMind::after{
+  display: none;
+}
+.whatsOnYourMindPostClickable{
+  font-size: .7rem;
+  padding: 0;
 }
 .postsContainer, .feedAndsNews{
   gap: .2rem;
@@ -528,7 +588,6 @@ main.mainContent
   background: var(--bgColor);
 }
 }
-
 .postsContainer
 {
   display: flex;
@@ -538,4 +597,9 @@ main.mainContent
   gap: .5rem;
 }
 
+
+
+  .userProfileQuickPopUp{
+    padding: 0;
+  }
 

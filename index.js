@@ -1,12 +1,9 @@
 import { loadTheme} from "./js/miniFunctionlities.js";
 import { signUpModal } from "./js/signup.js";
 
-
-
 loadTheme()
 
 const userData = localStorage.getItem('fbUserData');
-
 
 const checkUser = async () =>{
   
@@ -17,22 +14,16 @@ const checkUser = async () =>{
   document.getElementById("userName").value = userObjectData.firstName
   document.getElementById("userPassword").value = userObjectData.password
 }
-
 else{
   console.log("no one of such");
   document.body.appendChild(signUpModal())
 }
 }
 
-
 window.addEventListener('load', checkUser)
 
-
 document.addEventListener("DOMContentLoaded", () =>{
-  
-
-
-   
+     
  document.getElementById("createNewAccount").addEventListener("click", () =>{
   document.body.appendChild(signUpModal())
 })
@@ -48,7 +39,6 @@ const switchPagesAnimation = () => {
     </article>
   `;
 
- 
   welcomePopUpStyles.textContent =
   `
   @keyframes grow {
@@ -116,6 +106,7 @@ const switchPagesAnimation = () => {
 };
 
   
+
 document.getElementById("logIn").addEventListener("click", () =>{
 
   if(userData){

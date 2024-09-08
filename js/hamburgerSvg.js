@@ -559,7 +559,7 @@ hamburgerSvgEDivElementStyle.textContent =
   flex: 1;
 }
   .userProfileImageHambugerSection{
-    width: 2.5rem;
+    min-width: 2.5rem;
     min-height: 2.5rem;
     background: url('../assets/images/profile.jpg');
     background-position: center;
@@ -591,7 +591,7 @@ hamburgerSvgEDivElementStyle.textContent =
   }
 
   .extraActionsListHamburgerSection li{
-    width:48%;
+    width:48.5%;
     background: var(--accentColor);
     border-radius: .5rem;
     margin: 0;
@@ -606,6 +606,7 @@ hamburgerSvgEDivElementStyle.textContent =
     color: var(--textColor);
     height: 4rem;
     padding: .5rem;
+    padding-left: 1rem;
     border-radius: .5rem;
   }
   .extraActionHamburgerSection  h5{
@@ -614,7 +615,7 @@ hamburgerSvgEDivElementStyle.textContent =
   }
   .extraActionHamburgerSection > svg {
 
-    height: 3rem;
+    height: 1.5rem;
 
   }
 
@@ -710,6 +711,7 @@ hamburgerSvgEDivElementStyle.textContent =
     display: inline-block;
     width: 3rem;
     height: 1.5rem;
+    margin-right: .5rem;
 }
 .darkModeToggle input {
     opacity: 0;
