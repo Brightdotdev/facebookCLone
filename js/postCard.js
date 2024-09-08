@@ -1,5 +1,4 @@
-import { postCardDivElement } from "./postCardElement.js";
-import { commentElement} from "./postCardElement.js";
+import { commentElement, postCardDivElement } from "./postCardElement.js";
 
 
 class postCardClass  {
@@ -12,7 +11,8 @@ class postCardClass  {
     this.largePostCard = this.largePostCard.bind(this);
     this.normalPostCard = this.normalPostCard.bind(this);
     this.reactionPopUpDiv = this.reactions();
-   
+    this.comments = this.postCardElement.querySelector('.comments');
+    this.commentFragment = document.createDocumentFragment();
     this.normalPostCardInitialisation = this.normalPostCardInitialisation.bind(this);
     this.largePostCardInitialisation = this.largePostCardInitialisation.bind(this);
     
@@ -21,13 +21,12 @@ class postCardClass  {
     this.postCardElement.querySelector('.postImage').addEventListener('click', this.largePostCardInitialisation);
 
     this.reactionDiv = this.postCardElement.querySelector('#likePost');
-    
+    this.commentInteractions = Math.floor(Math.random() *  200 );
     this.postLikes = Math.floor(Math.random() *  200 );
-    this.comments = Math.floor(Math.random() *  200 );
     this.shares = Math.floor(Math.random() *  200 );
 
     this.postCardElement.querySelector('.postLikesNumber').innerText =  this.postLikes
-    this.postCardElement.querySelector('.postCommentsNumber').innerText = this.comments
+    this.postCardElement.querySelector('.postCommentsNumber').innerText = this.commentInteractions
     this.postCardElement.querySelector('.postSharesNumber').innerText =  this.shares
     this.reactionDiv.addEventListener('mouseover', () =>{
         this.reactionDiv.appendChild(this.reactionPopUpDiv);
@@ -60,7 +59,13 @@ class postCardClass  {
                  this.postCardElement.querySelector('.postLikesNumber').innerText =  this.postLikes++
 
         })
+
+        for (let i = 0; i < this.commentInteractions;i++) {
+            const commentElementDiv = commentElement();
+           this.commentFragment.appendChild(commentElementDiv);
+        }
     
+this.comments.appendChild(this.commentFragment);
 
 }
 
@@ -78,10 +83,8 @@ class postCardClass  {
         const postCard = this.postCardElement        
         const postAtricle = postCard.querySelector('.postPopUpArticle');
         const postCardContainer = postCard.querySelector('.postCardContainer');
-        const comments = postCard.querySelector('.comments') 
         const commentInput = postCard.querySelector('.userCommentInput');
-        const commentDiv = commentElement();
-
+ 
         postCard.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
@@ -92,16 +95,14 @@ class postCardClass  {
         const  largeResponisveness = () => {
          if(!this.normalState){
 
-          comments.appendChild(commentDiv);     
+            this.comments.style.display = 'flex'
+       
          postCard.querySelector('.closePost').style.display = 'none';
          postAtricle.style.display = 'flex';
-            
              if(window.innerWidth <= 1100 ) {
-                 postCard.style.top = '0';
-                 postCard.style.left = '0';
-             postCardContainer.style.width = '40rem';
-             postCardContainer.style.height = '100%';
-             comments.style.display = 'flex'
+                 postCardContainer.style.height = '35rem';
+                postCardContainer.style.width = '40rem';
+              document.querySelector('header').style.display = "none"
         document.body.style.overflow = ''
         postCard.scrollIntoView({
             behavior: 'smooth',
@@ -110,26 +111,27 @@ class postCardClass  {
 
              }
             if (window.innerWidth <= 800 ) {
-             comments.style.display = 'flex'
-                 postCard.style.top = '0';
-                 postCard.style.left = '0';
-             postCardContainer.style.width = '35rem';
+                postCard.style.top = '0';
+             this.comments.style.display = 'flex'
+             postCard.style.position = 'fixed';
+             postCard.style.width = '100vw';
+             postCard.style.height = '100vh';
+             postCardContainer.style.width = '100%';
              postCardContainer.style.height = '100%';
-             postCard.style.position = 'relative';
-             document.body.style.overflow = ''
+             postCardContainer.style.overflowY = 'auto';
+             document.body.style.overflow = 'hidden';
              postAtricle.querySelector('h4').style.fontSize = '1rem';
-        postCard.style.zIndex = '100000';
-        postCardContainer.style.zIndex = '10000'; 
-
-
-             postCard.scrollIntoView({
+            postCard.style.zIndex = '100000';
+            document.querySelector('header').style.display = "none"
+            postCardContainer.style.zIndex = '10000'; 
+                postCard.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
              }
          else if (window.innerWidth >= 1100) {
             postAtricle.style.display = "flex";
-             comments.style.display = 'flex'
+             this.comments.style.display = 'flex'
              postCardContainer.style.width = '45rem'
              postCardContainer.style.overflow = 'hidden'
              postCardContainer.style.height = '35rem'
@@ -142,19 +144,15 @@ class postCardClass  {
              postCard.style.justifyContent = 'center';
              postCard.style.alignItems = 'center'; 
           postCard.style.width = '100vw'; 
-
+          document.querySelector('header').style.display = "none"
              postCard.style.zIndex = '10000'; 
             postAtricle.querySelector('h4').style.fontSize = '2rem'
-             postCardContainer.querySelector('.popUpUserCommentText').style.fontSize = '1rem'       
-             postCardContainer.querySelector('.commentInteractions').style.left = '200px' 
              postCard.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
          }
-      if (window.innerWidth <= 626 ) {
-            postCardContainer.style.width = '100%'           
-           }
+   
          }
         } 
         window.addEventListener('resize', largeResponisveness);
@@ -167,12 +165,13 @@ class postCardClass  {
         const postCard = this.postCardElement        
         const postAtricle = postCard.querySelector('.postPopUpArticle');
         const postCardContainer = postCard.querySelector('.postCardContainer');
-        const comments = postCard.querySelector('.comments') 
         const commentInput = postCard.querySelector('.userCommentInput');
         postCard.style.position = 'relative';   
-        postCard.style.width = ''
-        postCardContainer.style.width ='33rem';
+        postCardContainer.style.position ='relative';
         postCard.style.zIndex = '0'; 
+        document.querySelector('header').style.display = "flex"
+        this.comments.style.display = 'none';     
+
 
         postCard.scrollIntoView({
             behavior: 'smooth',
@@ -183,38 +182,35 @@ class postCardClass  {
      
      if(this.normalState){
         postCard.querySelector('.closePost').style.display = 'flex';
-         postCardContainer.style.height ='fit-content';
-         postCardContainer.style.position ='relative';
-         postCard.style.position ='relative';
-         comments.style.display = 'none';     
+         
+        
+        
          postAtricle.style.display = "none";
          if(window.innerWidth <= 1100 ) {
              
              postCard.style.position = 'relative';         
             postCardContainer.style.width ='33rem';
+            postCardContainer.style.height = 'fit-content'
             commentInput.style.display = 'flex';
                 }
                if (window.innerWidth <= 800 ) {
-                 
-                    postCardContainer.style.width = '33rem';
+                postCard.style.top = '';
+                    postCardContainer.style.width = '100%';
                   postAtricle.querySelector('h4').style.fontSize = '1rem';
-                postCardContainer.querySelector('.popUpUserCommentText').style.fontSize = '.8rem'     
-                postCardContainer.querySelector('.commentInteractions').style.left = '50px'       
-                commentInput.style.display = 'flex'
+                commentInput.style.display = 'none'  
+                postCardContainer.style.width = '100%';
+                postCardContainer.style.height = 'fit-content';
+                postCard.style.height = 'fit-content' 
                 }
             else if (window.innerWidth >= 1100) {
-             
+                postCard.style.width = 'fit-content'
+                postCard.style.height = 'fit-content' 
              postCardContainer.style.position = 'relative';
-             postCardContainer.style.width = '33rem'           
+             postCardContainer.style.width = '33rem' 
+             postCardContainer.style.height = 'fit-content'           
               commentInput.style.display = 'flex'
                 postCard.style.position = 'relative';
-                commentInput.style.display = 'flex'
-                postCard.style.height = 'fit-content';
-                 
-            }
-            if (window.innerWidth <= 626 ) {
-             postCardContainer.style.width = '100%' 
-             commentInput.style.display = 'none'         
+                commentInput.style.display = 'flex';  
             }
      }
         } 

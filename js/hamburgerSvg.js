@@ -1,3 +1,5 @@
+import { applyTheme } from "./miniFunctionlities.js";
+
 const hamburgerSvgElement = () =>{
     const hamburgerSvgEDivElement = document.createElement('main');
     const hamburgerSvgEDivElementStyle = document.createElement('style');
@@ -7,13 +9,14 @@ const hamburgerSvgElement = () =>{
 
     hamburgerSvgEDivElement.innerHTML = 
     `  
+          
         <section class="menu">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 512 512" version="1.1" xml:space="preserve" width="2.5rem" height="2.5rem" >
                 <style type="text/css">
                     .arrowww{fill:var(--neutralColor);}
                 </style>
-            <g id="Layer_1"/>
-                <g id="Layer_2">
+            <g id="Layerr"/>
+                <g id="Layerrrr">
                 <g>
                 <path class="arrowww" d="M217,129.88c-6.25-6.25-16.38-6.25-22.63,0L79.61,244.64c-0.39,0.39-0.76,0.8-1.11,1.23    c-0.11,0.13-0.2,0.27-0.31,0.41c-0.21,0.28-0.42,0.55-0.62,0.84c-0.14,0.21-0.26,0.43-0.39,0.64c-0.14,0.23-0.28,0.46-0.41,0.7    c-0.13,0.24-0.24,0.48-0.35,0.73c-0.11,0.23-0.22,0.45-0.32,0.68c-0.11,0.26-0.19,0.52-0.28,0.78c-0.08,0.23-0.17,0.46-0.24,0.69    c-0.09,0.29-0.15,0.58-0.22,0.86c-0.05,0.22-0.11,0.43-0.16,0.65c-0.08,0.38-0.13,0.76-0.17,1.14c-0.02,0.14-0.04,0.27-0.06,0.41    c-0.11,1.07-0.11,2.15,0,3.22c0.01,0.06,0.02,0.12,0.03,0.18c0.05,0.46,0.12,0.92,0.21,1.37c0.03,0.13,0.07,0.26,0.1,0.39    c0.09,0.38,0.18,0.76,0.29,1.13c0.04,0.13,0.09,0.26,0.14,0.4c0.12,0.36,0.25,0.73,0.4,1.09c0.05,0.11,0.1,0.21,0.15,0.32    c0.17,0.37,0.34,0.74,0.53,1.1c0.04,0.07,0.09,0.14,0.13,0.21c0.21,0.38,0.44,0.76,0.68,1.13c0.02,0.03,0.04,0.06,0.06,0.09    c0.55,0.81,1.18,1.58,1.89,2.29l114.81,114.81c3.12,3.12,7.22,4.69,11.31,4.69s8.19-1.56,11.31-4.69c6.25-6.25,6.25-16.38,0-22.63    
                 l-87.5-87.5h291.62c8.84,0,16-7.16,16-16s-7.16-16-16-16H129.51L217,152.5C223.25,146.26,223.25,136.13,217,129.88z"/>
@@ -42,6 +45,8 @@ const hamburgerSvgElement = () =>{
     
         <li  class="friends">
             <a href="#" class="extraActionHamburgerSection" >
+                    <title>Friends</title>
+
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" class="friendsSvg" class="userActionSvg" >
                     <rect  class="friendsSvg"  />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.5C5 7.01472 7.01472 5 9.5 5C11.9853 5 14 7.01472 14 9.5C14 11.9853 11.9853 14 9.5 14C7.01472 14 5 11.9853 5 9.5Z" fill="#3191F6" id="firstPerson"/>
@@ -55,16 +60,18 @@ const hamburgerSvgElement = () =>{
     
         <li class="videos">
             <a href="#" class="extraActionHamburgerSection" >
+                    <title>Videos</title>
+
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" 
                 viewBox="0 -960 960 960" width="40px" class="videoSvgUserActions">
                <defs>
-                   <linearGradient id="blueTvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                   <linearGradient id="blueTvGradientHamburgerHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
                        <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
                        <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
                        <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
                    </linearGradient>
                </defs>
-               <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z" fill="url(#blueTvGradient)" class="userActionSvg"/>
+               <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z" fill="url(#blueTvGradientHamburgerHamburger)" class="userActionSvg"/>
            </svg>
                   <h5>Videos</h5>
             </a>
@@ -77,13 +84,13 @@ const hamburgerSvgElement = () =>{
              enable-background="new 0 0 24 24" height="40px"
              viewBox="0 0 24 24" class="groupsSvgUserActions">
             <defs>
-                <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="blueGradientHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
                     <stop offset="100%" style="stop-color:lightblue;stop-opacity:1"/>
                 </linearGradient>
             </defs>
           
-            <circle cx="12" cy="12" r="10" fill="url(#blueGradient)"/>
+            <circle cx="12" cy="12" r="10" fill="url(#blueGradientHamburger)"/>
         
             
             <g fill="white" transform="scale(0.6) translate(8, 6)">
@@ -109,15 +116,16 @@ const hamburgerSvgElement = () =>{
              class="userActionSvg" 
             class="marketPlaceSvg">
            <defs>
-               <linearGradient id="blueGradientMarketPlace" x1="0%" y1="0%" x2="100%" y2="100%">
+               <linearGradient id="blueGradientHamburgerMarketPlace" x1="0%" y1="0%" x2="100%" y2="100%">
                    <stop offset="0%" style="stop-color:blue;stop-opacity:1"/>
                    <stop offset="50%" style="stop-color:lightblue;stop-opacity:1"/>
                    <stop offset="100%" style="stop-color:blue;stop-opacity:1"/>
+                    <title>MarketPlace</title>
     
                </linearGradient>
            </defs>
            <path d="M0 0h24v24H0V0z" fill="none"/>
-           <path d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1v-2l-1-5zM6 18v-4h6v4H6z" fill="url(#blueGradientMarketPlace)" class="userActionSvg"/>
+           <path d="M18.36 9l.6 3H5.04l.6-3h12.72M20 4H4v2h16V4zm0 3H4l-1 5v2h1v6h10v-6h4v6h2v-6h1v-2l-1-5zM6 18v-4h6v4H6z" fill="url(#blueGradientHamburgerMarketPlace)" class="userActionSvg"/>
        </svg>
        
             <h5>MarketPlace</h5>
@@ -131,13 +139,15 @@ const hamburgerSvgElement = () =>{
              viewBox="0 0 24 24" data-name="Layer 1" class="userActionSvg" >
                
                 <defs>
-                  <linearGradient id="messengerKidsGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient id="messengerKidsHamburger" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" style="stop-color:green;stop-opacity:1"/>
                     <stop offset="50%" style="stop-color:white;stop-opacity:1"/>
                     <stop offset="100%" style="stop-color:teal;stop-opacity:1"/>
                   </linearGradient>
                 </defs>
-                <path fill="url(#messengerKidsGradient)" 
+                                    <title>Messennger Kids</title>
+
+                <path fill="url(#messengerKidsHamburger)" 
                 d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z"  class="userActionSvg"/>
               </svg>
            <h5>Mesenger Kids</h5>
@@ -147,18 +157,19 @@ const hamburgerSvgElement = () =>{
         <li  class="messenger" >
         <a href="#" class="extraActionHamburgerSection" >
             <svg xmlns="http://www.w3.org/2000/svg"  
-            viewBox="0 0 24 24" data-name="Layer 1" class="messengerSvg" class="userActionSvg" >
+            viewBox="0 0 24 24" data-name="Layer 12r3" class="messengerSvg" class="userActionSvg" >
              
                 <defs>
-                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <linearGradient id="gradientMessengerHamburger" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" style="stop-color:red;stop-opacity:1"/>
                     <stop offset="50%" style="stop-color:purple;stop-opacity:1"/>
                     <stop offset="100%" style="stop-color:blue;stop-opacity:1"/>
                   </linearGradient>
                 </defs>
               
+                    <title>Messenger</title>
                
-                <path fill="url(#gradient)" d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z" class="userActionSvg" />
+                <path fill="url(#gradientMessengerHamburger)" d="M12,2A9.65,9.65,0,0,0,2,11.7a9.51,9.51,0,0,0,3.14,7.18.81.81,0,0,1,.27.56l0,1.78a.81.81,0,0,0,1.13.71l2-.87a.75.75,0,0,1,.53,0,11,11,0,0,0,2.9.38A9.7,9.7,0,1,0,12,2Zm6,7.46-2.93,4.66a1.5,1.5,0,0,1-2.17.4l-2.34-1.75a.6.6,0,0,0-.72,0l-3.16,2.4A.47.47,0,0,1,6,14.54L8.93,9.88a1.5,1.5,0,0,1,2.17-.4l2.34,1.75a.6.6,0,0,0,.72,0l3.16-2.4A.47.47,0,0,1,18,9.46Z" class="userActionSvg" />
               </svg>
               <h5>Messenger</h5>
         </a>
@@ -167,9 +178,17 @@ const hamburgerSvgElement = () =>{
     
     
     <li class="feeds">
-        <a href="../index.html" class="extraActionHamburgerSection" >
+        <a href="../html/homePage.html" class="extraActionHamburgerSection" >
     <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" 
-     viewBox="0 0 24 24"  fill="url(#blueTvGradient)" class='feedSvg' class="userActionSvg" >
+     viewBox="0 0 24 24"  fill="url(#feedsHamburgerGradient)" class='feedSvg' class="userActionSvg" >
+        
+                <defs>
+                  <linearGradient id="feedsHamburgerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:blue;stop-opacity:1"/>
+                    <stop offset="100%" style="stop-color:teal;stop-opacity:1"/>
+                  </linearGradient>
+                </defs>
+                         <title>Feeds</title>
     <g><path d="M0,0h24v24H0V0z" fill="none" class="userActionSvg"/></g>
     <g><path d="M16,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V8L16,3z M8,7h3c0.55,0,1,0.45,1,1v0c0,0.55-0.45,1-1,1H8 C7.45,9,7,8.55,7,8v0C7,7.45,7.45,7,8,7z M16,17H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0 C17,16.55,16.55,17,16,17z M16,13H8c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0C17,12.55,16.55,13,16,13z M15,8 V5l4,4h-3C15.45,9,15,8.55,15,8z"/>
     </g></svg>
@@ -182,9 +201,10 @@ const hamburgerSvgElement = () =>{
     <li class="reels"> 
         <a href="./html/marketPlace.html" class="extraActionHamburgerSection" >
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="reelsSvg" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                <!-- Define the gradient -->
+                                  <title>Reels</title>
+
                 <defs>
-                  <linearGradient id="instagramGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <linearGradient id="instagramGradientHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style="stop-color:#f09433;stop-opacity:1"/>
                     <stop offset="25%" style="stop-color:#e6683c;stop-opacity:1"/>
                     <stop offset="50%" style="stop-color:#dc2743;stop-opacity:1"/>
@@ -194,10 +214,10 @@ const hamburgerSvgElement = () =>{
                 </defs>
               
                 <!-- Apply the gradient to the SVG elements -->
-                <path fill="url(#instagramGradient)" d="M13.34,4.13L20.26,16H4v-1C4,9.48,8.05,4.92,13.34,4.13z"/>
-                <polygon fill="url(#instagramGradient)" points="33.26,16 22.57,16 15.57,4 26.26,4"/>
-                <path fill="url(#instagramGradient)" d="M46,15v1H35.57l-7-12H35C41.08,4,46,8.92,46,15z"/>
-                <path fill="url(#instagramGradient)" d="M4,18v17c0,6.08,4.92,11,11,11h20c6.08,0,11-4.92,11-11V18H4z M31,32.19l-7.99,4.54C21.68,37.49,20,36.55,20,35.04v-9.08  c0-1.51,1.68-2.45,3.01-1.69L31,28.81C32.33,29.56,32.33,31.44,31,32.19z"/>
+                <path fill="url(#instagramGradientHamburger)" d="M13.34,4.13L20.26,16H4v-1C4,9.48,8.05,4.92,13.34,4.13z"/>
+                <polygon fill="url(#instagramGradientHamburger)" points="33.26,16 22.57,16 15.57,4 26.26,4"/>
+                <path fill="url(#instagramGradientHamburger)" d="M46,15v1H35.57l-7-12H35C41.08,4,46,8.92,46,15z"/>
+                <path fill="url(#instagramGradientHamburger)" d="M4,18v17c0,6.08,4.92,11,11,11h20c6.08,0,11-4.92,11-11V18H4z M31,32.19l-7.99,4.54C21.68,37.49,20,36.55,20,35.04v-9.08  c0-1.51,1.68-2.45,3.01-1.69L31,28.81C32.33,29.56,32.33,31.44,31,32.19z"/>
               </svg>
        
             <h5>Reels</h5>
@@ -212,13 +232,15 @@ const hamburgerSvgElement = () =>{
             class="bookmarkSvg" height="30"
             class="userActionSvg"
             width="24" viewBox="0 0 24 24">
+                                <title>Saved</title>
+
            <defs>
-               <linearGradient id="bookmarkGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+               <linearGradient id="bookmarkGradientHamburger" x1="0%" y1="0%" x2="0%" y2="100%">
                    <stop offset="0%" style="stop-color:#B54AD0;stop-opacity:1"/>
                    <stop offset="100%" style="stop-color:#9E70F7;stop-opacity:1"/>
                </linearGradient>
            </defs>
-           <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" class="userActionSvg" fill="url(#bookmarkGradient)" />
+           <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" class="userActionSvg" fill="url(#bookmarkGradientHamburger)" />
        </svg>
        
               <h5>Saved</h5>
@@ -228,11 +250,18 @@ const hamburgerSvgElement = () =>{
     <li  class="pages" >
     <a href="#" class="extraActionHamburgerSection" >
         <svg xmlns="http://www.w3.org/2000/svg" 
-         
         viewBox="0 0 24 24" fill="none" class="userActionSvg">
+          <defs>
+                   <linearGradient id="pagesGradientHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
+                       <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                       <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
+                       <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                   </linearGradient>
+               </defs>
+                                <title>Saved</title>
           <path 
           d="M5.75 1C6.16421 1 6.5 1.33579 6.5 1.75V3.6L8.22067 3.25587C9.8712 2.92576 11.5821 3.08284 13.1449 3.70797L13.3486 3.78943C14.9097 4.41389 16.628 4.53051 18.2592 4.1227C19.0165 3.93339 19.75 4.50613 19.75 5.28669V12.6537C19.75 13.298 19.3115 13.8596 18.6864 14.0159L18.472 14.0695C16.7024 14.5119 14.8385 14.3854 13.1449 13.708C11.5821 13.0828 9.8712 12.9258 8.22067 13.2559L6.5 13.6V21.75C6.5 22.1642 6.16421 22.5 5.75 22.5C5.33579 22.5 5 22.1642 5 21.75V1.75C5 1.33579 5.33579 1 5.75 1Z" 
-          fill="url(#blueTvGradient)" class="pagesFlagSvg" class="userActionSvg"/>
+          fill="url(#pagesGradientHamburger)" class="pagesFlagSvg" class="userActionSvg"/>
             </svg>
             <h5>Pages</h5>
     </a>
@@ -242,10 +271,20 @@ const hamburgerSvgElement = () =>{
         <a href="#" class="extraActionHamburgerSection">
             <svg xmlns="http://www.w3.org/2000/svg" 
             xmlns:xlink="http://www.w3.org/1999/xlink" 
-            fill="url(#blueTvGradient)" version="1.1" class="eventsSvg" viewBox="0 0 24 24" xml:space="preserve" class="userActionSvg">
+            fill="url(#eventsGradientHamburger)" version="1.1" class="eventsSvg" viewBox="0 0 24 24" xml:space="preserve" class="userActionSvg">
                 <style type="text/css">
+          
                     .st0{fill:none;}
                 </style>
+                                                <title>Events</title>
+
+                 <defs>
+                   <linearGradient id="eventsGradientHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
+                       <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                       <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
+                       <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                   </linearGradient>
+               </defs>
                 <g>
                     <path d="M20,7.4v10.5c0,1.7-1.3,3-3,3H5.9c0,1.1,0.9,2,2,2H18c2.2,0,4-1.8,4-4V9.4C22,8.3,21.1,7.4,20,7.4z" class="userActionSvg"/>
                     <g>
@@ -264,14 +303,22 @@ const hamburgerSvgElement = () =>{
         <svg xmlns="http://www.w3.org/2000/svg" 
         class='adsManagerSvg' class="userActionSvg" 
         viewBox="0 0 24 24" fill="none">
-            <path d="M21 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V3M15 10V17M7 13V17M19 5V17M11 7V17" stroke="url(#blueTvGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id='adsManagerSvg' class="userActionSvg"  />
+                                        <title>Ads Manager</title>
+
+            <defs>
+                   <linearGradient id="adsManagerGradientHamburger" x1="0%" y1="0%" x2="100%" y2="100%">
+                       <stop offset="0%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                       <stop offset="50%" style="stop-color:#1F8CE7;stop-opacity:1"/>
+                       <stop offset="100%" style="stop-color:#54D0C8;stop-opacity:1"/>
+                   </linearGradient>
+               </defs>
+                         
+            <path d="M21 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V3M15 10V17M7 13V17M19 5V17M11 7V17" stroke="url(#adsManagerGradientHamburger)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id='adsManagerSvg' class="userActionSvg"  />
             </svg>
     <h5>Ads Manager</h5>
     </a>
     
     </li>
-    
-    
     
     
     <li  class="games" >
@@ -283,15 +330,15 @@ const hamburgerSvgElement = () =>{
         viewBox="0 0 20 20">
         <rect x="0"  width="20" height="20"/>
         <defs>
-            <linearGradient id="gameGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:blue;stop-opacity:1"/>
-              <stop offset="50%" style="stop-color:navy;stop-opacity:1"/>
-              <stop offset="100%" style="stop-color:navy;stop-opacity:1"/>
+            <linearGradient id="gameGradientHamburger" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color:#f2f2f2;stop-opacity:1"/>
+              <stop offset="50%" style="stop-color:#B54AD0;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:purple;stop-opacity:1"/>
             </linearGradient>
           </defs>
             <g>
             <path 
-    d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9 1.6 1.1 5.2-3.7 7.1-3.7s5.4 4.8 7.1 3.7c1.6-1.1 1.1-6.4-1.2-9.9zM8 9H7v1H6V9H5V8h1V7h1v1h1v1zm5.4.5c0 .5-.4.9-.9.9s-.9-.4-.9-.9.4-.9.9-.9.9.4.9.9zm1.9-2c0 .5-.4.9-.9.9s-.9-.4-.9-.9.4-.9.9-.9.9.4.9.9z" fill="url(#gameGradient)" class="userActionSvg" />
+    d="M15.9 5.5C15.3 4.5 14.2 4 13 4H7c-1.2 0-2.3.5-2.9 1.5-2.3 3.5-2.8 8.8-1.2 9.9 1.6 1.1 5.2-3.7 7.1-3.7s5.4 4.8 7.1 3.7c1.6-1.1 1.1-6.4-1.2-9.9zM8 9H7v1H6V9H5V8h1V7h1v1h1v1zm5.4.5c0 .5-.4.9-.9.9s-.9-.4-.9-.9.4-.9.9-.9.9.4.9.9zm1.9-2c0 .5-.4.9-.9.9s-.9-.4-.9-.9.4-.9.9-.9.9.4.9.9z" fill="url(#gameGradientHamburger)" class="userActionSvg" />
             </g>  
             </svg>
             <h5>Games</h5>
@@ -354,7 +401,7 @@ const hamburgerSvgElement = () =>{
                         </svg>
                          <label class="darkModeText">Dark mode</label>
                          <label class="darkModeToggle">
-                             <input type="checkbox" id="darkModeToggle">
+                             <input type="checkbox" id="darkModeToggle" class="darkModeToggleCheckBox" >
                              <span class="toggle round"></span>
                          </label>
                 </a>
@@ -453,26 +500,11 @@ const hamburgerSvgElement = () =>{
     `
 hamburgerSvgEDivElementStyle.textContent = 
 `
-
-*, *::after, *::before,
-ul,li,a,h5,h1,h2,h3,h4,h5
-{
-  font-family: 'Segoe UI',sans-serif;
-  box-sizing: border-box;
-  list-style: none;
-  border: 0;
-  padding: 0;
-  text-decoration: none;
-  transition: all ease-out .2s;
-}
-
-ul,li,a,h5,h1,h2,h3,h4,h5
-{
-  max-width: 75ch;  
-}
-.menuHambugerSection{
+ .menuHambugerSection{
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -480,7 +512,6 @@ ul,li,a,h5,h1,h2,h3,h4,h5
     justify-content: flex-start;
     gap: 1rem;
     padding: .5rem;
-    height: fit-content;
     z-index: 200000000000000000;
 
   }
@@ -488,7 +519,7 @@ ul,li,a,h5,h1,h2,h3,h4,h5
     display: flex;
     align-items: center;
     gap: .5rem;
-    position: sticky;
+    position: relative;
     top: 0;
     background: var(--bgColor);
     z-index: 23;
@@ -523,6 +554,9 @@ ul,li,a,h5,h1,h2,h3,h4,h5
   gap: 1rem;
   padding: .5rem;
   height: fit-content;
+  overflow: auto;
+  scrollbar-width: none;
+  flex: 1;
 }
   .userProfileImageHambugerSection{
     width: 2.5rem;
@@ -708,9 +742,6 @@ ul,li,a,h5,h1,h2,h3,h4,h5
     transition: .4s;
     border-radius: 50%;
 }
-
-
-
 input:checked + .toggle:before {
     transform: translateX(1.7rem);
     left: 4px;
@@ -724,15 +755,18 @@ input:checked + .toggle:before {
     border-radius: 50%;
 }
 .unActive{display:none}
-
-
-
 .rotate{
   transform: rotate(180deg);
 }
 `
 document.head.appendChild(hamburgerSvgEDivElementStyle);
-const userName = hamburgerSvgEDivElement.querySelector('.userName')
+const userName = hamburgerSvgEDivElement.querySelector('.userName');
+const userProfileSectionHambugerSection = hamburgerSvgEDivElement.querySelector('.userProfileSectionHambugerSection');
+
+
+userProfileSectionHambugerSection.addEventListener('click', () =>{
+  window.location.href = '../html/userProfile.html'
+})
 
 const friends = hamburgerSvgEDivElement.querySelector('.friends')
 const memories = hamburgerSvgEDivElement.querySelector('.memories')
@@ -744,7 +778,7 @@ const messenger = hamburgerSvgEDivElement.querySelectorAll('.messenger')
 const settings = hamburgerSvgEDivElement.querySelectorAll('.settings')
 
 const reels = hamburgerSvgEDivElement.querySelector('.reels')
-const feeds = hamburgerSvgEDivElement.querySelector('.userName')
+const feeds = hamburgerSvgEDivElement.querySelector('.feeds')
 const pages = hamburgerSvgEDivElement.querySelector('.pages')
 const events = hamburgerSvgEDivElement.querySelector('.events')
 const adsManager = hamburgerSvgEDivElement.querySelector('.adsManager')
@@ -752,17 +786,19 @@ const games = hamburgerSvgEDivElement.querySelector('.games')
 const settingsAndPrivacyDropDown = hamburgerSvgEDivElement.querySelector('.settingsAndPrivacyDropDown');
 const settingsAndPrivacyDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.settingsAndPrivacyDropDownUl li');
 const settingsAndPrivacyDropDownSvg = hamburgerSvgEDivElement.querySelector('.settingsAndPrivacyDropDownSvg');
-
+const hamburgerCkeckBox = hamburgerSvgEDivElement.querySelector('.darkModeToggleCheckBox');
 const helpAndSupportDropDown = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDown');
 const helpAndSupportDropDownUl = hamburgerSvgEDivElement.querySelectorAll('.helpAndSupportDropDownUl li');
 const helpAndSupportDropDownSvg = hamburgerSvgEDivElement.querySelector('.helpAndSupportDropDownSvg');
 
-userName.textContent = 'haha'
+const userData = JSON.parse(localStorage.getItem('fbUserData'));
+userName.textContent = `${userData.firstName} ${userData.surName}`;
 
 settingsAndPrivacyDropDown.addEventListener('click', () =>{
-    settingsAndPrivacyDropDownSvg.classList.toggle('rotate');
-settingsAndPrivacyDropDownUl.forEach(list =>{
-list.classList.toggle("unActive")
+   
+  settingsAndPrivacyDropDownSvg.classList.toggle('rotate');
+  settingsAndPrivacyDropDownUl.forEach(list =>{
+  list.classList.toggle("unActive")
 })
 })
 
@@ -776,7 +812,6 @@ helpAndSupportDropDown.addEventListener('click', () =>{
 friends.addEventListener("click", () =>{
     window.location.href = '../html/friends.html'
 })
-
 groups.addEventListener("click", () =>{
     window.location.href = '../html/groups.html'
 })
@@ -787,30 +822,36 @@ marketplace.addEventListener("click", () =>{
     window.location.href = '../html/marketPlace.html'
 })
 feeds.addEventListener("click", () =>{
-    window.location.href = '../index.html'
+    window.location.href = '../html/homePage.html'
 })
 pages.addEventListener("click", () =>{
-    window.location.href = '../index.html'
+    window.location.href = '../html/homePage.html'
 })
 messenger.forEach(message =>{
     message.addEventListener("click", () =>{
-        window.location.href = '../messenger.html'
+        window.location.href = '../html/messenger.html'
     })
 })
 
 settings.forEach(setting =>{
     setting.addEventListener("click", () =>{
-        window.location.href = '../settings.html'
+        window.location.href = '../html/settings.html'
     })
 })
 
 
-
+  hamburgerCkeckBox.addEventListener('change', () =>{
+     
+    document.body.classList.remove('darkMode', 'lightMode')   
+    const selectedTheme  = hamburgerCkeckBox.checked ? "off" : "on";
+    localStorage.setItem('theme', selectedTheme);
+   applyTheme(selectedTheme);
+  }) 
 
 return hamburgerSvgEDivElement
 }
 
 
-export{
+export {
   hamburgerSvgElement
 }

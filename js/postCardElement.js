@@ -1,4 +1,4 @@
-import { friends, postImages, postCaptions  } from "./miniFunctionlities.js";
+import { friends, postImages, postCaptions,dates  } from "./miniFunctionlities.js";
 
 
 const postCardDivElement = () =>{
@@ -202,84 +202,6 @@ stroke-width="2" stroke-linecap="round"/>
    
             <h6 style="font-size: 1.5rem;margin: 0;padding: 0;color: var(--textColor); " >Comments</h6>
           
-          
-            <div class="comment">
-                <div class="popUpCommentUserProfile">
-                </div>
-                <div class="commentInfo">
-               
-                    <p class="popUpUserCommentText">This is a comment about commenting on comments</p>
-          
-        <div class="commentEngagements">
-            <div class="commentReactions">
-                <h6 >1 d</h6>
-                <h6>Like</h6>
-                <h6>Reply</h6>
-            </div>
-        
-            <div class="reactions commentInteractions">
-                <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.35 0 1504.4 1504.4" id="likeSvgReaction">
-                <style>.likee{fill:var(--mainBlue)}.likeFinger{fill:#fff}</style>
-                <title>Like</title>
-                <ellipse class="likee" cx="750.8" cy="752.2" rx="750.8" ry="752.2"/><path 
-                class="likeFinger" d="M378.3 667.5h165.1c13 0 23.6 10.5 23.6 23.6v379.1c0 13-10.5 23.6-23.6 23.6H378.3c-13 0-23.6-10.5-23.6-23.6V691c.1-13 10.6-23.5 23.6-23.5zM624.7 1004.7V733.1c.1-66.9 18.8-132.4 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.8 83.1-35.8 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-1.7.6-2.6 2.5-1.9 4.2.3.7.8 1.3 1.5 1.7 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-1.7.4-2.8 2.2-2.3 3.9.2.9.8 1.6 1.5 2 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-1.7.5-2.7 2.3-2.2 4 .2.7.7 1.4 1.3 1.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1-.1-22.4 0-22.4-29.9z"/>
-                </svg>
-                </a>
-                <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg"  
-                viewBox="-1.1 0 1500 1500" id="heartSvgIcon">
-                <style>.love{fill:#fff}.loveee{fill:rgb(196, 11, 11)}</style>
-                <path class="love" d="M541.7 1092.6H376.6c-13 0-23.6-10.6-23.6-23.6V689.9c0-13 10.6-23.6 23.6-23.6h165.1c13 0 23.6 10.6 23.6 23.6V1069c-.1 13-10.7 23.6-23.6 23.6zM622.9 1003.5V731.9c0-66.3 18.9-132.9 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.7 83.1-35.7 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-2.6.9-2.9 4.5-.5 5.9 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-2.8.8-3.3 4.5-.8 5.9 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-2.6.8-3.1 4.2-.8 5.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1.1-22.5.1-22.5-29.9z"/>
-                <ellipse class="loveee" cx="748.9" cy="750" rx="748.9" ry="750"/>
-                <path class="love" d="M748.9 541.9C715.4 338.7 318.4 323.2 318.4 628c0 270.1 430.5 519.1 430.5 519.1s430.5-252.3 430.5-519.1c0-304.8-397-289.3-430.5-86.1z"/>
-                </svg> 
-                </a>
-                <p style="margin: 0;padding: 0;"  class="postLikesNumber"  >
-                24K
-                </p>                    
-                    </div>
-                    </div>
-                </div>
-                </div>  
-        <div class="comment">
-                        <div class="popUpCommentUserProfile">
-                        </div>
-                        <div class="commentInfo">
-                       
-                            <p class="popUpUserCommentText">This is a comment about commenting on comments</p>
-                  
-                <div class="commentEngagements">
-                    <div class="commentReactions">
-                        <h6 >1 d</h6>
-                        <h6>Like</h6>
-                        <h6>Reply</h6>
-                    </div>
-                
-                    <div class="reactions commentInteractions">
-                        <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.35 0 1504.4 1504.4" id="likeSvgReaction">
-                        <style>.likee{fill:var(--mainBlue)}.likeFinger{fill:#fff}</style>
-                        <title>Like</title>
-                        <ellipse class="likee" cx="750.8" cy="752.2" rx="750.8" ry="752.2"/><path 
-                        class="likeFinger" d="M378.3 667.5h165.1c13 0 23.6 10.5 23.6 23.6v379.1c0 13-10.5 23.6-23.6 23.6H378.3c-13 0-23.6-10.5-23.6-23.6V691c.1-13 10.6-23.5 23.6-23.5zM624.7 1004.7V733.1c.1-66.9 18.8-132.4 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.8 83.1-35.8 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-1.7.6-2.6 2.5-1.9 4.2.3.7.8 1.3 1.5 1.7 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-1.7.4-2.8 2.2-2.3 3.9.2.9.8 1.6 1.5 2 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-1.7.5-2.7 2.3-2.2 4 .2.7.7 1.4 1.3 1.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1-.1-22.4 0-22.4-29.9z"/>
-                        </svg>
-                        </a>
-                        <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg"  
-                        viewBox="-1.1 0 1500 1500" id="heartSvgIcon">
-                        <style>.love{fill:#fff}.loveee{fill:rgb(196, 11, 11)}</style>
-                        <path class="love" d="M541.7 1092.6H376.6c-13 0-23.6-10.6-23.6-23.6V689.9c0-13 10.6-23.6 23.6-23.6h165.1c13 0 23.6 10.6 23.6 23.6V1069c-.1 13-10.7 23.6-23.6 23.6zM622.9 1003.5V731.9c0-66.3 18.9-132.9 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.7 83.1-35.7 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-2.6.9-2.9 4.5-.5 5.9 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-2.8.8-3.3 4.5-.8 5.9 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-2.6.8-3.1 4.2-.8 5.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1.1-22.5.1-22.5-29.9z"/>
-                        <ellipse class="loveee" cx="748.9" cy="750" rx="748.9" ry="750"/>
-                        <path class="love" d="M748.9 541.9C715.4 338.7 318.4 323.2 318.4 628c0 270.1 430.5 519.1 430.5 519.1s430.5-252.3 430.5-519.1c0-304.8-397-289.3-430.5-86.1z"/>
-                        </svg> 
-                        </a>
-                        <p style="margin: 0;padding: 0;"  class="postLikesNumber"  >
-                        24K
-                        </p>                    
-                            </div>
-                            </div>
-                        </div>
                         </div>  
     </div>
       </div>
@@ -675,9 +597,6 @@ gap: .5rem;
 }
 
 
-
-
-
 .commentInput a> svg{
   width: 1rem;
   fill: var(--neutralColor);
@@ -686,66 +605,18 @@ gap: .5rem;
   display: none;
 }
 
-
 .comments{
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
-  width: 100%;
+  width: fit-content;
+
   padding: 1rem;
   display: none;
 }
 
 
-.comment{
-  display: flex;
-  gap: 1rem;
-}
-
-.popUpCommentUserProfile{
-  background: url('../assets/images/profile.jpg');
-  min-width: 3rem;
-  height: 3rem;
-  background-position: center;
-  background-size: cover;
-  border-radius: 2rem;
-}
-.commentInfo{
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  align-items: flex-start;
-  color: var(--textColor);
-}
-.popUpUserCommentText{
-  width: 100%;
-  background: var(--accentColor2);
-  border-radius: 3rem;
-  padding: 1rem;
-  padding-left: 1rem ;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.commentEngagements, 
-.commentReactions{
-  display: flex;
- 
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-start;
-}
-.commentReactions h6{
-  padding: 0;
-  margin: 0;
-  color: grey;
-}
-.commentInteractions{
-  position: relative;
-  left: 200px;
-}
 
 @media (max-width:40rem) {
    
@@ -844,7 +715,7 @@ gap: .5rem;
 }
 
 .commentsAndShares{
-  display: none;
+  display: flex;
   gap: .5rem;
 &.commentsAndShares a:hover
 {
@@ -935,6 +806,9 @@ const postShares = postCardDiv.querySelector('.userShare');
 const postAtricle = postCardDiv.querySelector('.postPopUpArticle')
 
 
+const comments = postCardDiv.querySelector('.comments');
+
+
 postCardDiv.querySelector('.closePost').addEventListener('click', ()=>{
     postCardDiv.style.display ="none"
     })   
@@ -945,6 +819,8 @@ postShares.addEventListener('click', () =>{
     postCardDiv.appendChild(linkShared("link Shared"));
     })
 
+
+postCardDiv.querySelector('.timeUploaded').innerText = dates[Math.floor(Math.random() * dates.length )]
 postCardDiv.querySelector('.postCaption').innerText = postCaptions[Math.floor(Math.random() * postCaptions.length )]
 postCardDiv.querySelector('.uploderName').innerText = friends[Math.floor(Math.random() * friends.length )];
 postImage.style.background = `url(${postImages[Math.floor(Math.random() * postImages.length )]})`
@@ -970,137 +846,194 @@ return postCardDiv
 const commentElement = () =>{
     const commentDiv = document.createElement('div');
     const commentStyles = document.createElement('style');
-
+  commentDiv.classList.add("comment")
 
     commentDiv.innerHTML =
     `
-    <div class="comment">
-                    <div class="popUpCommentUserProfile">
-                    </div>
-                    <div class="commentInfo">
-                   
-                        <p class="popUpUserCommentText">This is a comment about commenting on comments</p>
-              
-            <div class="commentEngagements">
-                <div class="commentReactions">
-                    <h6  class='commentTime'  >1 d</h6>
-                    <h6>Like</h6>
-                    <h6>Reply</h6>
-                </div>
-            
-                <div class="reactions commentInteractions">
-                    <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.35 0 1504.4 1504.4" id="likeSvgReaction">
-                    <style>.likee{fill:var(--mainBlue)}.likeFinger{fill:#fff}</style>
-                    <title>Like</title>
-                    <ellipse class="likee" cx="750.8" cy="752.2" rx="750.8" ry="752.2"/><path 
-                    class="likeFinger" d="M378.3 667.5h165.1c13 0 23.6 10.5 23.6 23.6v379.1c0 13-10.5 23.6-23.6 23.6H378.3c-13 0-23.6-10.5-23.6-23.6V691c.1-13 10.6-23.5 23.6-23.5zM624.7 1004.7V733.1c.1-66.9 18.8-132.4 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.8 83.1-35.8 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-1.7.6-2.6 2.5-1.9 4.2.3.7.8 1.3 1.5 1.7 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-1.7.4-2.8 2.2-2.3 3.9.2.9.8 1.6 1.5 2 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-1.7.5-2.7 2.3-2.2 4 .2.7.7 1.4 1.3 1.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1-.1-22.4 0-22.4-29.9z"/>
-                    </svg>
-                    </a>
-                    <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg"  
-                    viewBox="-1.1 0 1500 1500" id="heartSvgIcon">
-                    <style>.love{fill:#fff}.loveee{fill:rgb(196, 11, 11)}</style>
-                    <path class="love" d="M541.7 1092.6H376.6c-13 0-23.6-10.6-23.6-23.6V689.9c0-13 10.6-23.6 23.6-23.6h165.1c13 0 23.6 10.6 23.6 23.6V1069c-.1 13-10.7 23.6-23.6 23.6zM622.9 1003.5V731.9c0-66.3 18.9-132.9 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.7 83.1-35.7 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-2.6.9-2.9 4.5-.5 5.9 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-2.8.8-3.3 4.5-.8 5.9 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-2.6.8-3.1 4.2-.8 5.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1.1-22.5.1-22.5-29.9z"/>
-                    <ellipse class="loveee" cx="748.9" cy="750" rx="748.9" ry="750"/>
-                    <path class="love" d="M748.9 541.9C715.4 338.7 318.4 323.2 318.4 628c0 270.1 430.5 519.1 430.5 519.1s430.5-252.3 430.5-519.1c0-304.8-397-289.3-430.5-86.1z"/>
-                    </svg> 
-                    </a>
-                    <p style="margin: 0;padding: 0;"  class="postLikesNumber"  >
-                    24K
-                    </p>                    
-                        </div>
-                        </div>
-                    </div>
-                    </div>  
+    
+   <div class="commentData">
+    <div class="popUpCommentUserProfile">
+    </div>
+    <div class="commentInfo">
+        <h6 class="commenter" style="margin: 0;padding: 0;font-weight: 800;letter-spacing: 1px;" >Comenter</h6>
+        <p  class="commentText" style="margin: 0;padding: 0;font-size: .9rem;" > commenting on comments commenting on comments commenting on commentscommenting on commentscommenting on comments </p>
+    </div>
+
+
+   </div>
+    
+<div class="commentEngagements">
+<div class="commentReactions">
+    <h6  class='commentTime'  >1 d</h6>
+    <h6>Like</h6>
+    <h6>Reply</h6>
+</div>
+
+<div class="commentInteractions">
+  
+ 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.35 0 1504.4 1504.4" id="likeSvgReaction">
+    <style>.likee{fill:var(--mainBlue)}.likeFinger{fill:#fff}</style>
+    <title>Like</title>
+    <ellipse class="likee" cx="750.8" cy="752.2" rx="750.8" ry="752.2"/><path 
+    class="likeFinger" d="M378.3 667.5h165.1c13 0 23.6 10.5 23.6 23.6v379.1c0 13-10.5 23.6-23.6 23.6H378.3c-13 0-23.6-10.5-23.6-23.6V691c.1-13 10.6-23.5 23.6-23.5zM624.7 1004.7V733.1c.1-66.9 18.8-132.4 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.8 83.1-35.8 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-1.7.6-2.6 2.5-1.9 4.2.3.7.8 1.3 1.5 1.7 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-1.7.4-2.8 2.2-2.3 3.9.2.9.8 1.6 1.5 2 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-1.7.5-2.7 2.3-2.2 4 .2.7.7 1.4 1.3 1.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1-.1-22.4 0-22.4-29.9z"/>
+    </svg>
+ 
+    <svg xmlns="http://www.w3.org/2000/svg"  
+    viewBox="-1.1 0 1500 1500" id="heartSvgIcon">
+    <style>.love{fill:#fff}.loveee{fill:rgb(196, 11, 11)}</style>
+    <path class="love" d="M541.7 1092.6H376.6c-13 0-23.6-10.6-23.6-23.6V689.9c0-13 10.6-23.6 23.6-23.6h165.1c13 0 23.6 10.6 23.6 23.6V1069c-.1 13-10.7 23.6-23.6 23.6zM622.9 1003.5V731.9c0-66.3 18.9-132.9 54.1-189.2 21.5-34.4 69.7-89.5 96.7-118 6-6.4 27.8-25.2 27.8-35.5 0-13.2 1.5-34.5 2-74.2.3-25.2 20.8-45.9 46-45.7h1.1c44.1.8 58.2 41.6 58.2 41.6s37.7 74.4 2.5 165.4c-29.7 76.9-35.7 83.1-35.7 83.1s-9.6 13.9 20.8 13.3c0 0 185.6-.8 192-.8 13.7 0 57.4 12.5 54.9 68.2-1.8 41.2-27.4 55.6-40.5 60.3-2.6.9-2.9 4.5-.5 5.9 13.4 7.8 40.8 27.5 40.2 57.7-.8 36.6-15.5 50.1-46.1 58.5-2.8.8-3.3 4.5-.8 5.9 11.6 6.6 31.5 22.7 30.3 55.3-1.2 33.2-25.2 44.9-38.3 48.9-2.6.8-3.1 4.2-.8 5.8 8.3 5.7 20.6 18.6 20 45.1-.3 14-5 24.2-10.9 31.5-9.3 11.5-23.9 17.5-38.7 17.6l-411.8.8c-.1.1-22.5.1-22.5-29.9z"/>
+    <ellipse class="loveee" cx="748.9" cy="750" rx="748.9" ry="750"/>
+    <path class="love" d="M748.9 541.9C715.4 338.7 318.4 323.2 318.4 628c0 270.1 430.5 519.1 430.5 519.1s430.5-252.3 430.5-519.1c0-304.8-397-289.3-430.5-86.1z"/>
+    </svg> 
+    
+    <h6 style="margin: 0;padding: 0;font-size: .9rem;font-weight: 500;"  class="commentLikesNumber"  >
+    24K
+    </h6>                    
+        </div>
+        </div>
+  
+    
     `
 
     const numberSuffix = ["m", "k"]
+    const daySuffix = ["m", "d","y","w"]
+
 
     const comment = 
     [
         "Oh, look, another motivational quote. Because what I really need is more empty inspiration in my life.",
-        "I’m not arguing, I’m just explaining why I’m right.",
         "I’d agree with you, but then we’d both be wrong.",
-        "I’d agree with you, but then we’d both be wrong.",
-        "I’m not lazy, I’m just on energy-saving mode.",
         "I’m not procrastinating. I’m just prioritizing my free time.",
-        "Sure, I’d love to help. What’s your emergency?",
         "I’m not a complete idiot. Some parts are missing.",
         "If I agreed with you, we’d both be wrong.",
         "I’m not sure how to tell you this, but you’re not as smart as you think you are.",
-        "I put the ‘pro’ in procrastination.",
-        "My imaginary friend says you have serious issues."
+        "My imaginary friend says you have serious issues.",
+        "If I wanted to hear from someone who doesn’t know what they’re talking about, I’d just talk to myself.",
+        "Thanks for the advice. I’ll file it right next to the last piece of unsolicited wisdom I didn’t ask for.",
+        "This just made my day. Or what’s left of it, anyway!",
+        "Finally, someone who gets me! 😂",
+        "Honestly, I felt this in my soul.",
+        "So, are you spying on my life, or...?",
+        "If you don’t mind, I’ll be stealing this for later use. Thanks! 😅",
+        "Well, that escalated quickly. 😂",
+        "This is the content I signed up for!",
+        "I’ve never related to anything more in my life. 🙌",
+        "Accurate. Too accurate, actually. 🤔",
+        "You win the internet today. 🏆",
+        "I didn’t know I needed to hear this until now.",
+        "LOL, this is way too real!",
+        "Are you okay? Blink twice if you need help. 😂",
+        "This hit harder than my alarm clock in the morning.",
+        "It’s funny because it’s true. 😅",
+        "This level of sarcasm should be illegal. 😂",
+        "This just unlocked a new level of procrastination for me.",
+        "And just like that, I found my spirit animal.",
+        "Are we the same person, or is this just a coincidence?",
+        "I need to frame this and hang it on my wall.",
+        "Wow, this is exactly the life advice I needed… said no one ever. 😂",
+        "So inspiring. I’ll definitely not be following this advice. 😏",
+        "Oh, look, another reason to avoid responsibilities. Just what I needed!",
+        "Amazing content. I’m sure this will totally change my life… not.",
+        "Ah yes, because we all needed another reminder of how lazy we are. 🙃",
+        "This level of motivation is truly overwhelming. Can’t wait to do nothing about it.",
+        "Because we all needed another reason to feel great about our choices… or lack thereof.",
+        "Great, now I have to pretend to care about this too. 😂",
+        "Wow, I can feel the productivity oozing through the screen. 😒",
+        "Thanks for the pro tip. My life is still exactly the same.",
+        "Oh, so you’re a comedian now? Nice.",
+        "I’m really going to take this advice… and throw it out the window.",
+        "Wow, you’ve really outdone yourself with this one. My laziness is quaking.",
+        "Oh yes, because what I really needed was another excuse to avoid the gym. 🙄",
+        "This was so deep, I’m drowning in sarcasm.",
+        "The effort you put into this is truly impressive. I’m not inspired at all.",
+        "You should write a book. It’ll be a bestseller in the ‘How Not to Do Life’ section.",
+        "Please, tell me more about how you’ve mastered the art of doing nothing.",
+        "I can’t believe how much I don’t care, but keep going.",
+        "This post really changed my life… for the five seconds it took to read it."
+           
     ]
 
-commentDiv.querySelector('.postLikesNumber').innerText = `${Math.floor(Math.random() * 20)}${numberSuffix[Math.floor(Math.random() *numberSuffix.length)]}`;
-commentDiv.querySelector('.commentTime').innerText = `${Math.floor(Math.random() * 20)}${numberSuffix[Math.floor(Math.random() *numberSuffix.length)]}`; 
+commentDiv.querySelector('.commentLikesNumber').innerText = `${Math.floor(Math.random() * 20)}${numberSuffix[Math.floor(Math.random() *numberSuffix.length)]}`;
+commentDiv.querySelector('.commentTime').innerText = `${Math.floor(Math.random() * 20)}${daySuffix[Math.floor(Math.random() *daySuffix.length)]}`; 
 
-commentDiv.querySelector('.popUpUserCommentText').innerText = `${comment[Math.floor(Math.random() * comment.length)]}`
+commentDiv.querySelector('.commentText').innerText = `${comment[Math.floor(Math.random() * comment.length)]}`
+commentDiv.querySelector('.commenter').innerText = `${friends[Math.floor(Math.random() * friends.length)]}`
 
 
 commentStyles.textContent =
 `
 .comment{
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .popUpCommentUserProfile{
-    background: url('../assets/images/profile.jpg');
-    min-width: 3rem;
-    height: 3rem;
-    background-position: center;
-    background-size: cover;
-    border-radius: 2rem;
-  }
-  .commentInfo{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    align-items: flex-start;
-    color: var(--textColor);
-  }
-  .popUpUserCommentText{
-    width: 100%;
-    background: var(--accentColor2);
-    border-radius: 3rem;
-    padding: 1rem;
-    padding-left: 1rem ;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .commentEngagements, 
-  .commentReactions{
-    display: flex;
-   
-    align-items: center;
-    gap: 1rem;
-    justify-content: flex-start;
-  }
-  .commentReactions h6{
-    padding: 0;
-    margin: 0;
-    color: grey;
-  }
-  .commentInteractions{
-    position: relative;
-    left: 200px;
-  }
-
-  @media (max-width:68.75rem) {
-.popUpUserCommentText{
- font-size: .8rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  gap: 1rem;
 }
- .commentInteractions{
-   left: 50px;
- }
+.commentData{
+  display: flex;
+  gap: .8rem;
+}
 
-  }
+.popUpCommentUserProfile{
+  background: url('../assets/images/profile.jpg');
+  min-width: 3rem;
+  height: 3rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 2rem;
+}
+
+.commentInfo{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+  color: var(--textColor);
+  padding: .5rem;
+  border-radius: .5rem;
+  background: var(--accentColor2);
+}
+
+.commentEngagements{
+display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+.commentInteractions{
+  display: flex;
+  align-items: center;
+
+}
+.commentInteractions > svg{
+  width: 1.5rem;
+}
+.commentInteractions > svg:nth-of-type(1){
+z-index: 2;
+position: relative;
+left: 8px;
+}
+.commentReactions{
+  
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.commentReactions h6, .commentInteractions >h6{
+  padding: 0;
+  margin: 0;
+  color:var(--neutralColor);
+}
+
+
 `
 document.head.appendChild(commentStyles);
+commentDiv.querySelector('.popUpCommentUserProfile').style.background = `url(${postImages[Math.floor(Math.random() * postImages.length )]})`
+commentDiv.querySelector('.popUpCommentUserProfile').style.backgroundSize = "cover";
+commentDiv.querySelector('.popUpCommentUserProfile').style.backgroundPostiton = "center";
+commentDiv.querySelector('.popUpCommentUserProfile').style.backgroundRepeat = "no-repeat";
+
+
 return commentDiv;
 }
 
