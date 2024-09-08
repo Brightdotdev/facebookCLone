@@ -629,7 +629,6 @@ gap:0;
     })
     user.style.overflow = "hidden"
 
-
  })
  
   userProfile.forEach(profile =>{

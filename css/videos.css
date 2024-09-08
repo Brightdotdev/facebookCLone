@@ -162,6 +162,8 @@ body{
     width: 95%;
     background-color: var(--bgColor);
     border-left: 1px solid  var(--bgColor);
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     overflow-y: scroll;
     overflow-y: auto;
@@ -172,8 +174,6 @@ body{
     .rightside::-webkit-scrollbar {
         display: none;
       }
-    display: flex;
-    justify-content: center;
 }
 
 .gold{

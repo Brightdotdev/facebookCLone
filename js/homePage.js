@@ -1,5 +1,5 @@
 import { nav } from "./navs.js";
-import { friends, loadTheme,profileImages } from "./miniFunctionlities.js";
+import { friends, loadTheme,profileImages, createPostsPopUp } from "./miniFunctionlities.js";
 import { postCardClass } from "./postCard.js";
 
 
@@ -78,6 +78,7 @@ document.querySelector(".seeMore").addEventListener("click", () =>{
   }
 }) 
 
+createPostsPopUp(".whatsOnYourMind");
 
 document.body.appendChild(navigation);
  const userData = await JSON.parse(localStorage.getItem('fbUserData'));

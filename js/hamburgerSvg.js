@@ -199,7 +199,7 @@ const hamburgerSvgElement = () =>{
     
     
     <li class="reels"> 
-        <a href="./html/marketPlace.html" class="extraActionHamburgerSection" >
+        <a href="#" class="extraActionHamburgerSection" >
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="reelsSvg" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                                   <title>Reels</title>
 
@@ -827,7 +827,10 @@ feeds.addEventListener("click", () =>{
     window.location.href = '../html/homePage.html'
 })
 pages.addEventListener("click", () =>{
-    window.location.href = '../html/homePage.html'
+    window.location.href = '../html/discover.html'
+})
+reels.addEventListener("click", () =>{
+  window.location.href = '../html/reels.html'
 })
 messenger.forEach(message =>{
     message.addEventListener("click", () =>{

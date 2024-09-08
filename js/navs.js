@@ -785,6 +785,13 @@ const hamburgerReturn = hamburgerQuickUserActions.querySelector('.menu');
    profile.addEventListener('click', () =>{
     quickUserAction.classList.toggle('unActive')
     })
+
+ 
+    window.addEventListener("click" ,(e) =>{
+      if(e.target === quickUserAction){
+        quickUserAction.classList.add("unActive");
+      }
+    })
  
 hamburger.addEventListener('click', () =>{
 document.body.appendChild(hamburgerQuickUserActions);

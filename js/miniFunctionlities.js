@@ -15,6 +15,293 @@ const applyTheme = (theme) =>{
 
 
 
+const createPostsPopUp = (createPostsDiv) =>{
+   const  createPostsPopUpDiv =   document.createElement("div");
+   const  createPostsPopUStyle =   document.createElement("style");
+
+   createPostsPopUpDiv.innerHTML =
+   `
+ <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create post</h2>
+                <span class="close">&times;</span>
+            </div>
+            <hr>
+            <!-- Modal Sub-Header with Profile and Privacy -->
+            <div class="modal-sub-header">
+                <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png" alt="Profile"
+                    class="profile-pic">
+                <div class="header-text">
+                    <p class="name">John Doe</p>
+                    <button class="privacy-btn">&#128100; Friends &#9660;</button>
+                </div>
+            </div>
+
+            <!-- Modal Input Field -->
+            <textarea placeholder="What's on your mind, User?" class="post-input"></textarea>
+            <!-- Modal Footer with Icons -->
+            <div class="modal-footer">
+                <p>Add to your post</p>
+                <div class="icon-container">
+                    <button class="icon-btn">&#128247;</button>
+                    <button class="icon-btn">&#128100;</button>
+                    <button class="icon-btn">&#128515;</button>
+                    <button class="icon-btn">&#127758;</button>
+                    <button class="icon-btn">GIF</button>
+                    <button class="icon-btn">...</button>
+                </div>
+            </div>
+            <!-- Post Button -->
+            <button class="post-btn" disabled>Post</button>
+        </div>
+    </div>
+   `
+   
+createPostsPopUStyle.textContent =
+`
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+        align-items: center;
+    justify-content: center;
+        z-index: 2000000;
+        display: none;
+
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: var(--accentColor);
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 2px 10px var(--accentColor2);
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Close button */
+.close {
+    font-size: 17px;
+    cursor: pointer;
+    color: var(--textColor);
+    background: var(--accentColor2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Horizontal line */
+hr {
+    border: none;
+    border-top: 1px solid var(--accentColor2);
+    margin: 0;
+}
+
+/* Modal Sub-Header */
+.modal-sub-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.header-text {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.name , h2{
+    margin: 0;
+    font-weight: bold;
+    color: var(--textColor);
+}
+button{
+    color: var(--textColor);
+}
+
+.privacy-btn {
+    background-color: var(--accentColor2);
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    color: var(--textColor);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+/* Input Field */
+.post-input {
+    width: calc(100% - 40px);
+    height: 150px;
+    margin: 0 15px 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+textarea::placeholder {
+    font-size: 20px;
+}
+
+.color-btn {
+    background-color: var(--accentColor);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+/* Modal Footer Icons */
+.modal-footer {
+    margin: 15px;
+    padding: 5px;
+    border-top: 1px solid var(--accentColor2);
+    border: 1px solid var(--neutralColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-footer p {
+    color: var(--textColor);
+    font-weight: 600;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px;
+}
+
+textarea {
+    background: var(--accentColor);
+}
+/* Post Button */
+.post-btn {
+    width: calc(100% - 30px);
+    margin: 0 15px 15px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--mainBlue);
+    color: var(--textColor);
+    border: none;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/* Responsiveness */
+@media (max-width: 62rem) {
+    p{
+        font-size: .8rem;
+    }
+    .modal-content {
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+}
+`
+
+
+const userData = JSON.parse(localStorage.getItem('fbUserData')); 
+
+
+if(userData) {
+createPostsPopUpDiv.querySelector(".name").innerText = `${userData.firstName} ${userData.surName}`;
+
+}
+// Get modal element
+const modal = createPostsPopUpDiv.querySelector("#myModal");
+
+
+
+// Get button that opens the modal
+const btn = document.querySelector(`${createPostsDiv}`);
+console.log(btn, modal);
+
+// Get the <span> element that closes the modal
+const span = createPostsPopUpDiv.querySelector(".close");
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "flex";
+  document.querySelector("header").style.display = "none";
+
+};
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+  document.querySelector("header").style.display = "flex";
+
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.querySelector("header").style.display = "none";
+  }
+};
+
+document.body.appendChild(createPostsPopUpDiv);
+
+
+document.head.appendChild(createPostsPopUStyle);
+}
+
+
+
+
 const loadTheme = () =>{
  const storedTheme = localStorage.getItem('theme');
 if (storedTheme) {
@@ -255,6 +542,7 @@ export{
     loadTheme, 
     applyTheme,
     linkShared,
+    createPostsPopUp,
     friends,
     postImages,
     dates,

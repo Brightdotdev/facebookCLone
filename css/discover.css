@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .sidebar {
-    width: 400px;
+    width: 320px;
     position: fixed;
     background-color: var(--accentColor);
     padding: 20px;
@@ -265,7 +265,6 @@ h1,h2,h3,h4,h5,h6,p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 10px; */
     margin: 0;
     vertical-align: middle;
     margin-bottom: 15px;
