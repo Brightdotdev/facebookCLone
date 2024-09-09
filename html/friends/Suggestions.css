@@ -87,7 +87,13 @@ body {
 .arrow{
     gap: 0;
 }
-
+.imageStuff{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
 .sidebar {
     width: 360px;
     background-color: var(--accentColor);
@@ -95,6 +101,10 @@ body {
     box-sizing: border-box;
     border-right: 1px solid var(--accentColor2);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: flex-start;
 }
 
 .sidebar h2 {
@@ -144,11 +154,6 @@ body {
     margin-bottom: 25px;
 }
 
-.suggestion-item img {
-    height: 70px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
 
 .suggestion-info {
     flex-grow: 1;
