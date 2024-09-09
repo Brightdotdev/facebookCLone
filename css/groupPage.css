@@ -149,9 +149,12 @@ body{
     align-items: center;
     display: flex;
     margin-top: 10px;
+    cursor: pointer;
 }
 
-
+.promise:hover{
+    background: var(--accentColor2);
+}
 .svffrf{
     display: flex;
     justify-content: center;
