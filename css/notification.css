@@ -201,7 +201,7 @@ h4{
   border-radius: 2rem;
 }
 .unread{
-  width: .7rem;
+  min-width: .7rem;
   height: .7rem;
   background: var(--mainBlue);
   border-radius: 5rem;
@@ -225,30 +225,26 @@ margin-left: 2rem;
   width: 100%;
 }
 .notificationText > h5{
-  font-size: .8rem;
+  font-size: .6rem;
 }
 
 .notificationText > p{
-  font-size: .7rem;
+  font-size: .6rem;
 }
 .notification:hover{
   background: var(--accentColor2);
 }
 .notificationImage{
-  min-width:2rem;
-  height:2rem;
+  min-width:1.5rem;
+  height:1.5rem;
   background: url("../assets/images/profile.jpg");
   background-position: center;
   background-size: cover;
   border-radius: 2rem;
 }
 .unread{
-  width: .5rem;
-  height: .5rem;
-  background: var(--mainBlue);
-  border-radius: 5rem;
-margin-left: .2rem;
-margin: 0;
+
+  display: none;
 }
 
 }
