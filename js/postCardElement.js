@@ -149,7 +149,7 @@ stroke-width="2" stroke-linecap="round"/>
             </div>
 
             <div class="commentInput">
-           <button class="userCommentInputButton" >Tell Us your Opinion(Like we give a shit)</button>
+           <button class="userCommentInputButton" >Tell Us your Opinion</button>
         
         
         <a href="#"> 
